@@ -1,0 +1,25 @@
+{
+  "name": "Juiced",
+  "version": "1.0.0",
+  "homepage": "http://juicedcss.com",
+  "authors": [
+    "Joey Lea <joey@w3by.com>"
+  ],
+  "description": "Juiced - a front-end CSS Framework based on Flexible Boxes",
+  "main": "./dist/css/juiced.css",
+  "keywords": [
+    "Juiced",
+    "flex",
+    "box",
+    "flexible",
+    "boxes"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
