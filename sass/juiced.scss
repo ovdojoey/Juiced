@@ -593,7 +593,7 @@ blockquote p {
   border: 0;
 }
 [aria-hidden="true"] {
-  // element is hidden from display and should also be hidden from DOM tree for non-sr devices for consistency
+  // element is hidden from SR | forcing across all devices for consistency
   display: none;
 }
 
