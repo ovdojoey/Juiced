@@ -1,6 +1,6 @@
 {
   "name": "Juiced",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "homepage": "http://juicedcss.com",
   "authors": [
     "Joey Lea <joey@w3by.com>"
@@ -17,7 +17,7 @@
     "flex box",
     "flexible",
     "boxes",
-    "css framework",
+    "css framework"
   ],
   "license": "MIT",
   "ignore": [
