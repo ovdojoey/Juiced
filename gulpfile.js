@@ -14,7 +14,7 @@ gulp.task('compile-juiced', function() {
 });
 
 gulp.task('watch-juiced', function() {
-  gulp.watch('./sass/juiced.scss', ['juiced-compile']);
+  gulp.watch('./sass/juiced.scss', ['compile-juiced']);
 });
 
 gulp.task('default', ['compile-juiced', 'watch-juiced']);
