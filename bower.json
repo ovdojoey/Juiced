@@ -1,17 +1,20 @@
 {
-  "name": "Juiced",
+  "name": "juiced",
   "version": "1.0.5",
   "homepage": "http://juicedcss.com",
   "authors": [
     "Joey Lea <joey@w3by.com>"
   ],
-  "description": "Juiced - a front-end CSS Framework based on Flexible Boxes",
+  "description": "A mobile first, responsive CSS Framework based on Flexible Boxes",
   "main": [
     "sass/juiced.scss",
     "dist/css/juiced.css"
   ],
   "keywords": [
-    "Juiced",
+    "scss",
+    "sass",
+    "responsive",
+    "mobile first",
     "flex",
     "flexbox",
     "flex box",
