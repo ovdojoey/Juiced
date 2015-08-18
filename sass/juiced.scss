@@ -13,7 +13,7 @@
       1.B Screen sizes
     
     2. Resets
-      2.A margin + padding
+      2.A box-sizing + margin + padding
       2.B body font sizes
       2.C heading tags
       2.D a tags
@@ -728,12 +728,13 @@ p{
   // Defaults to stretch flex content
   align-items: stretch;
 
-  // padding: 0 15px;
-  max-width: 1225px;
-  margin: auto;
+  max-width: $container-max-width;
+  margin: auto; 
+
+  &.full-width {
+    max-width: 100%;
+  }
   
-
-
   &.inline-flex {
     display: inline-flex;
   }
@@ -855,14 +856,8 @@ p{
 &>.col-auto, &>.col  {
       padding: 8px;
      }
-  }
-
-  &.full-width {
-    max-width: 100%;
-  }
+  } 
   
-  
-
   &>.col-lg-12, &>.col-lg-11, &>.col-lg-10, &>.col-lg-9, &>.col-lg-8, &>.col-lg-7, &>.col-lg-6, &>.col-lg-5, &>.col-lg-4, &>.col-lg-3, &>.col-lg-2, &>.col-lg-1,
   &>.col-md-12, &>.col-md-11, &>.col-md-10, &>.col-md-9, &>.col-md-8, &>.col-md-7, &>.col-md-6, &>.col-md-5, &>.col-md-4, &>.col-md-3, &>.col-md-2, &>.col-md-1,
   &>.col-sm-12, &>.col-sm-11, &>.col-sm-10, &>.col-sm-9, &>.col-sm-8, &>.col-sm-7, &>.col-sm-6, &>.col-sm-5, &>.col-sm-4, &>.col-sm-3, &>.col-sm-2, &>.col-sm-1,
