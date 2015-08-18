@@ -5,11 +5,10 @@
 */
 
 
-
 /* ----------------------------
     Juiced.scss Structure 
 
-    1. Variables
+    1. Variables (via @import)
       1.A Colors
       1.B Screen sizes
     
@@ -27,35 +26,11 @@
       3.B buttons
       3.C input and forms
 
-
-
-
-
    ---------------------------*/
 
 
-/* 1.A Colors */
-$color-primary: #4ab;
-$color-alt: #DC8712;
-
-$color-link: $color-alt;
-
-$color-dark: #212121;
-$color-light: #aaa;
-$color-white: #fff;
-
-$color-green: #1a4;
-$color-red: #AA252B;
-$color-blue: #4ab;
-$color-yellow: #fae17b;
-
-
-
-/* 1.B Screen sizes */
-$screen-xs-min: 480px;
-$screen-sm-min: 768px;
-$screen-md-min: 992px;
-$screen-lg-min: 1200px;
+/* 1. @import _variables.scss */
+@import "variables";
 
 
 /* 2.A */
