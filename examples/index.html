@@ -65,33 +65,45 @@
      </pre>
     </div>
     <div class="col-sm-6 col-order-4">
-     <pre>
+      <pre>
       &lt;div class="alert alert-blue"&gt;
-     &nbsp;  This is a blue alert with an exit button.  
-     &nbsp; &lt;a class="alert-exit"&gt;&amp;times;&lt;/a&gt;&lt;/div&gt;
+      &nbsp;  This is a blue alert with an exit button.  
+      &nbsp; &lt;a class="alert-exit"&gt;&amp;times;&lt;/a&gt;&lt;/div&gt;
       &lt;div class="alert alert-lg alert-green"&gt;
-     &nbsp;  This is a large green alert with an exit button. 
-     &nbsp;  &lt;a class="alert-exit"&gt;&amp;times;&lt;/a&gt;&lt;/div&gt;
+      &nbsp;  This is a large green alert with an exit button. 
+      &nbsp;  &lt;a class="alert-exit"&gt;&amp;times;&lt;/a&gt;&lt;/div&gt;
       &lt;div class="alert alert-sm"&gt;
-     &nbsp;  This is a small unstyled alert with an exit button. 
-     &nbsp; &lt;a class="alert-exit"&gt;&amp;times;&lt;/a&gt; &lt;/div&gt;
+      &nbsp;  This is a small unstyled alert with an exit button. 
+      &nbsp; &lt;a class="alert-exit"&gt;&amp;times;&lt;/a&gt; &lt;/div&gt;
       &lt;div class="alert alert-sm alert-yellow"&gt;
-     &nbsp;  This is a small yellow alert with an exit button. 
-     &nbsp;  &lt;a class="alert-exit"&gt;&amp;times;&lt;/a&gt; 
-     &lt;/div&gt;
-     </pre>
-    </div>
+      &nbsp;  This is a small yellow alert with an exit button. 
+      &nbsp;  &lt;a class="alert-exit"&gt;&amp;times;&lt;/a&gt; 
+      &lt;/div&gt;
+      </pre>
 
+      <p>
+        <strong>Add this JavaScript</strong>, for a super simple way to get your alert exits working:
+      </p>
+      <pre>
+        var _exits = [].slice.call(document.querySelectorAll('.alert-exit'));
+        _exits.forEach(function(ele) {
+          ele.addEventListener("click", function() {
+            var _parent = this.parentNode;
+            _parent.className = _parent.className + " display-none";
+          });
+        });
+      </pre>
+    </div>
+ 
   </div>
   <script>
 
-  function exitAlert() {
-    console.log(this);
-  }
-
   var _exits = [].slice.call(document.querySelectorAll('.alert-exit'));
   _exits.forEach(function(ele) {
-    ele.addEventListener("click", exitAlert);
+    ele.addEventListener("click", function() {
+      var _parent = this.parentNode;
+      _parent.className = _parent.className + " display-none";
+    });
   });
 
 
