@@ -77,8 +77,9 @@ body{
 
 /* 2.C */
 h1,h2,h3,h4,h5,h6{
-  font-weight: 800;
+  font-weight: 500;
   line-height: 1.6;
+  color: inherit;
   small{
     color: lighten($color-dark, 40%);
     font-size: 60%;
