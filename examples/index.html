@@ -10,12 +10,34 @@
     body{
       font-family: 'Lato', sans-serif;
     }
+    .top-padding {
+      margin-top: 80px;
+    }
+    .heading-bar{
+      border-bottom: 1px solid #eee;
+      padding: 10px 0;
+    }
+    .link-push-up{
+      position: reltative;
+      top: 80px;
+    }
   </style>
 </head>
 <body>
-  <div class="container gutters-sm-all items-start">
-    <div class="col-12 no-margin">
-      <h2 class="text-uppercase color-green">Components</h2>
+  <div class="position-fixed background-color-white z-index-2 full-width heading-bar" >
+    <div class="container gutters items-center">
+      <div class="col-7 col-xs-8 text-left">
+        <h2 class="text-uppercase color-green no-margin"><span class="display-none xs-display-inline">Juiced</span> Components</h2>
+      </div>
+      <div class="col-5 col-xs-4 text-center xs-text-right">
+        <a href="/" class="color-primary btn btn-sm">Home</a> &nbsp; 
+        <a href="#toggle" class="btn btn-sm color-white radius background-color-light hover-background-color-blue transition-background-color transition text-decoration-none">View All</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container gutters items-start">
+    <div class="col-12 top-padding">
       <h3 class="text-left">alerts</h3>
     </div>
     <div class="col-11 col-push-half">
@@ -28,24 +50,25 @@
       <div class="alert alert-yellow">This is a yellow alert.</div>
       <div class="alert alert-green">This is a green alert.</div>
       <div class="alert alert-plain">This is a plain alert.</div>
-      <div class="alert alert-red">This is a red alert.</div>
+      <div class="alert alert-red">This is a red alert. Danger ahead!</div>
 
     </div>
     <div class="col-sm-6 col-order-3">
-      <p> Alerts can have exit buttons, and also can be large or small.</p>
-      <div class="alert">
-        <strong>Note:</strong>
-      Juiced has no JavaScript baked in.  You must manually add any JavaScript exit funtionalty to hide alerts, Juiced makes this simple with helper classes.  <a href="#alert-exit-functionality">See how</a><span class="hidden sm-visible"> &#8594;</span><span class="visible sm-hidden"> &#8595;</span>. <a class="cursor-pointer alert-exit">&times;</a>
-      </div>
+      <p> Alerts can have exit buttons, and can be large or small.</p>
+      <p class="color-light"> 
+      <strong>Note:</strong>
+      Juiced has no JavaScript baked in.  You must manually add any JavaScript exit funtionalty to hide alerts, Juiced makes this simple with CSS helper classes.  <a href="#alert-exit-functionality">See how</a> &nbsp; <span class="hidden sm-visible position-absolute">&#8594;</span><span class="visible sm-hidden position-absolute">&#8595;</span> 
+      </p>
 
-      <div class="alert alert-blue">This is a blue alert with an exit button.<a class="alert-exit">&times;</a></div>
-      <div class="alert alert-lg alert-green">This is a large green alert with an exit button.<a class="alert-exit">&times;</a></div>
-      <div class="alert alert-sm">This is a small unstyled alert with an exit button.<a class="alert-exit">&times;</a> </div>
-      <div class="alert alert-sm alert-yellow">This is a small yellow alert with an exit button.<a class="alert-exit">&times;</a> </div>
+      <div class="alert alert-blue">This is a blue alert with an exit button.<a class="alert-exit cursor-pointer">&times;</a></div>
+      <div class="alert alert-lg alert-green">This is a large green alert with an exit button.<a class="alert-exit cursor-pointer">&times;</a></div>
+      <div class="alert alert-sm">This is a small unstyled alert with an exit button.<a class="alert-exit cursor-pointer">&times;</a> </div>
+      <div class="alert alert-sm alert-yellow">This is a small yellow alert with an exit button.<a class="alert-exit cursor-pointer">&times;</a> </div>
+      <div class="alert alert-lg alert-red">This is a large red alert with an exit button, just for fun.<a class="alert-exit cursor-pointer">&times;</a> </div>
 
     </div>
     <div class="col-sm-6 col-order-2">
-     <pre class="no-margin-top">
+     <pre class="no-margin-top" data-code-type="HTML">
         &lt;div class="alert"&gt;
         &nbsp; This is a unstyled alert.
         &lt;/div&gt;
@@ -61,32 +84,25 @@
         &lt;div class="alert alert-red"&gt;
         &nbsp; This is a red alert.
         &lt;/div&gt;
-   
      </pre>
     </div>
     <div class="col-sm-6 col-order-4">
-      <pre class="no-margin-top">
-      &lt;div class="alert alert-blue"&gt;
-      &nbsp;  This is a blue alert with an exit button.  
-      &nbsp; &lt;a class="alert-exit"&gt;&amp;times;&lt;/a&gt;&lt;/div&gt;
-      &lt;div class="alert alert-lg alert-green"&gt;
-      &nbsp;  This is a large green alert with an exit button. 
-      &nbsp;  &lt;a class="alert-exit"&gt;&amp;times;&lt;/a&gt;&lt;/div&gt;
-      &lt;div class="alert alert-sm"&gt;
-      &nbsp;  This is a small unstyled alert with an exit button. 
-      &nbsp; &lt;a class="alert-exit"&gt;&amp;times;&lt;/a&gt; &lt;/div&gt;
-      &lt;div class="alert alert-sm alert-yellow"&gt;
-      &nbsp;  This is a small yellow alert with an exit button. 
-      &nbsp;  &lt;a class="alert-exit"&gt;&amp;times;&lt;/a&gt; 
-      &lt;/div&gt;
-      </pre>
-      <a name="alert-exit-functionality"></a>
-      
-    
-      <strong>Add this JavaScript</strong> for simple exit functionality:
+
       
 
-      <pre class="background-color-dark color-white">
+      <pre class="no-margin-top" data-code-type="HTML">
+      &lt;div class="alert alert-blue"&gt;
+      &nbsp;  This is a blue alert with an exit button.  
+      &nbsp; &lt;a class="alert-exit cursor-pointer"&gt;&amp;times;&lt;/a&gt;
+      &lt;/div&gt;   
+      </pre>
+
+      <a name="alert-exit-functionality" class="link-push-up"></a>
+    
+      <strong>Add this JavaScript</strong> before your closing &lt;/body&gt; tag for simple exit functionality:
+
+      <pre class="background-color-dark color-white" data-code-type="JS">
+        &lt;script&gt;
         var _exits = [].slice.call(document.querySelectorAll( '.alert-exit' ));
         _exits.forEach(function(ele) {
          &nbsp;   ele.addEventListener("click", function() {
@@ -94,7 +110,12 @@
             &nbsp;  &nbsp;  _parent.className = _parent.className + " display-none";
           &nbsp;  });
         });
+        &lt;/script&gt;
       </pre>
+
+      <div class="alert alert-sm"><strong>What does this JavaScript do?</strong> It looks for all elements with a class of <samp>.alert-exit</samp>. When clicked, it finds the parent of the exit button, <em>(so don't wrap your exits)</em>, and adds a class of <samp>.display-none</samp> to that parent, hiding the alert with the CSS <samp>display:none</samp> property.</div>
+      
+    
     </div>
  
   </div>

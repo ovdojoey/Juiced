@@ -75,7 +75,7 @@ a{
     text-decoration: underline;
   }
 }
-a.text-decoration-none{
+a.text-decoration-none, a.no-text-decoration{
   text-decoration: none;
 }
 
@@ -88,6 +88,17 @@ pre{
   font-size: 0.85rem;
   max-width: 100%;
   margin-bottom: 2.8rem;
+  position: relative;
+
+  &:after{
+    content: attr(data-code-type);
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: darken($color-light, 8%);
+    font-family: sans-serif;
+    font-weight: 900;
+  }
 }
 
 /* 2.F */
@@ -139,6 +150,7 @@ p{
     right: 0px;
     display: inline-block;
     padding: 0 5px;
+    margin: -1px;
     height: 1em;
     font-size: 1.2em;
     line-height: 1em;
@@ -224,6 +236,10 @@ p{
  Helpers functions
 */
 
+.full-width {
+  width: 100%;
+}
+
 .background-cover {
   background-size: cover !important;
 }
@@ -287,6 +303,26 @@ p{
   position: static;
 }
 
+.z-index-1, .z-index-auto {
+  z-index: auto;
+}
+.z-index-negative {
+  z-index: -1;
+}
+.z-index-2{
+  z-index: 2;
+}
+.z-index-3{
+  z-index: 3;
+}
+.z-index-4{
+  z-index: 4;
+}
+.z-index-5{
+  z-index: 5;
+}
+
+
 .text-justify{
   text-align: justify;
 }
@@ -299,7 +335,7 @@ p{
 .text-left {
   text-align: left;
 }
-.text-decoration-none{
+.text-decoration-none, .no-text-decoration{
   text-decoration: none;
 }
 .text-uppercase {
