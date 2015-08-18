@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Juiced Examples</title>
+  <link rel="stylesheet" href="../dist/css/juiced.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+  <style>
+    body{
+      font-family: 'Lato', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="container gutters-sm-all">
+    <div class="col-12 no-margin">
+      <h2 class="text-uppercase color-green">Components</h2>
+      <h3 class="text-left">alerts</h3>
+    </div>
+    <div class="col-11 col-push-half">
+        <p class="text-left">Alerts make it easy to display prominate information to the user.  They are styled using colors from your palette.  They can have exit buttons, but Juiced does not have any Javascript built in, so you must manually add any exit functionality.</p>
+
+    </div>
+    <div class="col-sm-6 col-order-1">
+  
+      <div class="alert">This is a unstyled alert.</div>
+      <div class="alert alert-yellow">This is a yellow alert.</div>
+      <div class="alert alert-green">This is a green alert.</div>
+      <div class="alert alert-plain">This is a plain alert.</div>
+      <div class="alert alert-red">This is a red alert.</div>
+
+    </div>
+    <div class="col-sm-6 col-order-3 ">
+      <h4>alert exit + sizing</h4>
+      <p> Alerts can have exit buttons, and also can be large or small.  
+      </p>
+      <div class="alert alert-sm">
+      You must manually add any JavaScript exit funtionalty to hide the alert, Juiced makes it simple with the use of classes that transition and fade elements out.<a class="alert-exit cursor-pointer">&times;</a>
+      </div>
+      <div class="alert alert-blue">This is a blue alert with an exit button.<a class="alert-exit">&times;</a></div>
+      <div class="alert alert-lg alert-green">This is a large green alert with an exit button.<a class="alert-exit">&times;</a></div>
+      <div class="alert alert-sm">This is a small unstyled alert with an exit button.<a class="alert-exit">&times;</a> </div>
+      <div class="alert alert-sm alert-yellow">This is a small yellow alert with an exit button.<a class="alert-exit">&times;</a> </div>
+
+    </div>
+    <div class="col-sm-6 col-order-2">
+     <pre>
+        &lt;div class="alert"&gt;
+        &nbsp; This is a unstyled alert.
+        &lt;/div&gt;
+        &lt;div class="alert alert-yellow"&gt;
+        &nbsp;   This is a yellow alert.
+        &lt;/div&gt;
+        &lt;div class="alert alert-green"&gt;
+        &nbsp;   This is a green alert.
+        &lt;/div&gt;
+        &lt;div class="alert alert-plain"&gt;
+        &nbsp; This is a plain alert.
+        &lt;/div&gt;
+        &lt;div class="alert alert-red"&gt;
+        &nbsp; This is a red alert.
+        &lt;/div&gt;
+   
+     </pre>
+    </div>
+    <div class="col-sm-6 col-order-4">
+     <pre>
+      &lt;div class="alert alert-blue"&gt;
+     &nbsp;  This is a blue alert with an exit button.  
+     &nbsp; &lt;a class="alert-exit"&gt;&amp;times;&lt;/a&gt;&lt;/div&gt;
+      &lt;div class="alert alert-lg alert-green"&gt;
+     &nbsp;  This is a large green alert with an exit button. 
+     &nbsp;  &lt;a class="alert-exit"&gt;&amp;times;&lt;/a&gt;&lt;/div&gt;
+      &lt;div class="alert alert-sm"&gt;
+     &nbsp;  This is a small unstyled alert with an exit button. 
+     &nbsp; &lt;a class="alert-exit"&gt;&amp;times;&lt;/a&gt; &lt;/div&gt;
+      &lt;div class="alert alert-sm alert-yellow"&gt;
+     &nbsp;  This is a small yellow alert with an exit button. 
+     &nbsp;  &lt;a class="alert-exit"&gt;&amp;times;&lt;/a&gt; 
+     &lt;/div&gt;
+     </pre>
+    </div>
+
+  </div>
+  <script>
+
+  function exitAlert() {
+    console.log(this);
+  }
+
+  var _exits = [].slice.call(document.querySelectorAll('.alert-exit'));
+  _exits.forEach(function(ele) {
+    ele.addEventListener("click", exitAlert);
+  });
+
+
+  </script>
+</body>
+</html>
