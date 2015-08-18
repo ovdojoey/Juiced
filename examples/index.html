@@ -13,13 +13,13 @@
   </style>
 </head>
 <body>
-  <div class="container gutters-sm-all">
+  <div class="container gutters-sm-all items-start">
     <div class="col-12 no-margin">
       <h2 class="text-uppercase color-green">Components</h2>
       <h3 class="text-left">alerts</h3>
     </div>
     <div class="col-11 col-push-half">
-        <p class="text-left">Alerts make it easy to display prominate information to the user.  They are styled using colors from your palette.  They can have exit buttons, but Juiced does not have any Javascript built in, so you must manually add any exit functionality.</p>
+        <p class="text-left">Alerts make it easy to display prominate information to the user.  They are styled using colors from your palette.  They can have exit buttons, but Juiced does not have any Javascript built in, so you must manually add any exit functionality. <a href="#alert-exit-functionality">See how</a>.</p>
 
     </div>
     <div class="col-sm-6 col-order-1">
@@ -31,13 +31,13 @@
       <div class="alert alert-red">This is a red alert.</div>
 
     </div>
-    <div class="col-sm-6 col-order-3 ">
-      <h4>alert exit + sizing</h4>
-      <p> Alerts can have exit buttons, and also can be large or small.  
-      </p>
-      <div class="alert alert-sm">
-      You must manually add any JavaScript exit funtionalty to hide the alert, Juiced makes it simple with the use of classes that transition and fade elements out.<a class="alert-exit cursor-pointer">&times;</a>
+    <div class="col-sm-6 col-order-3">
+      <p> Alerts can have exit buttons, and also can be large or small.</p>
+      <div class="alert">
+        <strong>Note:</strong>
+      Juiced has no JavaScript baked in.  You must manually add any JavaScript exit funtionalty to hide alerts, Juiced makes this simple with helper classes.  <a href="#alert-exit-functionality">See how</a><span class="hidden sm-visible"> &#8594;</span><span class="visible sm-hidden"> &#8595;</span>. <a class="cursor-pointer alert-exit">&times;</a>
       </div>
+
       <div class="alert alert-blue">This is a blue alert with an exit button.<a class="alert-exit">&times;</a></div>
       <div class="alert alert-lg alert-green">This is a large green alert with an exit button.<a class="alert-exit">&times;</a></div>
       <div class="alert alert-sm">This is a small unstyled alert with an exit button.<a class="alert-exit">&times;</a> </div>
@@ -45,7 +45,7 @@
 
     </div>
     <div class="col-sm-6 col-order-2">
-     <pre>
+     <pre class="no-margin-top">
         &lt;div class="alert"&gt;
         &nbsp; This is a unstyled alert.
         &lt;/div&gt;
@@ -65,7 +65,7 @@
      </pre>
     </div>
     <div class="col-sm-6 col-order-4">
-      <pre>
+      <pre class="no-margin-top">
       &lt;div class="alert alert-blue"&gt;
       &nbsp;  This is a blue alert with an exit button.  
       &nbsp; &lt;a class="alert-exit"&gt;&amp;times;&lt;/a&gt;&lt;/div&gt;
@@ -80,17 +80,19 @@
       &nbsp;  &lt;a class="alert-exit"&gt;&amp;times;&lt;/a&gt; 
       &lt;/div&gt;
       </pre>
+      <a name="alert-exit-functionality"></a>
+      
+    
+      <strong>Add this JavaScript</strong> for simple exit functionality:
+      
 
-      <p>
-        <strong>Add this JavaScript</strong>, for a super simple way to get your alert exits working:
-      </p>
-      <pre>
-        var _exits = [].slice.call(document.querySelectorAll('.alert-exit'));
+      <pre class="background-color-dark color-white">
+        var _exits = [].slice.call(document.querySelectorAll( '.alert-exit' ));
         _exits.forEach(function(ele) {
-          ele.addEventListener("click", function() {
-            var _parent = this.parentNode;
-            _parent.className = _parent.className + " display-none";
-          });
+         &nbsp;   ele.addEventListener("click", function() {
+           &nbsp;  &nbsp;  var _parent = this.parentNode;
+            &nbsp;  &nbsp;  _parent.className = _parent.className + " display-none";
+          &nbsp;  });
         });
       </pre>
     </div>

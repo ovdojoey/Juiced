@@ -127,7 +127,7 @@ p{
 
   &.alert-sm{
     padding: 5px 10px;
-    font-size: .9rem;
+    font-size: .85rem;
   }
   &.alert-lg{
     padding: 16px;
@@ -272,6 +272,19 @@ p{
 }
 .display-inline {
   display: inline;
+}
+
+.position-relative {
+  position: relative;
+}
+.position-absolute {
+  position: absolute;
+}
+.position-fixed {
+  position: fixed;
+}
+.position-static {
+  position: static;
 }
 
 .text-justify{
