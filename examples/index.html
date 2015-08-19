@@ -18,8 +18,9 @@
       padding: 10px 0;
     }
     .link-push-up{
-      position: reltative;
-      top: 80px;
+      position: relative;
+      top: -80px;
+      display: block;
     }
   </style>
 </head>
@@ -38,17 +39,17 @@
 
   <div class="container gutters items-start">
     <div class="col-12 top-padding">
-      <h3 class="text-left text-uppercase">alerts</h3>
+      <h2 class="text-left">alerts</h2>
     </div>
     <div class="col-11 col-push-half">
         <p class="text-left">
-          Alerts make it easy to display prominate information to the user.  They are styled using colors from your palette. 
-          Alerts have optional exit button and size styles
-          .</p>
+          Alerts make it easy to display prominate information to the user.  They are styled using colors from your palette or you can use the optional <a href="/helper-classes/#color">color</a>, <a href="/helper-classes/#transition">transition</a>, <a href="/helper-classes/#background-color">background-color</a>, and <a href="/helper-classes/#hover">hover</a> classes.
+          Alerts can have an optional exit button and come in three sizes.
+          </p>
     
     </div>
     <div class="col-12">
-        <h4 class="color-light text-center text-uppercase">code examples:</h4>
+        <h4 class="color-light text-center text-uppercase">alert examples:</h4>
      </div>
     <div class="col-sm-6 col-order-1">
   
@@ -60,7 +61,7 @@
 
     </div>
     <div class="col-sm-6 col-order-3">
-      <h4 class="text-left">Easy exit buttons</h4>
+      <h4 class="text-left no-margin-top">Easy exit buttons</h4>
 
  
 
@@ -72,7 +73,7 @@
 
       <p class="color-light"> 
         <strong>Note:</strong>
-        Juiced has no JavaScript baked in.  You must manually add any Javascript funtionalty to hide alerts, Juiced makes this simple with CSS helper classes.  <a href="#alert-exit-functionality">See how</a>  &nbsp; <span class="hidden sm-visible position-absolute">&#8594;</span><span class="visible sm-hidden position-absolute">&#8595;</span> 
+        Juiced has no JavaScript baked in.  You must manually add any Javascript functionalty to hide alerts, Juiced makes this simple with CSS helper classes.  <a href="#alert-exit-functionality">See how</a>  &nbsp; <span class="hidden sm-visible position-absolute">&#8594;</span><span class="visible sm-hidden position-absolute">&#8595;</span> 
       </p>
 
     </div>
@@ -121,7 +122,7 @@
         &lt;/script&gt;
       </pre>
 
-      <div class="alert alert-sm"><strong>What does this JavaScript do?</strong> It loops through all elements with a class of <samp>.alert-exit</samp> and adds an event listener.  Now,  when an exit button is clicked, a class of <samp>.display-none</samp> is added to the parent element to hide it <em>(so don't wrap your exit markup)</em>.</div>
+      <div class="alert alert-sm"><strong>What does this JavaScript do?</strong> It loops through all elements with a class of <samp>.alert-exit</samp> and adds an event listener on the exit buttons.  Now,  when an exit button is clicked, a class of <samp>.display-none</samp> is added to the parent element to hide it <em>(so don't wrap your exit markup)</em>.</div>
       
     
     </div>
@@ -130,12 +131,12 @@
 
   <div class="container gutters items-start justify-space-">
     <div class="col-12 top-padding">
-      <a name="buttons"></a>
-      <h3 class="text-left text-uppercase">buttons</h3>
+      <a name="buttons" class="link-push-up"></a>
+      <h2 class="text-left">buttons</h2>
     </div>
     <div class="col-11 col-push-half">
         <p class="text-left">
-          Buttons are a quick and easy way to style up links and get users clicking.  Buttons are styled using the color, transition, background-color, and hover classes. 
+          Buttons are a quick and easy way to get users clicking.  Juiced makes no assumptions on how you will style your buttons, so by default there are no colors, transitions, or hover effects.  Buttons are styled using the <a href="/helper-classes/#color">color</a>, <a href="/helper-classes/#transition">transition</a>, <a href="/helper-classes/#background-color">background-color</a>, <a href="/helper-classes/#cursor">cursor</a> and <a href="/helper-classes/#hover">hover</a> classes.
         </p>
     
     </div>
@@ -148,65 +149,65 @@
 
       <div class="container gutters-all items-center text-center">
         <div class="col-4">
-          <a href="#buttons" class="btn btn-lg radius background-color-blue color-white">Large Radius</a>
+          <a  class="btn btn-lg radius background-color-alt no-text-decoration hover-background-color-green color-white cursor-pointer">Large Radius</a>
         </div>
         <div class="col-4">
-          <a href="#buttons" class="btn btn-sm radius background-color-green color-white">Small button</a>
+          <a  class="btn btn-sm radius background-color-green color-white cursor-pointer">Small button</a>
         </div>
         <div class="col-4">
-          <a href="#buttons" class="btn radius background-color-yellow">Everday button</a>
+          <a  class="btn radius background-color-yellow cursor-pointer">Everday button</a>
         </div>
         <div class="col-4">
-          <a href="#buttons" class="btn btn-lg radius background-color-red color-auto text-decoration-none">Auto color</a>
+          <a  class="btn btn-lg radius background-color-red color-auto text-decoration-none cursor-pointer">Auto color</a>
         </div>
         <div class="col-4">
-          <a href="#buttons" class="btn radius background-color-primary color-auto">Auto color button</a>
+          <a  class="btn radius background-color-primary color-auto cursor-pointer">Auto color button</a>
         </div>
         <div class="col-4">
-          <a href="#buttons" class="btn btn-sm text-decoration-none radius background-color-green color-auto">Auto color button</a>
+          <a  class="btn btn-sm text-decoration-none radius background-color-green color-auto cursor-pointer">Auto color button</a>
         </div>
         <div class="col-4">
-          <a href="#buttons" class="btn btn-lg radius background-color-alt color-auto transition-all transition hover-btn-inverse hover-color-alt no-text-decoration">Auto color button</a>
+          <a  class="btn btn-lg radius background-color-alt color-auto transition-all transition hover-btn-outline hover-color-alt no-text-decoration cursor-pointer">Auto color button</a>
         </div>
         <div class="col-4">
-          <a href="#buttons" class="btn btn-sm background-color-dark color-auto">No radius button</a>
+          <a  class="btn btn-sm background-color-dark color-auto cursor-pointer">No radius button</a>
         </div>
         <div class="col-4">
-          <a href="#buttons" class="btn radius background-color-light cursor-not-allowed no-text-decoration color-white">Disabled button</a>
+          <a  class="btn radius background-color-light cursor-not-allowed no-text-decoration color-auto">Disabled button</a>
         </div>
       </div>
       
       <br />
-      <p class="text-center color-light no-margin-bottom">Inverse buttons.</p>
-      <p class="text-center"><small class="color-light">Inverse buttons have a transparent background and a border color that matches the font color.</small></p>
+      <p class="text-center color-light no-margin-bottom">Outline buttons.</p>
+      <p class="text-center"><small class="color-light">Outline buttons have a transparent background and a border color that matches the font color.</small></p>
 
-      <div class="container gutters-all items-center text-center">
-        <div class="col-4">
-          <a href="#buttons" class="btn btn-lg btn-pill btn-inverse background-color-blue color-blue opacity-75 hover-opacity-100 transition-opacity text-decoration-none">Large pill</a>
+      <div class="container gutters-all justify-space-around items-center text-center">
+        <div class="col-6 col-xs-4">
+          <a  class="btn btn-lg btn-pill btn-outline background-color-blue color-blue opacity-75 hover-opacity-100 transition-opacity text-decoration-none cursor-pointer">Large pill</a>
         </div>
-        <div class="col-4">
-          <a href="#buttons" class="btn btn-inverse btn-sm background-color-green color-green hover-color-dark transition-all transition text-decoration-none">Small button</a>
+        <div class="col-6 col-xs-4">
+          <button type="button" class="btn btn-outline btn-sm background-color-green color-green hover-color-dark transition-all transition text-decoration-none cursor-pointer">Small button</button>
         </div>
-        <div class="col-4">
-          <a href="#buttons" class="btn radius btn-inverse background-color-yellow hover-background-color-alt hover-color-white no-text-decoration transition-background-color transition-fast">Everday button</a>
+        <div class="col-6 col-xs-4">
+          <a  class="btn radius btn-outline background-color-yellow hover-background-color-alt hover-color-white no-text-decoration transition-background-color transition-fast">Everday button</a>
         </div>
-        <div class="col-4">
-          <a href="#buttons" class="btn btn-lg btn-inverse radius background-color-light color-light text-decoration-none hover-color-dark transition-all transition">Inverse Button</a>
+        <div class="col-6 col-xs-4">
+          <a  class="btn btn-lg btn-outline radius background-color-light color-light text-decoration-none hover-color-dark transition-all transition">Outline Button</a>
         </div>
-        <div class="col-4">
-          <a href="#buttons" class="btn btn-pill btn-sm btn-inverse hover-btn-inverse-reverse color-dark no-text-decoration transition-fast transition-all hover-opacity-75 opacity-50 hover-background-color-dark hover-color-white">Reverse Inverse Pill</a>
+        <div class="col-6 col-xs-4">
+          <a  class="btn btn-pill btn-block btn-sm btn-outline hover-btn-outline-reverse color-dark no-text-decoration transition-fast transition-all hover-opacity-75 opacity-50 hover-background-color-dark hover-color-white">Reverse Outline Block Pill</a>
         </div>
-        <div class="col-4">
-          <a href="#buttons" class="btn btn-sm btn-pill btn-inverse-thick btn-inverse text-decoration-none color-blue opacity-75 hover-opacity-100 transition transtion-all hover-color-dark">Auto color button</a>
+        <div class="col-6 col-xs-4">
+          <a  class="btn btn-sm btn-pill btn-outline-thick btn-outline text-decoration-none color-blue opacity-75 hover-opacity-100 transition transtion-all hover-color-dark">Auto color button</a>
         </div>
-        <div class="col-4">
-          <a href="#buttons" class="btn btn-lg btn-inverse-thick btn-inverse radius color-yellow">Auto color button</a>
+        <div class="col-6 col-xs-4">
+          <a  class="btn btn-lg btn-outline-thick btn-outline radius color-yellow">yellow button</a>
         </div>
-        <div class="col-4">
-          <a href="#buttons" class="btn btn-sm btn-inverse radius color-red opacity-50 hover-opacity-100 text-decoration-none">Inverse button</a>
+        <div class="col-6 col-xs-4">
+          <a  class="btn btn-sm btn-outline radius color-red opacity-50 hover-opacity-100 text-decoration-none">Outline button</a>
         </div>
-        <div class="col-4">
-          <a href="#buttons" class="btn btn-inverse btn-inverse-thick radius color-red hover-color-dark text-decoration-none">Red button</a>
+        <div class="col-6 col-xs-4">
+          <a  class="btn btn-outline btn-outline-thick radius color-red hover-color-dark text-decoration-none">Red button</a>
         </div>
       </div>
 
@@ -224,6 +225,14 @@
       var _parent = this.parentNode;
       _parent.className = _parent.className + " display-none";
     });
+  });
+
+  var _btnClass = [].slice.call(document.querySelectorAll('.btn'));
+  _btnClass.forEach(function(ele) {
+    ele.addEventListener("click", function(){ 
+      var _classList = this.className;
+      alert(_classList);
+    })
   });
 
 

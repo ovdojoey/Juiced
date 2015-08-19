@@ -210,12 +210,15 @@ p{
   &.btn-pill{
     border-radius: 20px;
   }
-  &.btn-inverse{
+  &.btn-outline{
     background: transparent;
     border: 1px solid;
-    &.btn-inverse-thick{
+    &.btn-outline-thick{
       border: 2px solid;
     }
+  }
+  &.btn-block{
+    width: 100%;
   }
 }
 
@@ -229,6 +232,7 @@ p{
   transition: box-shadow .4s, border-color .2s;
   font-size: 1rem;
   outline: none;
+  line-height: inherit;
 
   &.radius{
     border-radius: 4px;
@@ -280,6 +284,9 @@ p{
 }
 .no-margin-right{
   margin-right: 0;
+}
+.no-border{
+  border: 0;
 }
 
 .hidden{
@@ -413,7 +420,7 @@ p{
 }
 
 .background-color-primary.color-auto{
-  color: lighten($color-primary, 48%);
+  color: lighten($color-primary, 45%);
 }
 .background-color-alt.color-auto{
   color: lighten($color-alt, 48%);
@@ -422,7 +429,7 @@ p{
   color: lighten($color-dark, 60%);
 }
 .background-color-light.color-auto{
-  color: darken($color-light, 48%);
+  color: darken($color-light, 40%);
 }
 .background-color-green.color-auto{
   color: lighten($color-green, 48%);
@@ -434,7 +441,7 @@ p{
   color: darken($color-yellow, 48%);
 }
 .background-color-blue.color-auto{
-  color: darken($color-blue, 48%);
+  color: lighten($color-blue, 45%);
 }
 .background-color-white.color-auto{
   color: darken($color-white, 48%);
@@ -589,13 +596,13 @@ p{
     background: $color-white;
   }
 }
-.hover-btn-inverse{
+.hover-btn-outline{
   &:hover{
     background: transparent !important;
     border: 1px solid;
   }
 }
-.btn.hover-btn-inverse-reverse{
+.btn.hover-btn-outline-reverse{
   &:hover{
     background: auto;
     border: 1px solid transparent;
