@@ -211,6 +211,9 @@ p{
   &.btn-inverse{
     background: transparent !important;
     border: 1px solid;
+    &.btn-inverse-thick{
+      border: 2px solid;
+    }
   }
 }
 
