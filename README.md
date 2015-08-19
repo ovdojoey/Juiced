@@ -12,7 +12,7 @@ Juiced can be downloaded directly from the Github repository <https://github.com
 
 ## Customization
 
-To create your own custom version of Juiced (with your own colors or breakpoints) you will need NPM installed.  Use Terminal and run `npm install` to install the required gulp depenendencies.  After that you can modify the variables in /sass/_variables.scss and run `gulp` to compile a new build.  Your new build will be placed in the /dist/ folder.
+To create your own custom version of Juiced (with your own colors or breakpoints) you will need Node installed.  Once Node is on your machine, use your console to run `npm install` and install Juiced's required depenendencies.  After that you can modify the variables in /sass/_variables.scss and run `gulp` to compile a new build.  Your new build will be placed in the /dist/ folder.
 
 ## Usage
 
