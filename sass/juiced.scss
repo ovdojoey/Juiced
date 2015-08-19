@@ -205,6 +205,13 @@ p{
     padding: 6px;
     font-size: 0.9rem;
   }
+  &.btn-pill{
+    border-radius: 20px;
+  }
+  &.btn-inverse{
+    background: transparent !important;
+    border: 1px solid;
+  }
 }
 
 // 3.C
@@ -398,6 +405,34 @@ p{
 }
 .color-white, a.color-white {
   color: $color-white;
+}
+
+.background-color-primary.color-auto{
+  color: lighten($color-primary, 48%);
+}
+.background-color-alt.color-auto{
+  color: lighten($color-alt, 48%);
+}
+.background-color-dark.color-auto{
+  color: lighten($color-dark, 48%);
+}
+.background-color-light.color-auto{
+  color: darken($color-light, 48%);
+}
+.background-color-green.color-auto{
+  color: lighten($color-green, 48%);
+}
+.background-color-red.color-auto{
+  color: lighten($color-red, 48%);
+}
+.background-color-yellow.color-auto{
+  color: darken($color-yellow, 48%);
+}
+.background-color-blue.color-auto{
+  color: darken($color-blue, 48%);
+}
+.background-color-white.color-auto{
+  color: darken($color-white, 48%);
 }
 
 .background-color-primary {

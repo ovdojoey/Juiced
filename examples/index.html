@@ -27,37 +27,44 @@
   <div class="position-fixed background-color-white z-index-2 full-width heading-bar" >
     <div class="container gutters items-center">
       <div class="col-7 col-xs-8 text-left">
-        <h2 class="text-uppercase color-green no-margin"><span class="display-none xs-display-inline">Juiced</span> Components</h2>
+        <h2 class="text-uppercase color-green no-margin"><span class="display-none xs-display-inline" role="presentation">Juiced</span> <span class="color-light">Components</span></h2>
       </div>
       <div class="col-5 col-xs-4 text-center xs-text-right">
-        <a href="/" class="color-primary btn btn-sm">Home</a> &nbsp; 
-        <a href="#toggle" class="btn btn-sm color-white radius background-color-light hover-background-color-blue transition-background-color transition text-decoration-none">View All</a>
+        <a href="/docs" class="color-primary btn btn-sm">Docs</a> &nbsp; 
+        <a href="#toggle" class="btn btn-sm color-white radius background-color-light hover-background-color-blue transition-background-color transition text-decoration-none">List All</a>
       </div>
     </div>
   </div>
 
   <div class="container gutters items-start">
     <div class="col-12 top-padding">
-      <h3 class="text-left">alerts</h3>
+      <h3 class="text-left text-uppercase">alerts</h3>
     </div>
     <div class="col-11 col-push-half">
-        <p class="text-left">Alerts make it easy to display prominate information to the user.  They are styled using colors from your palette.  They can have exit buttons, but Juiced does not have any Javascript built in, so you must manually add any exit functionality. <a href="#alert-exit-functionality">See how</a>.</p>
-
+        <p class="text-left">
+          Alerts make it easy to display prominate information to the user.  They are styled using colors from your palette. 
+          Alerts have optional exit button and size styles
+          .</p>
+    
     </div>
+    <div class="col-12">
+        <h4 class="color-light text-center text-uppercase">code examples:</h4>
+     </div>
     <div class="col-sm-6 col-order-1">
   
       <div class="alert">This is a unstyled alert.</div>
       <div class="alert alert-yellow">This is a yellow alert.</div>
-      <div class="alert alert-green">This is a green alert.</div>
+      <div class="alert alert-green alert-sm">This is a small green alert.</div>
       <div class="alert alert-plain">This is a plain alert.</div>
-      <div class="alert alert-red">This is a red alert. Danger ahead!</div>
+      <div class="alert alert-red alert-lg">This is a large red alert.</div>
 
     </div>
     <div class="col-sm-6 col-order-3">
-      <p> Alerts can have exit buttons, and can be large or small.</p>
+      <h4 class="text-left">Alert exit buttons</h4>
+
       <p class="color-light"> 
       <strong>Note:</strong>
-      Juiced has no JavaScript baked in.  You must manually add any JavaScript exit funtionalty to hide alerts, Juiced makes this simple with CSS helper classes.  <a href="#alert-exit-functionality">See how</a> &nbsp; <span class="hidden sm-visible position-absolute">&#8594;</span><span class="visible sm-hidden position-absolute">&#8595;</span> 
+      Juiced has no JavaScript baked in.  You must manually add any Javascript funtionalty to hide alerts, Juiced makes this simple with CSS helper classes.  <a href="#alert-exit-functionality">See how</a>  &nbsp; <span class="hidden sm-visible position-absolute">&#8594;</span><span class="visible sm-hidden position-absolute">&#8595;</span> 
       </p>
 
       <div class="alert alert-blue">This is a blue alert with an exit button.<a class="alert-exit cursor-pointer">&times;</a></div>
@@ -75,20 +82,18 @@
         &lt;div class="alert alert-yellow"&gt;
         &nbsp;   This is a yellow alert.
         &lt;/div&gt;
-        &lt;div class="alert alert-green"&gt;
-        &nbsp;   This is a green alert.
+        &lt;div class="alert alert-green alert-sm"&gt;
+        &nbsp;   This is a small green alert.
         &lt;/div&gt;
         &lt;div class="alert alert-plain"&gt;
         &nbsp; This is a plain alert.
         &lt;/div&gt;
-        &lt;div class="alert alert-red"&gt;
-        &nbsp; This is a red alert.
+        &lt;div class="alert alert-red alert-lg"&gt;
+        &nbsp; This is a large red alert.
         &lt;/div&gt;
      </pre>
     </div>
     <div class="col-sm-6 col-order-4">
-
-      
 
       <pre class="no-margin-top" data-code-type="HTML">
       &lt;div class="alert alert-blue"&gt;
@@ -103,7 +108,8 @@
 
       <pre class="background-color-dark color-white" data-code-type="JS">
         &lt;script&gt;
-        var _exits = [].slice.call(document.querySelectorAll( '.alert-exit' ));
+        var _exits = [].slice.call( document.querySelectorAll('.alert-exit') );
+
         _exits.forEach(function(ele) {
          &nbsp;   ele.addEventListener("click", function() {
            &nbsp;  &nbsp;  var _parent = this.parentNode;
@@ -113,12 +119,164 @@
         &lt;/script&gt;
       </pre>
 
-      <div class="alert alert-sm"><strong>What does this JavaScript do?</strong> It looks for all elements with a class of <samp>.alert-exit</samp>. When clicked, it finds the parent of the exit button, <em>(so don't wrap your exits)</em>, and adds a class of <samp>.display-none</samp> to that parent, hiding the alert with the CSS <samp>display:none</samp> property.</div>
+      <div class="alert alert-sm"><strong>What does this JavaScript do?</strong> It loops through all elements with a class of <samp>.alert-exit</samp> and adds an event listener.  Now,  when an exit button is clicked, a class of <samp>.display-none</samp> is added to the parent element to hide it <em>(so don't wrap your exit markup)</em>.</div>
       
     
     </div>
  
   </div>
+
+  <div class="container gutters items-start justify-space-">
+    <div class="col-12 top-padding">
+      <a name="buttons"></a>
+      <h3 class="text-left text-uppercase">buttons</h3>
+    </div>
+    <div class="col-11 col-push-half">
+        <p class="text-left">
+          Buttons are a quick and easy way to style up links and get users `clicking.  Buttons are styled using the color classes.  You can make them pop using the transition classes.
+        </p>
+    
+    </div>
+    <div class="col-12">
+        <h4 class="color-light text-center text-uppercase">code examples:</h4>
+        <p class="color-light text-center">Using inspect element is the best way to learn about the examples below.</p>
+    </div>
+
+    <div class="col-sm-12 col-order-1">
+
+      <div class="container gutters-all items-center text-center">
+        <div class="col-4">
+          <a href="#buttons" class="btn btn-lg radius background-color-blue color-white">Large Radius</a>
+        </div>
+        <div class="col-4">
+          <a href="#buttons" class="btn btn-sm radius background-color-green color-white">Small button</a>
+        </div>
+        <div class="col-4">
+          <a href="#buttons" class="btn radius background-color-yellow">Everday button</a>
+        </div>
+        <div class="col-4">
+          <a href="#buttons" class="btn btn-lg radius background-color-red color-auto text-decoration-none">Auto color</a>
+        </div>
+        <div class="col-4">
+          <a href="#buttons" class="btn radius background-color-primary color-auto">Auto color button</a>
+        </div>
+        <div class="col-4">
+          <a href="#buttons" class="btn btn-sm text-decoration-none radius background-color-green color-auto">Auto color button</a>
+        </div>
+        <div class="col-4">
+          <a href="#buttons" class="btn btn-lg radius background-color-alt color-auto">Auto color button</a>
+        </div>
+        <div class="col-4">
+          <a href="#buttons" class="btn btn-sm radius background-color-dark color-auto">Auto color button</a>
+        </div>
+        <div class="col-4">
+          <a href="#buttons" class="btn radius background-color-light cursor-not-allowed no-text-decoration color-white">Disabled button</a>
+        </div>
+      </div>
+      
+      <br />
+      <p class="text-center color-light">More buttons and hover transitions:</p>
+
+      <div class="container gutters-all items-center text-center">
+        <div class="col-4">
+          <a href="#buttons" class="btn btn-pill btn-inverse background-color-blue color-blue opacity-75 hover-opacity-100 transition-opacity text-decoration-none">Large pill</a>
+        </div>
+        <div class="col-4">
+          <a href="#buttons" class="btn btn-inverse btn-sm radius background-color-green color-green hover-color-dark hover-background-color-dark transition-all transition text-decoration-none">Small button</a>
+        </div>
+        <div class="col-4">
+          <a href="#buttons" class="btn radius btn-inverse background-color-yellow hover-color-dark hover-background-color-green no-text-decoration transition-background-color transition-fast">Everday button</a>
+        </div>
+        <div class="col-4">
+          <a href="#buttons" class="btn btn-lg btn-inverse radius background-color-light color-light text-decoration-none hover-color-dark transition-all transition">Inverse Button</a>
+        </div>
+        <div class="col-4">
+          <a href="#buttons" class="btn btn-inverse radius color-dark no-text-decoration transition transition-all hover-opacity-100 opacity-75">Button</a>
+        </div>
+        <div class="col-4">
+          <a href="#buttons" class="btn btn-sm btn-pill btn-inverse text-decoration-none color-blue opacity-75 hover-opacity-100 transition transtion-opacity">Auto color button</a>
+        </div>
+        <div class="col-4">
+          <a href="#buttons" class="btn btn-lg radius background-color-alt color-auto">Auto color button</a>
+        </div>
+        <div class="col-4">
+          <a href="#buttons" class="btn btn-sm radius background-color-dark color-auto">Auto color button</a>
+        </div>
+        <div class="col-4">
+          <a href="#buttons" class="btn radius background-color-light cursor-not-allowed no-text-decoration color-white">Disabled button</a>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="col-sm-6 col-order-3">
+      <h4 class="text-left">Alert exit buttons</h4>
+
+      <p class="color-light"> 
+      <strong>Note:</strong>
+      Juiced has no JavaScript baked in.  You must manually add any Javascript funtionalty to hide alerts, Juiced makes this simple with CSS helper classes.  <a href="#alert-exit-functionality">See how</a>  &nbsp; <span class="hidden sm-visible position-absolute">&#8594;</span><span class="visible sm-hidden position-absolute">&#8595;</span> 
+      </p>
+
+      <div class="alert alert-blue">This is a blue alert with an exit button.<a class="alert-exit cursor-pointer">&times;</a></div>
+      <div class="alert alert-lg alert-green">This is a large green alert with an exit button.<a class="alert-exit cursor-pointer">&times;</a></div>
+      <div class="alert alert-sm">This is a small unstyled alert with an exit button.<a class="alert-exit cursor-pointer">&times;</a> </div>
+      <div class="alert alert-sm alert-yellow">This is a small yellow alert with an exit button.<a class="alert-exit cursor-pointer">&times;</a> </div>
+      <div class="alert alert-lg alert-red">This is a large red alert with an exit button, just for fun.<a class="alert-exit cursor-pointer">&times;</a> </div>
+
+    </div>
+    <div class="col-sm-6 col-order-2">
+     <pre class="no-margin-top" data-code-type="HTML">
+        &lt;div class="alert"&gt;
+        &nbsp; This is a unstyled alert.
+        &lt;/div&gt;
+        &lt;div class="alert alert-yellow"&gt;
+        &nbsp;   This is a yellow alert.
+        &lt;/div&gt;
+        &lt;div class="alert alert-green alert-sm"&gt;
+        &nbsp;   This is a small green alert.
+        &lt;/div&gt;
+        &lt;div class="alert alert-plain"&gt;
+        &nbsp; This is a plain alert.
+        &lt;/div&gt;
+        &lt;div class="alert alert-red alert-lg"&gt;
+        &nbsp; This is a large red alert.
+        &lt;/div&gt;
+     </pre>
+    </div>
+    <div class="col-sm-6 col-order-4">
+
+      <pre class="no-margin-top" data-code-type="HTML">
+      &lt;div class="alert alert-blue"&gt;
+      &nbsp;  This is a blue alert with an exit button.  
+      &nbsp; &lt;a class="alert-exit cursor-pointer"&gt;&amp;times;&lt;/a&gt;
+      &lt;/div&gt;   
+      </pre>
+
+      <a name="alert-exit-functionality" class="link-push-up"></a>
+    
+      <strong>Add this JavaScript</strong> before your closing &lt;/body&gt; tag for simple exit functionality:
+
+      <pre class="background-color-dark color-white" data-code-type="JS">
+        &lt;script&gt;
+        var _exits = [].slice.call( document.querySelectorAll('.alert-exit') );
+
+        _exits.forEach(function(ele) {
+         &nbsp;   ele.addEventListener("click", function() {
+           &nbsp;  &nbsp;  var _parent = this.parentNode;
+            &nbsp;  &nbsp;  _parent.className = _parent.className + " display-none";
+          &nbsp;  });
+        });
+        &lt;/script&gt;
+      </pre>
+
+      <div class="alert alert-sm"><strong>What does this JavaScript do?</strong> It loops through all elements with a class of <samp>.alert-exit</samp> and adds an event listener.  Now,  when an exit button is clicked, a class of <samp>.display-none</samp> is added to the parent element to hide it <em>(so don't wrap your exit markup)</em>.</div>
+      
+    
+    </div>
+ 
+  </div>
+
+
   <script>
 
   var _exits = [].slice.call(document.querySelectorAll('.alert-exit'));
