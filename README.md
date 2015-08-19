@@ -12,8 +12,8 @@ Juiced can be downloaded directly from the Github repository <https://github.com
 
 ## Customization
 
-To create your own custom version of Juiced (with your own colors or breakpoints) you will need Node installed.  Once Node is on your machine, use your console to run `npm install` and install Juiced's required depenendencies.  After that you can modify the variables in /sass/_variables.scss and run `gulp` to compile a new build.  Your new build will be placed in the /dist/ folder.
+To create your own custom version of Juiced (using your own colors or breakpoints) you will need Node installed.  Once Node is on your machine, open Console and run `npm install` to install Juiced's required depenendencies.  After that you can modify the variables in /sass/_variables.scss and run `gulp` to compile a new build and watch for new changes.  Your new build will be placed in the `/dist/css/` folder.
 
 ## Usage
 
-You can use Juiced by including the minified `/dist/css/juiced.css` file directly in head of your webpage - or - by using `@import bower_compoents/sass/juiced` to add Juiced source to your existing SASS stylesheet. *Note: the location of your bower folder may vary.*
+You can use Juiced by including the minified `/dist/css/juiced.css` file directly in head of your webpage. Or, if you are already using SASS in your workflow, add Juiced to the top of your SASS file by using `@import /bower_components/sass/juiced`. *Note: the location of your bower components folder may vary.*  
