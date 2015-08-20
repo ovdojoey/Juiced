@@ -23,7 +23,8 @@ You can use Juiced by including the minified `/dist/css/juiced.css` file in the 
 
 If you are already using SASS in your workflow, add Juiced to the top of your SASS file by using `@import /bower_components/sass/juiced`. *Note: the location of your bower components folder may vary.*  
 
-You should define your custom Juiced variables before the `@import` as this will allow your custom variables to remain even after updating the Juiced source (*for instance when using `bower update`*).  *See the `/sass/_variables.scss` file for a list of available variables.*
+**Want to customize Juiced?** 
+You should define any Juiced variables above your `@import` statement as this will keep your custom changes even after updating the Juiced source (*for instance when updating using `bower update`*).  *See the `/sass/_variables.scss` file for a list of available variables.*
 
 ## Learning Juiced
 More to be come here, but get started with Juiced by checking out the examples folder.
