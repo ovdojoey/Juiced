@@ -16,10 +16,10 @@ To create your own custom version of Juiced (using your own colors or breakpoint
 
 ## Usage
 
-### Simple Usage
+#### Simple Usage
 You can use Juiced by including the minified `/dist/css/juiced.css` file directly in head of your webpage.
 
-### Advanced Usage
+#### Advanced Usage
 
 If you are already using SASS in your workflow, add Juiced to the top of your SASS file by using `@import /bower_components/sass/juiced`. *Note: the location of your bower components folder may vary.*  You should define your custom Juiced variables above the @import statement as this will allow your changes to remain even when updating Juiced using `bower update` *See /sass/_variables.scss for a list of available variables.*
 
