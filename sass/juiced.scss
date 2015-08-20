@@ -44,6 +44,13 @@ html, body{
   padding: 0;
 }
 
+html[dir="rtl"]{
+  direction: rtl;
+}
+html[dir="ltr"]{
+  direction: ltr;
+}
+
 /* 2.B */
 body{
   font-size: 18px;
@@ -71,9 +78,12 @@ a{
   &:visited{
     color: $color-link;
   }
-  &:hover{
+  &:hover, &:focus{
     color: lighten($color-link, 10%);
     text-decoration: underline;
+  }
+  &:focus{
+    outline: none;
   }
 }
 a.text-decoration-none, a.no-text-decoration, a.no-t-d{
@@ -132,7 +142,6 @@ ul.no-style, ol.no-style, dl.no-style{
     margin: 0;
   }
 }
-
 
 
 /* 3.A */
@@ -204,7 +213,7 @@ ul.no-style, ol.no-style, dl.no-style{
   text-align: center;
   display: inline-block;
   border: 1px solid transparent;
-
+  font-size: 1rem;
 
   &.radius {
     border-radius: 5px;
@@ -300,6 +309,12 @@ ul.no-style, ol.no-style, dl.no-style{
 }
 
 // 3.D
+input[type=radio], input[type=checkbox]{
+  font-size: 1rem;
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}
 .form-control{
   width: 100%;
   border: none;
@@ -317,6 +332,10 @@ ul.no-style, ol.no-style, dl.no-style{
   &:focus{
     box-shadow: 0 0 8px lighten($color-dark, 50%);
     border-color: $color-primary;
+  }
+  option{
+    font-size: 1rem;
+    // padding: 6px 12px;
   }
   // &:hover{
   //   border-color: $color-primary;

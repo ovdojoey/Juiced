@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,6 +22,9 @@
       top: -80px;
       display: block;
     }
+    .side-links a{
+      padding: 3px 0;
+    }
   </style>
 </head>
 <body>
@@ -39,7 +42,7 @@
   </div>
 
   <div class="container">
-    <div class="col-12 col-md-9">
+    <div class="col-12 col-md-10">
       <div class="container gutters items-start">
         <div class="col-12 top-padding">
 
@@ -225,12 +228,17 @@
             <p class="text-left">
               Cards are in.  You can create them with minimal markup using <samp>.card</samp> and child <samp>.card-content</samp> block elements.  They can be styled using the <a href="/helper-classes/#color">color</a>, <a href="/helper-classes/#transition">transition</a>, <a href="/helper-classes/#background-color">background-color</a>, <a href="/helper-classes/#cursor">cursor</a> and <a href="/helper-classes/#hover">hover</a> classes.
             </p>
+            <strong>Card containers</strong>
+            <p class="text-left">
+              By default, cards fill 100% of the available width allowing them to sit nicely inside the Juiced grid.  If you don't want to use the grid, you can wrap your cards with a <samp>.card-masonry</samp> block element, and they will be set to a max-width of 360px as shown in our examples below.
+            </p>
+
         </div>
         <div class="col-12">
             <h4 class="color-light text-center text-uppercase">code examples:</h4>
         </div>
         <div class="col-12">
-          <div class="card-masonry-1 sm-card-masonry-2 text-center">
+          <div class="card-masonry-1 sm-card-masonry-2 lg-card-masonry-3 text-center">
               <div class="card radius">
                 <img src="stars.jpg" alt="" class="card-img">
                 <div class="card-content">
@@ -252,7 +260,7 @@
               <div class="card radius">
                 <div class="card-content card-header">
                 <h3>.card-head</h3>
-                <p class="color-light">This section lives in a container with classes <samp>.card-content</samp> and <samp>.card-header</samp></p>
+                <p class="color-light">A container with classes <samp>.card-content</samp> and <samp>.card-header</samp></p>
                 </div>
                 <div class="card-content">
                   <p class="no-margin text-left">Using <samp>.card-header</samp> adds a thin border on the bottom of the header section. It also spaces your heading tags and paragraph tags nicely for titles and subtitles.</p>
@@ -297,20 +305,238 @@
       </div>
 
 
+      <div class="container gutters items-start">
+        <div class="col-12 top-padding">
+          <a name="forms" class="link-push-up"></a>
+          <h2 class="text-left">forms</h2>
+        </div>
+        <div class="col-11 col-push-half">
+            <p class="text-left">
+              Forms are useful for just about every website in existance.  Juiced has an opt-in class of <samp>.form-control</samp> for consistent styling across all your form elements.  Radio buttons and checkboxes are minimally styled by default so you won't need to use <samp>.form-control</samp> on them.
+            </p>
+
+        </div>
+        <div class="col-12">
+            <h4 class="color-light text-center text-uppercase">form examples:</h4>
+        </div>
+        <div class="col-12">
+
+          <form method="GET" action="#forms" accept-charset="UTF-8">
+              <div class="container gutters-sm-all items-center">
+                  <div class="col-sm-4 text-left sm-text-right">
+                      <label for="contact_name">Your Name:</label>
+                  </div>
+                  <div class="col-sm-8">
+                      <input id="contact_name" placeholder="John Smith" name="name" type="text" class="form-control radius">
+                  </div>
+                  <div class="col-sm-4 text-left sm-text-right">
+                       <label for="contact_email">Email Address:</label>  
+                  </div>
+                  <div class="col-sm-8">
+                       <input id="contact_email" placeholder="john.smith@example.com" name="email" type="email" class="form-control radius">
+                  </div>
+                  <div class="col-sm-4 text-left sm-text-right">
+                       <label for="contact_tel">Phone:</label>
+                  </div>
+                  <div class="col-sm-8">
+                      <input id="contact_tel" placeholder="555.555.1212" name="phone" type="text" class="form-control radius">
+                  </div>
+                  <div class="col-sm-4 text-left sm-text-right">
+                       <label for="contact_pass">Password:</label>
+                  </div>
+                  <div class="col-sm-8">
+                      <input id="contact_pass" type="password" name="phone" class="form-control radius">
+                  </div>
+                  <div class="col-sm-4 text-left sm-text-right">
+                       <label for="selections">Selections:</label>
+                  </div>
+                  <div class="col-sm-8">
+                      <select id="selections" class="form-control">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>
+                  </div>
+                  <div class="col-sm-4 text-left sm-text-right">
+                       <label for="selections_multi">Multiple Selections:</label>
+                  </div>
+                  <div class="col-sm-8">
+                      <select id="selections_multi" multiple class="form-control">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </select>
+                  </div>
+
+
+                      
+                  <div class="col-sm-12">
+                       <label for="contact_message">Message:</label>
+                  </div>
+                  <div class="col-sm-12">
+                      <textarea id="contact_message" placeholder="How can we help you?" name="content" class="form-control"></textarea>
+                  </div>
+                  
+                  <div class="col-sm-6">
+                      <label>
+                        <input type="radio" name="radio" value="1">
+                        Radio Option 1
+                      </label>
+                  </div>
+                  <div class="col-sm-6">
+                      <label>
+                        <input type="radio" name="radio" value="2" checked>
+                        Radio Option 2 Pre-checked
+                      </label>
+                  </div>
+                  <div class="col-sm-6">
+                      <label class="cursor-not-allowed">
+                        <input type="radio" name="radio" value="3" disabled>
+                        Radio Option 3 Disabled
+                      </label>
+                  </div>
+                  <div class="col-sm-6">
+                      <label>
+                        <input type="checkbox" name="checkbox" value="3">
+                        And checkbox
+                      </label>
+                  </div>           
+                  <div class="col-12 text-center">
+                    <br />
+                    <button type="submit" class="btn color-white radius background-color-green hover-background-color-blue transition-fast cursor-pointer">Submit</button>
+                  </div>
+                </div>
+          </form>
+        </div>
+      </div>
+      <div class="container gutters items-start top-padding">
+        <div class="col-sm-4">
+          <h3 class="color-blue">See the markup  &nbsp; <span class="hidden sm-visible position-absolute">&#8594;</span><span class="visible sm-hidden position-absolute">&#8595;</span></h3>
+          <hr class="background-color-light no-border" style="height: 1px;" />
+          <h4 class="color-light text-uppercase">TIPS:</h4>
+          <p class="alert alert-blue">
+            All <samp>.form-control</samp> elements sit nicely in the Juiced grid and fill 100% of the available width.
+          </p>
+          <p class="alert alert-blue">
+            Most Juiced components allow for a <samp>.radius</samp> helper class to be added for easy border-radius rounding.  If you do not add <samp>.radius</samp> to your components, they will have square edges.
+          </p>
+          <p class="alert alert-blue">
+            As shown in our example, there is no need for form-groups. Use the grid to nicely space your form elements.
+          </p>
+        </div>
+        <div class="col-sm-8">
+          <pre data-code-type="HTML">
+            &lt;form&gt;
+              &nbsp;  &lt;div class="container gutters-sm-all items-center"&gt;
+              &nbsp;&nbsp;      &lt;div class="col-sm-4 text-left sm-text-right"&gt;
+              &nbsp;&nbsp;&nbsp;          &lt;label for="contact_name"&gt;Your Name:&lt;/label&gt;
+              &nbsp;&nbsp;      &lt;/div&gt;
+              &nbsp;&nbsp;      &lt;div class="col-sm-8"&gt;
+              &nbsp;&nbsp;&nbsp;          &lt;input id="contact_name" placeholder="John Smith" name="name" type="text" class="form-control radius"&gt;
+              &nbsp;&nbsp;      &lt;/div&gt;
+              &nbsp;&nbsp;      &lt;div class="col-sm-4 text-left sm-text-right"&gt;
+              &nbsp;&nbsp;&nbsp;           &lt;label for="contact_email"&gt;Email Address:&lt;/label&gt;  
+              &nbsp;&nbsp;      &lt;/div&gt;
+              &nbsp;&nbsp;      &lt;div class="col-sm-8"&gt;
+              &nbsp;&nbsp;&nbsp;           &lt;input id="contact_email" placeholder="john.smith@example.com" name="email" type="email" class="form-control radius"&gt;
+              &nbsp;&nbsp;      &lt;/div&gt;
+              &nbsp;&nbsp;      &lt;div class="col-sm-4 text-left sm-text-right"&gt;
+              &nbsp;&nbsp;&nbsp;           &lt;label for="contact_tel"&gt;Phone:&lt;/label&gt;
+              &nbsp;&nbsp;      &lt;/div&gt;
+              &nbsp;&nbsp;        &lt;div class="col-sm-8"&gt;
+              &nbsp;&nbsp;&nbsp;          &lt;input id="contact_tel" placeholder="555.555.1212" name="phone" type="text" class="form-control radius"&gt;
+              &nbsp;&nbsp;      &lt;/div&gt;
+              &nbsp;&nbsp;      &lt;div class="col-sm-4 text-left sm-text-right"&gt;
+              &nbsp;&nbsp;&nbsp;           &lt;label for="contact_pass"&gt;Password:&lt;/label&gt;
+              &nbsp;&nbsp;      &lt;/div&gt;
+              &nbsp;&nbsp;      &lt;div class="col-sm-8"&gt;
+              &nbsp;&nbsp;&nbsp;          &lt;input id="contact_pass" type="password" name="phone" class="form-control radius"&gt;
+              &nbsp;&nbsp;      &lt;/div&gt;
+              &nbsp;&nbsp;      &lt;div class="col-sm-4 text-left sm-text-right"&gt;
+              &nbsp;&nbsp;&nbsp;           &lt;label for="selections"&gt;Selections:&lt;/label&gt;
+              &nbsp;&nbsp;      &lt;/div&gt;
+              &nbsp;&nbsp;      &lt;div class="col-sm-8"&gt;
+              &nbsp;&nbsp;&nbsp;          &lt;select id="selections" class="form-control"&gt;
+              &nbsp;&nbsp;&nbsp;&nbsp;            &lt;option value="1"&gt;1&lt;/option&gt; &lt;option value="2"&gt;2&lt;/option&gt; &lt;option value="3"&gt;3&lt;/option&gt;
+              &nbsp;&nbsp;&nbsp;          &lt;/select&gt;
+              &nbsp;&nbsp;      &lt;/div&gt;
+              &nbsp;&nbsp;      &lt;div class="col-sm-4 text-left sm-text-right"&gt;
+              &nbsp;&nbsp;&nbsp;           &lt;label for="selections_multi"&gt;Multiple Selections:&lt;/label&gt;
+              &nbsp;&nbsp;      &lt;/div&gt;
+              &nbsp;&nbsp;      &lt;div class="col-sm-8"&gt;
+              &nbsp;&nbsp;&nbsp;          &lt;select id="selections_multi" multiple class="form-control"&gt;
+              &nbsp;&nbsp;&nbsp;&nbsp;            &lt;option value="1"&gt;1&lt;/option&gt; &lt;option value="2"&gt;2&lt;/option&gt; &lt;option value="3"&gt;3&lt;/option&gt; &lt;option value="4"&gt;4&lt;/option&gt; &lt;option value="5"&gt;5&lt;/option&gt;
+              &nbsp;&nbsp;&nbsp;          &lt;/select&gt;
+              &nbsp;&nbsp;      &lt;/div&gt;
+              &nbsp;&nbsp;      &lt;div class="col-sm-12"&gt;
+              &nbsp;&nbsp;&nbsp;           &lt;label for="contact_message"&gt;Message:&lt;/label&gt;
+              &nbsp;&nbsp;      &lt;/div&gt;
+              &nbsp;&nbsp;      &lt;div class="col-sm-12"&gt;
+              &nbsp;&nbsp;&nbsp;          &lt;textarea id="contact_message" placeholder="How can we help you?" name="content" class="form-control"&gt;&lt;/textarea&gt;
+              &nbsp;&nbsp;      &lt;/div&gt;
+              &nbsp;&nbsp;     &lt;div class="col-sm-6"&gt;
+              &nbsp;&nbsp;&nbsp;          &lt;label&gt;
+              &nbsp;&nbsp;&nbsp;&nbsp;            &lt;input type="radio" name="radio" value="1"&gt;
+              &nbsp;&nbsp;&nbsp;&nbsp;            Radio Option 1
+              &nbsp;&nbsp;&nbsp;          &lt;/label&gt;
+              &nbsp;&nbsp;      &lt;/div&gt;
+              &nbsp;&nbsp;      &lt;div class="col-sm-6"&gt;
+              &nbsp;&nbsp;&nbsp;          &lt;label&gt;
+              &nbsp;&nbsp;&nbsp;&nbsp;            &lt;input type="radio" name="radio" value="2" checked&gt;
+              &nbsp;&nbsp;&nbsp;&nbsp;            Radio Option 2 Pre-checked
+              &nbsp;&nbsp;&nbsp;          &lt;/label&gt;
+              &nbsp;&nbsp;      &lt;/div&gt;
+              &nbsp;&nbsp;      &lt;div class="col-sm-6"&gt;
+              &nbsp;&nbsp;&nbsp;          &lt;label class="cursor-not-allowed"&gt;
+              &nbsp;&nbsp;&nbsp;&nbsp;            &lt;input type="radio" name="radio" value="3" disabled&gt;
+              &nbsp;&nbsp;&nbsp;&nbsp;           Radio Option 3 Disabled
+              &nbsp;&nbsp;&nbsp;          &lt;/label&gt;
+              &nbsp;&nbsp;      &lt;/div&gt;
+              &nbsp;&nbsp;       &lt;div class="col-sm-6"&gt;
+              &nbsp;&nbsp;&nbsp;          &lt;label&gt;
+              &nbsp;&nbsp;&nbsp;&nbsp;            &lt;input type="checkbox" name="checkbox" value="3"&gt;
+              &nbsp;&nbsp;&nbsp;&nbsp;            And checkbox
+              &nbsp;&nbsp;&nbsp;          &lt;/label&gt;
+              &nbsp;&nbsp;      &lt;/div&gt;       
+              &nbsp;&nbsp;  &lt;div class="col-12 text-center"&gt;
+              &nbsp;&nbsp;&nbsp;      &lt;button type="submit" class="btn radius color-white background-color-green hover-background-color-blue transition-fast cursor-pointer"&gt;Submit&lt;/button&gt;
+              &nbsp;&nbsp;  &lt;/div&gt;
+              &nbsp;  &lt;/div&gt;
+            &lt;/form&gt;
+          </pre>
+        </div>
+      </div>
+
+
+
+
+
+
+     
+
+
     </div>
-    <div class="col-md-3"> 
+    <div class="col-md-2"> 
       <div class="container gutters items-start">
         <div class="col-12 top-padding">
           <nav class="position-fixed full-width z-index-3 hidden sm-visible font-bold">
+            <a href="index.html" tabindex="2" class="color-primary"><h4>Juiced Docs</h4></a>
+
             <a href="classes" tabindex="2"><h4 class="no-margin">Layout</h4></a>
             <a href="classes" tabindex="2"><h4 class="no-margin">Helper Classes</h4></a>
 
-            <h4 class="no-margin-top color-light">Components:</h4>
-            <ul class="no-style">
-              <a href="#alerts" tabindex="1" class="no-text-decoration color-primary opacity-75 transition-fast hover-opacity-100 position-relative display-block"><li>alerts</li></a>
-              <a href="#buttons" tabindex="1" class="no-text-decoration color-primary opacity-75 transition-fast hover-opacity-100 position-relative display-block"><li>buttons</li></a>
-              <a href="#cards" tabindex="1" class="no-text-decoration color-primary opacity-75 transition-fast hover-opacity-100 position-relative display-block"><li>cards</li></a>
-              <a href="#forms" tabindex="1" class="no-text-decoration color-primary opacity-75 transition-fast hover-opacity-100 position-relative display-block"><li>forms</li></a>
+            <h4 class="no-margin color-light">Components</h4>
+            <ul class="no-style side-links">
+              <li><a href="#alerts" tabindex="1" class="no-text-decoration color-primary opacity-75 transition-fast hover-opacity-100 position-relative display-block">alerts</a></li>
+              <li><a href="#buttons" tabindex="1" class="no-text-decoration color-primary opacity-75 transition-fast hover-opacity-100 position-relative display-block">buttons</a></li>
+              <li><a href="#cards" tabindex="1" class="no-text-decoration color-primary opacity-75 transition-fast hover-opacity-100 position-relative display-block">cards</a></li>
+              <li><a href="#forms" tabindex="1" class="no-text-decoration color-primary opacity-75 transition-fast hover-opacity-100 position-relative display-block">forms</a></li>
+              <li><a href="#labels" tabindex="1" class="no-text-decoration color-primary opacity-75 transition-fast hover-opacity-100 position-relative display-block">labels</a></li>
+              <li><a href="#modals" tabindex="1" class="no-text-decoration color-primary opacity-75 transition-fast hover-opacity-100 position-relative display-block">modals</a></li>
+              <li><a href="#tooltips" tabindex="1" class="no-text-decoration color-primary opacity-75 transition-fast hover-opacity-100 position-relative display-block">tooltips</a></li>
+             
             </ul>
           </nav>
         </div>
