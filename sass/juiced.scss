@@ -315,6 +315,11 @@ input[type=radio], input[type=checkbox]{
     cursor: not-allowed;
   }
 }
+label{
+  input{
+    margin-top: 1rem;
+  }
+}
 .form-control{
   width: 100%;
   border: none;
