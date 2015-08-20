@@ -24,7 +24,8 @@
     3. Components
       3.A alerts
       3.B buttons
-      3.C input and forms
+      3.D input and forms
+      3.  tooltips
 
    ---------------------------*/
 
@@ -75,7 +76,7 @@ a{
     text-decoration: underline;
   }
 }
-a.text-decoration-none, a.no-text-decoration{
+a.text-decoration-none, a.no-text-decoration, a.no-t-d{
   text-decoration: none;
 }
 
@@ -121,6 +122,15 @@ blockquote p {
 /* 2.G */
 p{
   margin-bottom: 2.8rem;
+}
+
+ul.no-style, ol.no-style, dl.no-style{
+  list-style: none;
+  margin: 0;
+  margin-bottom: 1.4rem;
+  li{
+    margin: 0;
+  }
 }
 
 
@@ -221,8 +231,63 @@ p{
     width: 100%;
   }
 }
-
 // 3.C
+
+.card-masonry-4{
+  column-count: 4;
+}
+.card-masonry-3{
+  column-count: 3;
+}
+.card-masonry-2{
+  column-count: 2;
+}
+.card-masonry-1{
+  column-count: 1;
+}
+
+.card{
+  width: 100%;
+  max-width: 360px;
+  border: 1px solid $color-light;
+  margin: 16px auto;
+  display: inline-block;
+
+  &.radius{
+    border-radius: 4px;
+  }
+  .card-img{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    vertical-align: middle;
+  }
+  .card-content{
+    padding: 16px;
+    // border-bottom: 1px solid lighten($color-light,20%);
+  }
+  .card-header,.card-footer{
+    padding: 22px 16px;
+    h1,h2,h3,h4,h5,h6{
+      margin: 5px 0;
+      &~ p{
+        margin: 0;
+      }
+    }
+    &.no-border{
+      border: 0;
+    }
+  }
+  .card-header{
+    border-bottom: 1px solid lighten($color-light,20%);
+  }
+  .card-footer{
+    border-top: 1px solid lighten($color-light,20%);
+  }
+}
+
+// 3.D
 .form-control{
   width: 100%;
   border: none;
@@ -245,6 +310,14 @@ p{
     border-color: $color-primary;
   }
 }
+
+// 3.
+.tooltip {
+  position: absolute;
+
+}
+
+
 
 
 
@@ -287,6 +360,21 @@ p{
 }
 .no-border{
   border: 0;
+}
+.no-padding{
+  padding: 0;
+}
+.no-padding-top{
+  padding-top: 0;
+}
+.no-padding-bottom {
+  padding-bottom: 0;
+}
+.no-padding-right {
+  padding-right: 0;
+}
+.no-padding-left {
+  padding-left: 0;
 }
 
 .hidden{
@@ -354,7 +442,7 @@ p{
 .text-left {
   text-align: left;
 }
-.text-decoration-none, .no-text-decoration{
+.text-decoration-none, .no-text-decoration, .no-t-d{
   text-decoration: none;
 }
 .text-uppercase {
@@ -1129,6 +1217,19 @@ p{
 
   }
 
+  .xs-card-masonry-4{
+   column-count: 4;
+  }
+  .xs-card-masonry-3{
+    column-count: 3;
+  }
+  .xs-card-masonry-2{
+    column-count: 2;
+  }
+  .xs-card-masonry-1{
+    column-count: 1;
+  }
+
 
   // xs text helpers
   .xs-text-justify{
@@ -1296,6 +1397,20 @@ p{
     }
   
   }
+
+  .sm-card-masonry-4{
+   column-count: 4;
+  }
+  .sm-card-masonry-3{
+    column-count: 3;
+  }
+  .sm-card-masonry-2{
+    column-count: 2;
+  }
+  .sm-card-masonry-1{
+    column-count: 1;
+  }
+
 
   // sm text helpers
   .sm-text-justify{
@@ -1465,6 +1580,20 @@ p{
     
   }
 
+  .md-card-masonry-4{
+   column-count: 4;
+  }
+  .md-card-masonry-3{
+    column-count: 3;
+  }
+  .md-card-masonry-2{
+    column-count: 2;
+  }
+  .md-card-masonry-1{
+    column-count: 1;
+  }
+
+
   // md text helpers
   .md-text-justify{
     text-align: justify;
@@ -1631,6 +1760,20 @@ p{
     }
 
   }
+
+  .lg-card-masonry-4{
+   column-count: 4;
+  }
+  .lg-card-masonry-3{
+    column-count: 3;
+  }
+  .lg-card-masonry-2{
+    column-count: 2;
+  }
+  .lg-card-masonry-1{
+    column-count: 1;
+  }
+
 
   // lg text helpers
   .lg-text-justify{

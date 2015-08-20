@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Juiced Examples</title>
+  <title>Juiced Components</title>
   <link rel="stylesheet" href="../dist/css/juiced.css">
   <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
   <style>
@@ -25,6 +25,7 @@
   </style>
 </head>
 <body>
+
   <div class="position-fixed background-color-white z-index-2 full-width heading-bar" >
     <div class="container gutters items-center">
       <div class="col-7 col-xs-8 text-left">
@@ -32,209 +33,311 @@
       </div>
       <div class="col-5 col-xs-4 text-center xs-text-right">
         <a href="/docs" class="color-primary btn btn-sm">Docs</a> &nbsp; 
-        <a href="#toggle" class="btn btn-sm color-white radius background-color-light hover-background-color-blue transition-background-color transition text-decoration-none">List All</a>
+        <a href="#toggle" class="btn md-display-none btn-sm color-white radius background-color-light hover-background-color-blue transition-background-color transition text-decoration-none">List All</a>
       </div>
     </div>
   </div>
 
-  <div class="container gutters items-start">
-    <div class="col-12 top-padding">
-      <h2 class="text-left">alerts</h2>
-    </div>
-    <div class="col-11 col-push-half">
-        <p class="text-left">
-          Alerts make it easy to display prominate information to the user.  They are styled using colors from your palette or you can use the optional <a href="/helper-classes/#color">color</a>, <a href="/helper-classes/#transition">transition</a>, <a href="/helper-classes/#background-color">background-color</a>, and <a href="/helper-classes/#hover">hover</a> classes.
-          Alerts can have an optional exit button and come in three sizes.
-          </p>
-    
-    </div>
-    <div class="col-12">
-        <h4 class="color-light text-center text-uppercase">alert examples:</h4>
-     </div>
-    <div class="col-sm-6 col-order-1">
+  <div class="container">
+    <div class="col-12 col-md-9">
+      <div class="container gutters items-start">
+        <div class="col-12 top-padding">
+
+          <a name="alerts" class="link-push-up"></a>
+          <h2 class="text-left">alerts</h2>
+        </div>
+        <div class="col-11 col-push-half">
+            <p class="text-left">
+              Alerts make it easy to display prominate information to the user.  They are styled using colors from your palette or you can use the optional <a href="/helper-classes/#color">color</a>, <a href="/helper-classes/#transition">transition</a>, <a href="/helper-classes/#background-color">background-color</a>, and <a href="/helper-classes/#hover">hover</a> classes.
+              Alerts can have an optional exit button and come in three sizes.
+              </p>
+        
+        </div>
+
+        <div class="col-sm-6 col-order-1">
+      
+          <div class="alert">This is a unstyled alert.</div>
+          <div class="alert alert-yellow">This is a yellow alert.</div>
+          <div class="alert alert-green alert-sm">This is a small green alert.</div>
+          <div class="alert alert-plain">This is a plain alert.</div>
+          <div class="alert alert-red alert-lg">This is a large red alert.</div>
+
+        </div>
+        <div class="col-sm-6 col-order-3">
+
+          <p>Alerts can have exit buttons with minimal markup:</p>
+          <div class="alert alert-blue">This is a blue alert with an exit button.<a class="alert-exit cursor-pointer">&times;</a></div>
+          <div class="alert alert-lg alert-green">This is a large green alert with an exit button.<a class="alert-exit cursor-pointer">&times;</a></div>
+          <div class="alert alert-sm">This is a small unstyled alert with an exit button.<a class="alert-exit cursor-pointer">&times;</a> </div>
+          <div class="alert alert-sm alert-yellow">This is a small yellow alert with an exit button.<a class="alert-exit cursor-pointer">&times;</a> </div>
+          <div class="alert alert-lg alert-red">This is a large red alert with an exit button, just for fun.<a class="alert-exit cursor-pointer">&times;</a> </div>
+
   
-      <div class="alert">This is a unstyled alert.</div>
-      <div class="alert alert-yellow">This is a yellow alert.</div>
-      <div class="alert alert-green alert-sm">This is a small green alert.</div>
-      <div class="alert alert-plain">This is a plain alert.</div>
-      <div class="alert alert-red alert-lg">This is a large red alert.</div>
 
-    </div>
-    <div class="col-sm-6 col-order-3">
-      <h4 class="text-left no-margin-top">Easy exit buttons</h4>
 
- 
+          <p class="color-light"> 
+            <strong>Note:</strong>
+            Juiced has no JavaScript baked in.  You must manually add any Javascript functionalty to hide alerts, Juiced makes this simple with CSS helper classes.  <a href="#alert-exit-functionality">See how</a>  &nbsp; <span class="hidden sm-visible position-absolute">&#8594;</span><span class="visible sm-hidden position-absolute">&#8595;</span> 
+          </p>
 
-      <div class="alert alert-blue">This is a blue alert with an exit button.<a class="alert-exit cursor-pointer">&times;</a></div>
-      <div class="alert alert-lg alert-green">This is a large green alert with an exit button.<a class="alert-exit cursor-pointer">&times;</a></div>
-      <div class="alert alert-sm">This is a small unstyled alert with an exit button.<a class="alert-exit cursor-pointer">&times;</a> </div>
-      <div class="alert alert-sm alert-yellow">This is a small yellow alert with an exit button.<a class="alert-exit cursor-pointer">&times;</a> </div>
-      <div class="alert alert-lg alert-red">This is a large red alert with an exit button, just for fun.<a class="alert-exit cursor-pointer">&times;</a> </div>
+        </div>
+        <div class="col-sm-6 col-order-2">
+         <pre class="no-margin-top" data-code-type="HTML">
+            &lt;div class="alert"&gt;
+            &nbsp; This is a unstyled alert.
+            &lt;/div&gt;
+            &lt;div class="alert alert-yellow"&gt;
+            &nbsp;   This is a yellow alert.
+            &lt;/div&gt;
+            &lt;div class="alert alert-green alert-sm"&gt;
+            &nbsp;   This is a small green alert.
+            &lt;/div&gt;
+            &lt;div class="alert alert-plain"&gt;
+            &nbsp; This is a plain alert.
+            &lt;/div&gt;
+            &lt;div class="alert alert-red alert-lg"&gt;
+            &nbsp; This is a large red alert.
+            &lt;/div&gt;
+         </pre>
+        </div>
+        <div class="col-sm-6 col-order-4">
+         <pre class="no-margin-top" data-code-type="HTML">
+          &lt;div class="alert alert-blue"&gt;
+          &nbsp;  This is a blue alert with an exit button.  
+          &nbsp; &lt;a class="alert-exit cursor-pointer"&gt;&amp;times;&lt;/a&gt;
+          &lt;/div&gt;   
+          </pre>
+         
+          <a name="alert-exit-functionality" class="link-push-up"></a>
+        
+          <strong>Add this JavaScript</strong> before your closing &lt;/body&gt; tag for simple exit functionality:
 
-      <p class="color-light"> 
-        <strong>Note:</strong>
-        Juiced has no JavaScript baked in.  You must manually add any Javascript functionalty to hide alerts, Juiced makes this simple with CSS helper classes.  <a href="#alert-exit-functionality">See how</a>  &nbsp; <span class="hidden sm-visible position-absolute">&#8594;</span><span class="visible sm-hidden position-absolute">&#8595;</span> 
-      </p>
+          <pre class="background-color-dark color-white" data-code-type="JS">
+            &lt;script&gt;
+            (function(){
+            &nbsp; var _exits = [].slice.call( document.querySelectorAll('.alert-exit') );
+            &nbsp; _exits.forEach(function(ele) {
+             &nbsp; &nbsp;   ele.addEventListener("click", function() {
+               &nbsp; &nbsp;  &nbsp;  var _parent = this.parentNode;
+                &nbsp; &nbsp;  &nbsp;  _parent.className = _parent.className + " display-none";
+              &nbsp; &nbsp;  });
+            &nbsp; });
+            })();
+            &lt;/script&gt;
+          </pre>
 
-    </div>
-    <div class="col-sm-6 col-order-2">
-     <pre class="no-margin-top" data-code-type="HTML">
-        &lt;div class="alert"&gt;
-        &nbsp; This is a unstyled alert.
-        &lt;/div&gt;
-        &lt;div class="alert alert-yellow"&gt;
-        &nbsp;   This is a yellow alert.
-        &lt;/div&gt;
-        &lt;div class="alert alert-green alert-sm"&gt;
-        &nbsp;   This is a small green alert.
-        &lt;/div&gt;
-        &lt;div class="alert alert-plain"&gt;
-        &nbsp; This is a plain alert.
-        &lt;/div&gt;
-        &lt;div class="alert alert-red alert-lg"&gt;
-        &nbsp; This is a large red alert.
-        &lt;/div&gt;
-     </pre>
-    </div>
-    <div class="col-sm-6 col-order-4">
-
-      <pre class="no-margin-top" data-code-type="HTML">
-      &lt;div class="alert alert-blue"&gt;
-      &nbsp;  This is a blue alert with an exit button.  
-      &nbsp; &lt;a class="alert-exit cursor-pointer"&gt;&amp;times;&lt;/a&gt;
-      &lt;/div&gt;   
-      </pre>
-
-      <a name="alert-exit-functionality" class="link-push-up"></a>
-    
-      <strong>Add this JavaScript</strong> before your closing &lt;/body&gt; tag for simple exit functionality:
-
-      <pre class="background-color-dark color-white" data-code-type="JS">
-        &lt;script&gt;
-        var _exits = [].slice.call( document.querySelectorAll('.alert-exit') );
-
-        _exits.forEach(function(ele) {
-         &nbsp;   ele.addEventListener("click", function() {
-           &nbsp;  &nbsp;  var _parent = this.parentNode;
-            &nbsp;  &nbsp;  _parent.className = _parent.className + " display-none";
-          &nbsp;  });
-        });
-        &lt;/script&gt;
-      </pre>
-
-      <div class="alert alert-sm"><strong>What does this JavaScript do?</strong> It loops through all elements with a class of <samp>.alert-exit</samp> and adds an event listener on the exit buttons.  Now,  when an exit button is clicked, a class of <samp>.display-none</samp> is added to the parent element to hide it <em>(so don't wrap your exit markup)</em>.</div>
-      
-    
-    </div>
- 
-  </div>
-
-  <div class="container gutters items-start justify-space-">
-    <div class="col-12 top-padding">
-      <a name="buttons" class="link-push-up"></a>
-      <h2 class="text-left">buttons</h2>
-    </div>
-    <div class="col-11 col-push-half">
-        <p class="text-left">
-          Buttons are a quick and easy way to get users clicking.  Juiced makes no assumptions on how you will style your buttons, so by default there are no colors, transitions, or hover effects.  Buttons are styled using the <a href="/helper-classes/#color">color</a>, <a href="/helper-classes/#transition">transition</a>, <a href="/helper-classes/#background-color">background-color</a>, <a href="/helper-classes/#cursor">cursor</a> and <a href="/helper-classes/#hover">hover</a> classes.
-        </p>
-    
-    </div>
-    <div class="col-12">
-        <h4 class="color-light text-center text-uppercase">code examples:</h4>
-        <p class="color-light text-center">Using inspect element is the best way to learn about the examples below.</p>
-    </div>
-
-    <div class="col-sm-12 col-order-1">
-
-      <div class="container gutters-all items-center text-center">
-        <div class="col-4">
-          <a  class="btn btn-lg radius background-color-alt no-text-decoration hover-background-color-green color-white cursor-pointer">Large Radius</a>
+          <div class="alert alert-sm"><strong>What does this JavaScript do?</strong> It loops through all elements with a class of <samp>.alert-exit</samp> and adds an event listener on the exit buttons.  Now,  when an exit button is clicked, a class of <samp>.display-none</samp> is added to the parent element to hide it <em>(so don't wrap your exit markup)</em>.</div>
+          
+        
         </div>
-        <div class="col-4">
-          <a  class="btn btn-sm radius background-color-green color-white cursor-pointer">Small button</a>
-        </div>
-        <div class="col-4">
-          <a  class="btn radius background-color-yellow cursor-pointer">Everday button</a>
-        </div>
-        <div class="col-4">
-          <a  class="btn btn-lg radius background-color-red color-auto text-decoration-none cursor-pointer">Auto color</a>
-        </div>
-        <div class="col-4">
-          <a  class="btn radius background-color-primary color-auto cursor-pointer">Auto color button</a>
-        </div>
-        <div class="col-4">
-          <a  class="btn btn-sm text-decoration-none radius background-color-green color-auto cursor-pointer">Auto color button</a>
-        </div>
-        <div class="col-4">
-          <a  class="btn btn-lg radius background-color-alt color-auto transition-all transition hover-btn-outline hover-color-alt no-text-decoration cursor-pointer">Auto color button</a>
-        </div>
-        <div class="col-4">
-          <a  class="btn btn-sm background-color-dark color-auto cursor-pointer">No radius button</a>
-        </div>
-        <div class="col-4">
-          <a  class="btn radius background-color-light cursor-not-allowed no-text-decoration color-auto">Disabled button</a>
-        </div>
-      </div>
-      
-      <br />
-      <p class="text-center color-light no-margin-bottom">Outline buttons.</p>
-      <p class="text-center"><small class="color-light">Outline buttons have a transparent background and a border color that matches the font color.</small></p>
-
-      <div class="container gutters-all justify-space-around items-center text-center">
-        <div class="col-6 col-xs-4">
-          <a  class="btn btn-lg btn-pill btn-outline background-color-blue color-blue opacity-75 hover-opacity-100 transition-opacity text-decoration-none cursor-pointer">Large pill</a>
-        </div>
-        <div class="col-6 col-xs-4">
-          <button type="button" class="btn btn-outline btn-sm background-color-green color-green hover-color-dark transition-all transition text-decoration-none cursor-pointer">Small button</button>
-        </div>
-        <div class="col-6 col-xs-4">
-          <a  class="btn radius btn-outline background-color-yellow hover-background-color-alt hover-color-white no-text-decoration transition-background-color transition-fast">Everday button</a>
-        </div>
-        <div class="col-6 col-xs-4">
-          <a  class="btn btn-lg btn-outline radius background-color-light color-light text-decoration-none hover-color-dark transition-all transition">Outline Button</a>
-        </div>
-        <div class="col-6 col-xs-4">
-          <a  class="btn btn-pill btn-block btn-sm btn-outline hover-btn-outline-reverse color-dark no-text-decoration transition-fast transition-all hover-opacity-75 opacity-50 hover-background-color-dark hover-color-white">Reverse Outline Block Pill</a>
-        </div>
-        <div class="col-6 col-xs-4">
-          <a  class="btn btn-sm btn-pill btn-outline-thick btn-outline text-decoration-none color-blue opacity-75 hover-opacity-100 transition transtion-all hover-color-dark">Auto color button</a>
-        </div>
-        <div class="col-6 col-xs-4">
-          <a  class="btn btn-lg btn-outline-thick btn-outline radius color-yellow">yellow button</a>
-        </div>
-        <div class="col-6 col-xs-4">
-          <a  class="btn btn-sm btn-outline radius color-red opacity-50 hover-opacity-100 text-decoration-none">Outline button</a>
-        </div>
-        <div class="col-6 col-xs-4">
-          <a  class="btn btn-outline btn-outline-thick radius color-red hover-color-dark text-decoration-none">Red button</a>
-        </div>
+     
       </div>
 
+      <div class="container gutters items-start justify-space-">
+        <div class="col-12 top-padding">
+          <a name="buttons" class="link-push-up"></a>
+          <h2 class="text-left">buttons</h2>
+        </div>
+        <div class="col-11 col-push-half">
+            <p class="text-left">
+              Buttons are a quick and easy way to get users clicking.  Juiced makes no assumptions on how you will style your buttons, so by default there are no colors, transitions, or hover effects.  Buttons are styled using the <a href="/helper-classes/#color">color</a>, <a href="/helper-classes/#transition">transition</a>, <a href="/helper-classes/#background-color">background-color</a>, <a href="/helper-classes/#cursor">cursor</a> and <a href="/helper-classes/#hover">hover</a> classes.
+            </p>
+        
+        </div>
+
+        <div class="col-sm-12 col-order-1">
+
+          <div class="container gutters-all justify-space-around items-center text-center">
+            <div class="col-6 col-sm-4">
+              <a  class="btn btn-lg radius background-color-primary no-text-decoration color-white cursor-pointer  opacity-75 hover-opacity-100">Large Radius</a>
+            </div>
+            <div class="col-6 col-sm-4">
+              <a  class="btn btn-sm radius background-color-green color-white cursor-pointer opacity-75 hover-opacity-100 transition text-decoration-none">Small button</a>
+            </div>
+            <div class="col-6 col-sm-4">
+              <a  class="btn radius background-color-yellow cursor-pointer color-auto text-decoration-none hover-scale-105 transition transition-transform">Everday button</a>
+            </div>
+            <div class="col-6 col-sm-4">
+              <a  class="btn btn-lg radius background-color-red color-auto text-decoration-none cursor-pointer">Auto color</a>
+            </div>
+            <div class="col-6 col-sm-4">
+              <a  class="btn radius background-color-primary color-auto cursor-pointer">Basic button</a>
+            </div>
+            <div class="col-6 col-sm-4">
+              <a  class="btn btn-sm text-decoration-none radius background-color-green color-auto cursor-pointer">Auto color button</a>
+            </div>
+            <div class="col-6 col-sm-4">
+              <a  class="btn btn-lg radius background-color-alt color-auto transition-fast hover-btn-outline hover-scale-105 hover-color-alt no-text-decoration cursor-pointer">Pretty button</a>
+            </div>
+            <div class="col-6 col-sm-4">
+              <a  class="btn btn-sm background-color-dark color-auto cursor-pointer  hover-scale-105 transition-all transition text-decoration-none">No radius button</a>
+            </div>
+            <div class="col-6 col-sm-4">
+              <a  class="btn radius background-color-light cursor-not-allowed no-text-decoration color-auto">Disabled button</a>
+            </div>
+          </div>
+          
+          <br />
+          <p class="text-center color-light no-margin-bottom">Outline buttons.</p>
+          <p class="text-center"><small class="color-light">Outline buttons have a transparent background and a border color that matches the font color.</small></p>
+
+          <div class="container gutters-all justify-space-around items-center text-center">
+            <div class="col-6 col-xs-4">
+              <a  class="btn btn-lg btn-pill btn-outline background-color-blue color-blue opacity-75 hover-opacity-100 transition-opacity text-decoration-none cursor-pointer">Large pill</a>
+            </div>
+            <div class="col-6 col-xs-4">
+              <button type="button" class="btn btn-outline btn-sm background-color-green color-green hover-color-dark transition-fast transition text-decoration-none cursor-pointer hover-scale-105">Small button</button>
+            </div>
+            <div class="col-6 col-xs-4">
+              <a  class="btn radius btn-outline background-color-yellow hover-background-color-alt hover-color-white no-text-decoration transition-background-color transition-fast">Everday button</a>
+            </div>
+            <div class="col-6 col-xs-4">
+              <a  class="btn btn-lg btn-outline radius color-alt text-decoration-none hover-color-dark transition-all transition">Outline Button</a>
+            </div>
+            <div class="col-6 col-xs-4">
+              <a  class="btn btn-pill btn-block btn-sm btn-outline hover-btn-outline-reverse color-dark no-t-d transition-fast hover-opacity-75 opacity-50 hover-background-color-dark hover-color-white">Reverse Outline Block Pill</a>
+            </div>
+            <div class="col-6 col-xs-4">
+              <a  class="btn btn-sm btn-pill btn-outline-thick btn-outline text-decoration-none color-blue opacity-75 hover-opacity-100 transition transtion-all hover-color-dark">Auto color button</a>
+            </div>
+            <div class="col-6 col-xs-4">
+              <a  class="btn btn-lg btn-outline-thick btn-outline radius color-yellow hover-color-dark no-t-d">Bad button</a>
+            </div>
+            <div class="col-6 col-xs-4">
+              <a  class="btn btn-sm btn-outline radius color-red opacity-50 hover-opacity-100 text-decoration-none">Outline button</a>
+            </div>
+            <div class="col-6 col-xs-4">
+              <a  class="btn btn-outline btn-outline-thick radius color-red hover-btn-outline-reverse hover-color-white hover-background-color-red transition-fast hover-scale-105 text-decoration-none">Red button</a>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+
+      <div class="container gutters items-start">
+        <div class="col-12 top-padding">
+          <a name="cards" class="link-push-up"></a>
+          <h2 class="text-left">cards</h2>
+        </div>
+        <div class="col-11 col-push-half">
+            <p class="text-left">
+              Cards are in.  You can create them with minimal markup using <samp>.card</samp> and child <samp>.card-content</samp> block elements.  They can be styled using the <a href="/helper-classes/#color">color</a>, <a href="/helper-classes/#transition">transition</a>, <a href="/helper-classes/#background-color">background-color</a>, <a href="/helper-classes/#cursor">cursor</a> and <a href="/helper-classes/#hover">hover</a> classes.
+            </p>
+        
+        </div>
+        <div class="col-12">
+            <h4 class="color-light text-center text-uppercase">code examples:</h4>
+        </div>
+        <div class="col-12">
+          <div class="card-masonry-1 sm-card-masonry-2 text-center">
+              <div class="card radius">
+                <img src="stars.jpg" alt="" class="card-img">
+                <div class="card-content">
+                  <h3>Card Images</h3>
+                  <p class="text-left">Using the <samp>.card-img</samp> class sets the image to 100% width.  This is useful for card with image based headers and footers.</p>
+                </div>
+                <div class="card-content card-footer">
+                  <div class="container text-center">
+                    <div class="col-6">
+                      <a href="#" class="btn btn-outline color-green">Join</a>
+                    </div>
+                    <div class="col-6">
+                       <a href="#" class="btn btn-outline color-red">Skip</a> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card radius">
+                <div class="card-content card-header">
+                <h3>.card-head</h3>
+                <p class="color-light">This section lives in a container with classes <samp>.card-content</samp> and <samp>.card-header</samp></p>
+                </div>
+                <div class="card-content">
+                  <p class="no-margin text-left">Using <samp>.card-header</samp> adds a thin border on the bottom of the header section. It also spaces your heading tags and paragraph tags nicely for titles and subtitles.</p>
+                </div>
+                <div class="card-content card-footer">
+                  <a class="btn btn-outline color-green no-t-d radius cursor-pointer hover-color-blue transition-fast">Join</a>
+                </div>
+              </div>
+
+              <div class="card radius text-left">
+                <div class="card-content card-header text-left">
+                  <h3>Card Are Easy to Mockup</h3>
+                  
+                </div>
+                <div class="card-content">
+                  <p>Create cards with a <samp>.card</samp> element and use <samp>.card-content</samp>, <samp>.card-header</samp>, <samp>.card-footer</samp>, and <samp>.card-img</samp> for aligning and spacing content inside cards.</p>
+                </div>
+                <div class="card-content card-footer">
+                  Easy footers
+                </div>
+              </div>
+
+              <div class="card radius text-left">
+                <div class="card-content text-left">
+                  <h3>Style your cards</h3>
+                  
+                </div>
+                <div class="card-content  color-white background-color-primary">
+                  <p>Cards can be styled using all the helper classes for color, background-color, alignment, hover, and more.</p>
+                </div>
+              </div>
+
+              <div class="card radius text-left">
+                <div class="card-content">
+                  <h3>Want stackable masonry-like cards?</h3>
+                  <p>Use our built in <samp>.card-masonry<samp> classes to wrap all your cards. Reponsive breakpoints are the same, so <samp>.masonry-1</samp> means one column on mobile and <samp>.sm-masonry-2</samp> would switch to two columns on small screens and up.  Juiced supports up to 4 columns for each breakpoint.</p>
+                </div>
+              
+              </div>
+          </div>
+        </div>
+      </div>
+
 
     </div>
+    <div class="col-md-3"> 
+      <div class="container gutters items-start">
+        <div class="col-12 top-padding">
+          <nav class="position-fixed full-width z-index-3 hidden sm-visible font-bold">
+            <a href="classes" tabindex="2"><h4 class="no-margin">Layout</h4></a>
+            <a href="classes" tabindex="2"><h4 class="no-margin">Helper Classes</h4></a>
 
+            <h4 class="no-margin-top color-light">Components:</h4>
+            <ul class="no-style">
+              <a href="#alerts" tabindex="1" class="no-text-decoration color-primary opacity-75 transition-fast hover-opacity-100 position-relative display-block"><li>alerts</li></a>
+              <a href="#buttons" tabindex="1" class="no-text-decoration color-primary opacity-75 transition-fast hover-opacity-100 position-relative display-block"><li>buttons</li></a>
+              <a href="#cards" tabindex="1" class="no-text-decoration color-primary opacity-75 transition-fast hover-opacity-100 position-relative display-block"><li>cards</li></a>
+              <a href="#forms" tabindex="1" class="no-text-decoration color-primary opacity-75 transition-fast hover-opacity-100 position-relative display-block"><li>forms</li></a>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
   </div>
-
-
   <script>
+  (function(){
 
-  var _exits = [].slice.call(document.querySelectorAll('.alert-exit'));
-  _exits.forEach(function(ele) {
-    ele.addEventListener("click", function() {
-      var _parent = this.parentNode;
-      _parent.className = _parent.className + " display-none";
+    var _exits = [].slice.call(document.querySelectorAll('.alert-exit'));
+    _exits.forEach(function(ele) {
+      ele.addEventListener("click", function() {
+        var _parent = this.parentNode;
+        _parent.className = _parent.className + " display-none";
+      });
     });
-  });
 
-  var _btnClass = [].slice.call(document.querySelectorAll('.btn'));
-  _btnClass.forEach(function(ele) {
-    ele.addEventListener("click", function(){ 
-      var _classList = this.className;
-      alert(_classList);
-    })
-  });
+    var _btnClass = [].slice.call(document.querySelectorAll('.btn'));
+    _btnClass.forEach(function(ele) {
+      ele.addEventListener("click", function(){ 
+        var _classList = this.className;
+        alert(_classList);
+      })
+    });
 
+  })();
 
   </script>
 </body>
