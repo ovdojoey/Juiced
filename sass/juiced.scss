@@ -318,9 +318,9 @@ ul.no-style, ol.no-style, dl.no-style{
     box-shadow: 0 0 8px lighten($color-dark, 50%);
     border-color: $color-primary;
   }
-  &:hover{
-    border-color: $color-primary;
-  }
+  // &:hover{
+  //   border-color: $color-primary;
+  // }
 }
 
 // 3.

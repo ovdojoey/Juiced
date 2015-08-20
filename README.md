@@ -25,7 +25,7 @@ If you are already using SASS in your workflow, add Juiced to the top of your SA
 
 **Want to customize Juiced?** 
 
-You should define any Juiced variables above your `@import` statement as this will keep your custom changes even after updating the Juiced source (*for instance when updating using `bower update`*).  *See the `/sass/_variables.scss` file for a list of available variables.*
+You should define any Juiced variables above your `@import` statement as this will save your custom variables even after updating the Juiced source (*for instance when updating using `bower update`*).  *See the `/sass/_variables.scss` file for a list of available variables.*
 
 ## Learning Juiced
 More to be come here, but get started with Juiced by checking out the examples folder.
