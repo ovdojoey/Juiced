@@ -233,6 +233,16 @@ ul.no-style, ol.no-style, dl.no-style{
 }
 // 3.C
 
+.card-masonry-1,.card-masonry-2,.card-masonry-3,.card-masonry-4,
+.xs-card-masonry-1,.xs-card-masonry-2,.xs-card-masonry-3,.xs-card-masonry-4,
+.sm-card-masonry-1,.sm-card-masonry-2,.sm-card-masonry-3,.sm-card-masonry-4,
+.md-card-masonry-1,.md-card-masonry-2,.md-card-masonry-3,.md-card-masonry-4,
+.lg-card-masonry-1,.lg-card-masonry-2,.lg-card-masonry-3,.lg-card-masonry-4{
+  &>.card{
+    max-width: 360px;
+  }
+}
+
 .card-masonry-4{
   column-count: 4;
 }
@@ -248,7 +258,6 @@ ul.no-style, ol.no-style, dl.no-style{
 
 .card{
   width: 100%;
-  max-width: 360px;
   border: 1px solid $color-light;
   margin: 16px auto;
   display: inline-block;
