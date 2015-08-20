@@ -1,24 +1,24 @@
 /* 1.A Colors */
-$color-primary: #4ab;
-$color-alt: #DC8712;
+$color-primary: #4ab !default;
+$color-alt: #DC8712 !default;
 
-$color-link: $color-alt;
+$color-link: $color-alt  !default;
 
-$color-dark: #212121;
-$color-light: #aaa;
-$color-white: #fff;
+$color-dark: #212121 !default;
+$color-light: #aaa !default;
+$color-white: #fff !default;
 
-$color-green: #1a4;
-$color-red: #AA252B;
-$color-blue: #4ab;
-$color-yellow: #fae17b;
+$color-green: #1a4 !default;
+$color-red: #AA252B !default;
+$color-blue: #4ab !default;
+$color-yellow: #fae17b !default;
 
 
 
 /* 1.B Screen sizes */
-$screen-xs-min: 480px;
-$screen-sm-min: 768px;
-$screen-md-min: 992px;
-$screen-lg-min: 1200px;
+$screen-xs-min: 480px !default;
+$screen-sm-min: 768px !default;
+$screen-md-min: 992px !default;
+$screen-lg-min: 1200px !default;
 
-$container-max-width: 1170px;
+$container-max-width: 1170px !default;

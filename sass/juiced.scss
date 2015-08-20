@@ -268,7 +268,7 @@ ul.no-style, ol.no-style, dl.no-style{
   &.no-border{
     border: 0;
   }
-  
+
   .card-img{
     width: 100%;
     margin: 0;
@@ -276,9 +276,8 @@ ul.no-style, ol.no-style, dl.no-style{
     display: block;
     vertical-align: middle;
   }
-  .card-content{
+  .card-content, &.card-content{
     padding: 16px;
-    // border-bottom: 1px solid lighten($color-light,20%);
   }
   .card-header,.card-footer{
     padding: 22px 16px;
