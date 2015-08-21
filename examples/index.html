@@ -9,6 +9,7 @@
   <style>
     body{
       font-family: 'Lato', sans-serif;
+      font-size:16px;
     }
     .top-padding {
       margin-top: 80px;
@@ -25,6 +26,13 @@
     .side-links a{
       padding: 3px 0;
     }
+    #skip-content{
+      height: 0;
+      overflow: hidden;
+    }
+    #skip-content:focus{
+      height: auto;
+    }
   </style>
 </head>
 <body>
@@ -35,8 +43,12 @@
         <h2 class="text-uppercase color-green no-margin"><span class="display-none xs-display-inline" role="presentation">Juiced</span> <span class="color-light">Components</span></h2>
       </div>
       <div class="col-5 col-xs-4 text-center xs-text-right">
-        <a href="/docs" class="color-primary btn btn-sm">Docs</a> &nbsp; 
-        <a href="#toggle" class="btn md-display-none btn-sm color-white radius background-color-light hover-background-color-blue transition-background-color transition text-decoration-none">List All</a>
+
+        <a href="#content" id="skip-content" class="display-block position-relative" tabindex="1">Skip to main content</a>
+
+
+        <a href="/docs" class="color-primary ">Docs</a> &nbsp; 
+        <a href="#toggle" class="= md-display-none color-white radius background-color-light hover-background-color-blue transition-background-color transition text-decoration-none">List All</a>
       </div>
     </div>
   </div>
@@ -45,7 +57,7 @@
     <div class="col-12 col-md-10">
       <div class="container gutters items-start">
         <div class="col-12 top-padding">
-
+          <a name="content" class="link-push-up"></a>
           <a name="alerts" class="link-push-up"></a>
           <h2 class="text-left">alerts</h2>
         </div>
@@ -186,7 +198,7 @@
 
           <div class="container gutters-all justify-space-around items-center text-center">
             <div class="col-6 col-xs-4">
-              <a  class="btn btn-lg btn-pill btn-outline background-color-blue color-blue opacity-75 hover-opacity-100 transition-opacity text-decoration-none cursor-pointer">Large pill</a>
+              <a  class="btn btn-lg radius btn-outline background-color-blue color-blue opacity-75 hover-opacity-100 transition-opacity text-decoration-none cursor-pointer">Large outline</a>
             </div>
             <div class="col-6 col-xs-4">
               <button type="button" class="btn btn-outline btn-sm background-color-green color-green hover-color-dark transition-fast transition text-decoration-none cursor-pointer hover-scale-105">Small button</button>
@@ -283,12 +295,12 @@
                 </div>
               </div>
 
-              <div class="card radius text-left">
-                <div class="card-content text-left">
+              <div class="card no-border radius text-left">
+                <div class="card-content card-header text-left background-color-dark color-white">
                   <h3>Style your cards</h3>
                   
                 </div>
-                <div class="card-content  color-white background-color-primary">
+                <div class="card-content  color-white background-color-green">
                   <p>Cards can be styled using all the helper classes for color, background-color, alignment, hover, and more.</p>
                 </div>
               </div>
@@ -312,8 +324,46 @@
         </div>
         <div class="col-11 col-push-half">
             <p class="text-left">
-              Forms are useful for just about every website in existance.  Juiced has an opt-in class of <samp>.form-control</samp> for consistent styling across all your form elements.  Radio buttons and checkboxes are minimally styled by default so you won't need to use <samp>.form-control</samp> on them.
+             Juiced has an opt-in class of <samp>.form-control</samp> for consistent styling across all your form elements.  Radio buttons and checkboxes are minimally styled by default so you won't need to use <samp>.form-control</samp> on them.
             </p>
+            <div class="container">
+              <div class="col-sm-6">
+                <h4>Switches</h4>
+                <p class="text-left">
+                  Switches are the new way to stylize checkboxes and radio buttons. Markup a radio <samp>input</samp> with a class of <samp>.switch</samp> and a sibling <samp>label</samp> element with the same <samp>.switch</samp> class.  And viola.. you have a switch!  Add <samp>.radius</samp>, and <samp>.thin</samp> classes to your label for pretty styles. 
+                </p>
+                  <input class="switch" type="checkbox" id="switchEx1" name="checkbox" value="3">
+                  <label class="switch radius thin cursor-pointer" for="switchEx1" aria-label="Basic switch example">
+                  </label>
+
+                  <input class="switch" type="checkbox" id="switchEx2" name="checkbox" value="3">
+                  <label class="switch radius cursor-pointer" for="switchEx2" aria-label="Basic switch example">
+                  </label>
+
+                  <input class="switch" type="checkbox" id="switchEx3" name="checkbox" value="3">
+                  <label class="switch cursor-pointer" for="switchEx3" aria-label="Basic switch example">
+                  </label>
+
+                  <input class="switch" type="checkbox" id="switchEx4" name="checkbox" value="3">
+                  <label class="switch thin cursor-pointer" for="switchEx4" aria-label="Basic switch example">
+                  </label>
+              </div>
+              <div class="col-sm-5 col-sm-push-1">
+                <pre data-code-type="HTML">
+                  &lt;input class="switch" type="checkbox" id="ex1" name="checkbox" value="1"&gt;
+                  &lt;label class="switch radius thin" for="ex1"&gt;
+                    &nbsp; Switch label
+                  &lt;/label&gt;
+                </pre>
+
+                  <p class="alert alert-sm">
+                 Switches use <samp>$color-primary</samp> and <samp>$color-light</samp> for border and background colors.  <samp>$color-light</samp> is slightly lightened for the border color.
+                </p>
+                
+                
+              </div>
+            </div>
+            
 
         </div>
         <div class="col-12">
@@ -369,17 +419,15 @@
                         <option value="5">5</option>
                       </select>
                   </div>
-
-
-                      
-                  <div class="col-sm-12">
+                     
+                  <div class="col-sm-4 text-right ">
                        <label for="contact_message">Message:</label>
                   </div>
-                  <div class="col-sm-12">
+                  <div class="col-sm-8">
                       <textarea id="contact_message" placeholder="How can we help you?" name="content" class="form-control"></textarea>
                   </div>
                   
-                  <div class="col-sm-6">
+                  <div class="col-sm-6 col-sm-push-2">
                       <label>
                         <input type="radio" name="radio" value="1">
                         Radio Option 1
@@ -391,18 +439,34 @@
                         Radio Option 2 Pre-checked
                       </label>
                   </div>
-                  <div class="col-sm-6">
+                  
+                  <div class="col-sm-6  col-sm-push-2">
                       <label class="cursor-not-allowed">
                         <input type="radio" name="radio" value="3" disabled>
                         Radio Option 3 Disabled
                       </label>
                   </div>
                   <div class="col-sm-6">
+
+                      <input class="switch" type="radio" id="switchExample2" name="radio" value="5">
+                      <label class="switch" for="switchExample2">
+                        switch radio
+                      </label>
+                      
+                  </div>  
+                  <div class="col-sm-6  col-sm-push-2">
+                      <input class="switch" type="checkbox" id="switchExample1" name="checkbox" value="3">
+                      <label class="switch radius thin" for="switchExample1">
+                        switch checkbox thin
+                      </label>
+                  </div>
+                  <div class="col-sm-6">
                       <label>
                         <input type="checkbox" name="checkbox" value="3">
-                        And checkbox
+                        And boring checkbox
                       </label>
-                  </div>           
+                  </div>  
+
                   <div class="col-12 text-center">
                     <br />
                     <button type="submit" class="btn color-white radius background-color-green hover-background-color-blue transition-fast cursor-pointer">Submit</button>
@@ -416,18 +480,29 @@
           <h3 class="color-blue">See the markup  &nbsp; <span class="hidden sm-visible position-absolute">&#8594;</span><span class="visible sm-hidden position-absolute">&#8595;</span></h3>
           <hr class="background-color-light no-border" style="height: 1px;" />
           <h4 class="color-light text-uppercase">TIPS:</h4>
-          <p class="alert alert-blue">
-            All <samp>.form-control</samp> elements sit nicely in the Juiced grid and fill 100% of the available width.
-          </p>
-          <p class="alert alert-blue">
-            Most Juiced components allow for a <samp>.radius</samp> helper class to be added for easy border-radius rounding.  If you do not add <samp>.radius</samp> to your components, they will have square edges.
-          </p>
-           <p class="alert alert-blue">
-            If you choose not to use the grid for spacing, Juiced will automatically provide margin's to any <samp>input</samp> wrapped in a <samp>label</samp>.
-          </p>
-          <p class="alert alert-blue">
-            As shown in our example, there is no need for form-groups. Use the grid to nicely space your form elements.
-          </p>
+          <div class="container gutters-sm-all items-start">
+            <div class="col-xs-6 col-12 col-sm-12">
+              <p class="alert alert-sm no-margin">
+                All <samp>.form-control</samp> elements sit nicely in the Juiced grid and fill 100% of the available width.
+              </p>
+            </div>
+            <div class="col-xs-6 col-sm-12">
+              <p class="alert alert-sm no-margin">
+                Most Juiced components allow for a <samp>.radius</samp> helper class to be added for easy border-radius rounding.  If you do not add <samp>.radius</samp> to your components, they will have square edges.
+              </p>
+            </div>
+            <div class="col-xs-6 col-sm-12">
+               <p class="alert alert-sm no-margin">
+                If you choose not to use the grid for spacing, Juiced will automatically provide margin's to any <samp>input</samp> wrapped in a <samp>label</samp>.
+              </p>
+            </div>
+            <div class="col-xs-6 col-sm-12">
+               <p class="alert alert-sm no-margin">
+                As shown in our example, there is no need for form-groups. Use the grid to nicely space your form elements.
+              </p>
+            </div>
+         
+          </div>
         </div>
         <div class="col-sm-8">
           <pre data-code-type="HTML">

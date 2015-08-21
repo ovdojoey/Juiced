@@ -82,7 +82,7 @@ a{
     color: lighten($color-link, 10%);
     text-decoration: underline;
   }
-  &:focus{
+  &:active{
     outline: none;
   }
 }
@@ -278,6 +278,19 @@ ul.no-style, ol.no-style, dl.no-style{
     border: 0;
   }
 
+  &.radius.no-border{
+    border-radius: 4px; 
+    .card-header,.card-content:first-of-type{
+      border-top-right-radius: 4px;
+      border-top-left-radius: 4px;
+    }
+    .card-footer,.card-content:last-of-type{
+      border-bottom-right-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+
+  }
+
   .card-img{
     width: 100%;
     margin: 0;
@@ -311,9 +324,88 @@ ul.no-style, ol.no-style, dl.no-style{
 // 3.D
 input[type=radio], input[type=checkbox]{
   font-size: 1rem;
+
   &[disabled] {
     cursor: not-allowed;
   }
+  &.switch{
+    display: none;
+    position: absolute;
+  }
+}
+.switch{
+  display: inline-block;
+  // width: 4rem;
+  height: 1.75rem;
+  user-select: none;
+  border: 1px solid transparent;
+  text-indent: 4.4rem;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  min-width: 4.5rem;
+
+  &:before{
+    display: block;
+    content: '';
+    height: 1.8rem;
+    width: 4rem;
+    left: 0;
+    top: 0;
+    position: absolute;
+    border: 1px solid $color-light;
+    transition: all .4s;
+  }
+  &:after{
+    display: block;
+    content: '';
+    position: absolute;
+    height: 1.3rem;
+    width: 1.3rem;
+    top: .25rem;
+    left: 0.25rem;
+    transition: left .4s;
+    z-index: 1;
+    background: $color-light;
+    border: 1px solid transparent;
+  }
+
+  &.thin{
+    &:after{
+      border: 1px solid lighten($color-light, 5%);
+      background: transparent;
+    }
+  }
+  
+  &.radius{
+    border-radius: 16px;
+    &:before{
+      border-radius: 16px;
+    }
+    &:after{
+      border-radius: 2rem;
+      height: 1.3rem;
+      width: 1.3rem;
+      top: .25rem;
+    }
+  }
+
+  &:checked{
+    & + .switch{
+
+      &:before{
+        background: $color-primary;
+        border-color: transparent;
+      }
+      &:after{
+        left: calc(4rem - 1.6rem);
+        border-color: transparent;
+        background: $color-white;
+      }
+      
+    }
+  }
+
 }
 label{
   input{
