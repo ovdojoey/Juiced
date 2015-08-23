@@ -33,6 +33,12 @@
     #skip-content:focus{
       height: auto;
     }
+    #side-nav{
+      max-height: 100vh;
+      overflow-y: auto;
+      padding-bottom: 100px;
+    }
+    
   </style>
 </head>
 <body>
@@ -242,7 +248,7 @@
             </p>
             <strong>Card containers</strong>
             <p class="text-left">
-              By default, cards fill 100% of the available width allowing them to sit nicely inside the Juiced grid.  If you don't want to use the grid, you can wrap your cards with a <samp>.card-masonry</samp> block element, and they will be set to a max-width of 360px as shown in our examples below.
+              By default, cards fill 100% of the available width allowing them to sit nicely inside the Juiced grid.  If you don't want to use the grid, you can wrap your cards with a <samp>.card-masonry</samp> block element, and they will be set to a max-width of 360px as shown in our examples below (<em>see the masonry card for more details</em>).
             </p>
 
         </div>
@@ -308,7 +314,7 @@
               <div class="card radius text-left">
                 <div class="card-content">
                   <h3>Want stackable masonry-like cards?</h3>
-                  <p>Use our built in <samp>.card-masonry<samp> classes to wrap all your cards. Reponsive breakpoints are the same, so <samp>.masonry-1</samp> means one column on mobile and <samp>.sm-masonry-2</samp> would switch to two columns on small screens and up.  Juiced supports up to 4 columns for each breakpoint.</p>
+                  <p>Use our built in <samp>.card-masonry<samp> classes to wrap all your cards. Reponsive breakpoints are the same, so <samp>.card-masonry-1</samp> means one column on mobile and <samp>.sm-card-masonry-2</samp> would switch to two columns on small screens and up.  Juiced supports up to 4 columns for each breakpoint.</p>
                 </div>
               
               </div>
@@ -591,19 +597,21 @@
       <div class="container gutters items-start">
         <div class="col-12 top-padding">
           <nav class="position-fixed full-width z-index-3 hidden sm-visible font-bold">
-            <a href="index.html" tabindex="3" class="color-primary"><h4>Juiced Docs</h4></a>
+            <div id="side-nav">
+              <a href="index.html" tabindex="3" class="color-primary"><h4>Juiced Docs</h4></a>
 
-            <a href="layout.html" tabindex="3"><h4 class="no-margin">Layout</h4></a>
-            <a href="classes.html" tabindex="3"><h4 class="no-margin">Helper Classes</h4></a>
+              <a href="layout.html" tabindex="3"><h4 class="no-margin">Layout</h4></a>
+              <a href="classes.html" tabindex="3"><h4 class="no-margin">Helper Classes</h4></a>
 
-            <h4 class="no-margin color-light">Components</h4>
-            <ul class="no-style side-links">
-              <li><a href="#alerts" tabindex="2" class="no-text-decoration color-primary opacity-75 transition-fast hover-opacity-100 position-relative display-block">alerts</a></li>
-              <li><a href="#buttons" tabindex="2" class="no-text-decoration color-primary opacity-75 transition-fast hover-opacity-100 position-relative display-block">buttons</a></li>
-              <li><a href="#cards" tabindex="2" class="no-text-decoration color-primary opacity-75 transition-fast hover-opacity-100 position-relative display-block">cards</a></li>
-              <li><a href="#forms" tabindex="2" class="no-text-decoration color-primary opacity-75 transition-fast hover-opacity-100 position-relative display-block">forms</a></li>
-           
-            </ul>
+              <h4 class="no-margin color-light">Components</h4>
+              <ul class="no-style side-links">
+                <li><a href="#alerts" tabindex="2" class="no-text-decoration color-primary opacity-75 transition-fast hover-opacity-100 position-relative display-block">alerts</a></li>
+                <li><a href="#buttons" tabindex="2" class="no-text-decoration color-primary opacity-75 transition-fast hover-opacity-100 position-relative display-block">buttons</a></li>
+                <li><a href="#cards" tabindex="2" class="no-text-decoration color-primary opacity-75 transition-fast hover-opacity-100 position-relative display-block">cards</a></li>
+                <li><a href="#forms" tabindex="2" class="no-text-decoration color-primary opacity-75 transition-fast hover-opacity-100 position-relative display-block">forms</a></li>
+             
+              </ul>
+            </div>
           </nav>
         </div>
       </div>
