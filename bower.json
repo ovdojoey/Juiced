@@ -1,9 +1,8 @@
 {
   "name": "juiced",
-  "version": "1.1.6",
   "homepage": "http://juicedcss.com",
   "authors": [
-    "Joey Lea <joey@w3by.com>"
+    "Joey Lea <joey@w3by.com> (http://joeylea.com)"
   ],
   "description": "A mobile first, responsive CSS Framework based on Flexible Boxes",
   "main": [

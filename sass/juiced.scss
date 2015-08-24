@@ -238,6 +238,9 @@ ul.no-style, ol.no-style, dl.no-style{
   }
   &.btn-block{
     width: 100%;
+    & + .btn-block {
+      border-top-color: transparent;
+    }
   }
 }
 // 3.C
@@ -1055,7 +1058,7 @@ label{
   max-width: $container-max-width;
   margin: auto; 
 
-  &.full-width {
+  &.full-width, &.container-fluid {
     max-width: 100%;
   }
 

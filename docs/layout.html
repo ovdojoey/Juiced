@@ -59,7 +59,7 @@
 <body>
 
   <div class="position-fixed background-color-white z-index-2 full-width heading-bar" >
-    <div class="container full-width items-center">
+    <div class="container items-center">
       <div class="col-7 col-xs-8 text-center">
         <div class="container gutters-sm items-center">
           <div class="col-4 col-xs-auto">
@@ -80,7 +80,7 @@
     </div>
   </div>
 
-  <div class="container full-width">
+  <div class="container ">
     <div class="col-md-2 col-md-order-2 col-10 col-push-1 col-md-push-0 top-padding hidden md-visible" id="navigation-bar"> 
       <div class="container gutters items-start">
         <div class="col-12">
@@ -91,9 +91,8 @@
               <h4 class="no-margin color-light">Layout</h4>
               <ul class="no-style side-links no-padding-bottom">
                 <li><a href="#overview" tabindex="2" class="no-text-decoration color-primary opacity-75 transition-opacity transition-fast hover-opacity-100 position-relative display-block">overview</a></li>
-                <li><a href="#grid" tabindex="2" class="no-text-decoration color-primary opacity-75 transition-opacity transition-fast hover-opacity-100 position-relative display-block">container</a></li>
+                <li><a href="#container" tabindex="2" class="no-text-decoration color-primary opacity-75 transition-opacity transition-fast hover-opacity-100 position-relative display-block">container</a></li>
                 <li><a href="#columns" tabindex="2" class="no-text-decoration color-primary opacity-75 transition-opacity transition-fast hover-opacity-100 position-relative display-block">columns</a></li>
-                <li><a href="#flexbox" tabindex="2" class="no-text-decoration color-primary opacity-75 transition-opacity transition-fast hover-opacity-100 position-relative display-block">flexbox</a></li>
              
               </ul>
               <a href="classes.html" tabindex="3"><h4 class="no-margin">Helper Classes</h4></a>
@@ -120,7 +119,7 @@
         
             <strong>Quickstart</strong>
             <p>
-              To start building with Juiced, create a <samp>.container</samp> parent element.  Inside you will add your columns (<samp>.col-<var>[auto|1-12]</var></samp>).  &nbsp; Unlike other CSS frameworks, you don't need to use <samp>.row</samp> and your columns don't have to add up to 12.    Gutters are created using padding, and are not added to columns by default. <em>Learn about gutters in the container section</em>.
+              To start building with Juiced, create a <samp>.container</samp> parent element.  Inside you will add your columns <samp>.col-<var>[auto|1-12]</var></samp>.  &nbsp; Unlike other CSS frameworks, you don't need to use <samp>.row</samp> and your columns don't have to add up to 12.    Gutters are created using padding, but are not added to columns by default. <em>Learn about gutters in the container section</em>.
             </p>
 
             <strong><samp>.col-<var>[1-12]</var></samp></strong>
@@ -273,6 +272,127 @@
         </div>
       </div>
 
+      <div class="container gutters items-start">
+        <div class="col-12 top-padding">
+          <a name="content" class="link-push-up"></a>
+          <a name="container" class="link-push-up"></a>
+          <h2 class="text-left">container</h2>
+        </div>
+        <div class="col-11 col-push-half">
+            <p class="text-left">
+              The container wraps all of your columns.  Without using the <samp>.container</samp> class, your <samp>.col</samp> classes will not work.  The container is 100% Flexbox, and it's display is set to <samp>flex</samp> by default.  If you are familiar with Flexbox, the following information should be a refresher, if not - take a look at the helper classes that activate various Flexbox properties.
+            </p>
+        
+            <strong>Container width</strong>
+            <p>
+              By default, the container is a max-width of 1170px.  This can be modified in the <samp>_variables.scss</samp> file. 
+            </p>
+            <strong>Full width (fluid containers)</strong>
+            <p>
+              
+              To stretch the container to 100% of the available width, add <samp>.full-width</samp> to the container. 
+            </p>
+
+
+            <strong>Container gutters</strong>
+            <p>
+              By default, gutters are not included on columns.  This makes it easier for the designer to decide if they want padding added.  Add standard width gutters (16px) to the left and right of each column with <samp>.gutters</samp>.  Add smaller gutters (8px) on each side using <samp>.gutters-sm</samp>.  Sometimes it is useful to have padding above and below each column as well (to provide spacing when the columns' collapse).  You can add gutters to all sides using <samp>.gutters-all</samp>(16px on all sides) and <samp>.gutters-sm-all</samp> (8px on all sides). 
+            </p>
+            <h3 class="color-blue">Container modifiers:</h3>
+            <p>Container modifiers are classes that help align your columns.  Applying these classes will set the child columns to the property chosen.
+            </p>
+
+            <div class="container">
+              <div class="col-xs-11 col-xs-push-half">
+
+                  <div class="alert text-center">
+                    <p class="no-margin">
+                    Take a look at our examples on Codepen for visual reference.
+                    </p>
+                    <br>
+                    <a href="http://codepen.io/ovdojoey/pen/BNEQZO" target="_blank" class="color-blue btn radius no-t-d btn-sm btn-outline hover-color-yellow hover-btn-outline-reverse hover-background-color-blue transition-fast btn-block">Codepen examples</a>
+                  </div>
+
+
+                <strong>Column Justification</strong>
+                <p>Justifying the content allows you to position any columns nicely when using auto sized columns, or when you have an unknown number of columns.  This means you don't need to have all your columns add up to 12.  The justification classes are <samp>.justify-start</samp>, <samp>.justify-end</samp>, <samp>.justify-center</samp>, <samp>.justify-space-between</samp>, and <samp>.justify-space-around</samp>.
+                </p>
+
+                <strong>Item Alignment</strong>
+                <p>Item alignment refers to how the columns sit inside the "row".  Typically they stretch to fill 100% of the available height, but you can also sit them at the top, bottom, vertically-centered, or baseline.  The item alignment classes are <samp>.items-stretch</samp>, <samp>.items-start</samp>, <samp>.items-end</samp>, <samp>.items-center</samp>, and <samp>.items-baseline</samp>.
+                </p>
+
+                <strong>Content Alignment</strong>
+                <p>Content alignment refers to how all the columns as a group sit in the container.  Typically they stretch to fill 100% of the available height, but you can manually position them.  The content alignment classes are <samp>.content-stretch</samp>, <samp>.content-start</samp>, <samp>.content-end</samp>, <samp>.content-center</samp>, <samp>.content-space-around</samp>, and <samp>.content-space-between</samp>.
+                </p>
+
+
+                <strong>Flex display, wrap and direction</strong>
+                <p>You can change the <em>display</em> property to inline-flex to by adding <samp>.flex-inline</samp> to the container.  Change the flex-direction with <samp>.dir-row</samp>, <samp>.dir-row-reverse</samp>, <samp>.dir-column</samp>, and <samp>.dir-column-reverse</samp>.
+                Change the <em>flex-wrap</em> by using <samp>.nowrap</samp> and <samp>.wrap-reverse</samp>.</p>
+
+
+                <p class="display-inline-block alert alert-sm"><strong>Note:</strong> Juiced is built with maximum compatbility when using <em>flex-direction: <strong>row</strong></em>. We have also written the docs using <em>flex-direction: row</em> and changing this may produce different outcomes from what our docs specify. Also, changing the direction, display, or wrap style may have compatability issues with I.E. as it does not properly handle box-sixing on Flexbox elements and needed a <em>max-width</em> hack to be IE9+ compatible.
+                </p>
+              </div>
+            </div>
+
+
+            
+          </div>
+          
+      </div>
+
+      <div class="container gutters items-start">
+        <div class="col-12 top-padding">
+          <a name="content" class="link-push-up"></a>
+          <a name="columns" class="link-push-up"></a>
+          <h2 class="text-left">columns</h2>
+        </div>
+        <div class="col-11 col-push-half">
+            <p class="text-left">
+              Columns house all of your content. They can be a fixed width by using <samp>.col-<var>[1-12]</var></samp> or they can be automatically sized by using <samp>.col-auto</samp>.  Columns must be children of a container, but you are free to nest as many containers inside of columns as you need.
+            </p>
+        
+            
+
+            <h3 class="color-blue">Column modifiers:</h3>
+            <p>Column modifiers are classes that help align your columns.  Applying these classes will only affect the particular column set to the property chosen.
+            </p>
+
+            <div class="container">
+              <div class="col-xs-11 col-xs-push-half">
+
+                  <div class="alert text-center">
+                    <p class="no-margin">
+                    Take a look at our examples on Codepen for visual reference.
+                    </p>
+                    <br>
+                    <a href="http://codepen.io/ovdojoey/pen/PqgWgP" target="_blank" class="color-blue btn radius no-t-d btn-sm btn-outline hover-color-yellow hover-btn-outline-reverse hover-background-color-blue transition-fast btn-block">Ordering columns</a>
+                    <a href="http://codepen.io/ovdojoey/pen/MwRbwd" target="_blank" class="color-blue btn radius no-t-d btn-sm btn-outline hover-color-yellow hover-btn-outline-reverse hover-background-color-blue transition-fast btn-block">Column Width</a>
+                  </div>
+
+
+                <strong>Column ordering</strong>
+                <p>Flexbox is the ultimate way to order content, and Juiced expands on that to allow up to 12 columns to be ordered per breakpoint.  Order columns for mobile first using <samp>.col-order-<var>[1-12]</var></samp> and order columns for larger screen sizes using: <samp>.col-<var>[xs|sm|md|lg]</var>-<var>[1-12]</var></samp>.
+                </p>
+
+                <strong>Column alignment</strong>
+                <p>Much like item alignment, these properties will only be applied to a particular column, not the whole set. The column alignment classes are <samp>.align-stretch</samp>, <samp>.align-auto</samp>, <samp>.align-start</samp>, <samp>.align-end</samp>, <samp>.align-center</samp>, and <samp>.align-baseline</samp>.
+                </p>
+
+                <strong>Column growth</strong>
+                <p>When using auto sized columns, it can be useful to grow that column to fill any available space left.  Simply add <samp>.grow-1</samp> to add do so.  If you need to scale multiple columns independtly, you can add <samp>.col-grow-<var>[1-4]</var>]</samp>, which is useful if there are more than one auto-sized columns that need to scale at a consistent factor. 
+                </p>
+
+              </div>
+            </div>
+
+
+            
+          </div>
+          
+      </div>
     
       <div class="col-12 col-order-3  text-center">
         <p class="color-light">Copyright 2015 Joey Lea.  All rights reserved.</p>
