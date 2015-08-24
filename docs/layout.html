@@ -119,7 +119,7 @@
         
             <strong>Quickstart</strong>
             <p>
-              To start building with Juiced, create a <samp>.container</samp> parent element.  Inside you will add your columns <samp>.col-<var>[auto|1-12]</var></samp>.  &nbsp; Unlike other CSS frameworks, you don't need to use <samp>.row</samp> and your columns don't have to add up to 12.    Gutters are created using padding, but are not added to columns by default. <em>Learn about gutters in the container section</em>.
+              To start building with Juiced, create a <samp>.container</samp> parent element.  Inside you will add your columns <samp>.col-<var>[auto|1-12]</var></samp>.  Unlike other CSS frameworks, you don't need to use <samp>.row</samp> and your columns don't have to add up to 12.    Gutters are created using padding, but are not added by default. <em>Learn about gutters in the container section below</em>.
             </p>
 
             <strong><samp>.col-<var>[1-12]</var></samp></strong>
@@ -252,7 +252,7 @@
             <strong>Truly mobile-first</strong>
             </p>
             <p>
-              Juiced is built with a mobile-first mentality, so you never have to target the smallest viewport when buildling your grid, instead just use <samp>.col-<var>[1-12]</var></samp>.  From there, you build up for larger screens using <samp><var>[xs|sm|md|lg]</var>-col-<var>[1-12]</var></samp>.  Column targeting works from the targeted breakpoint up, so the classes <samp>.col-6 .col-lg-4</samp> will span 6 columns on all devices up until large screens, which it will span only 4 columns.
+              Juiced is built with a mobile-first mentality, so you never have to target the smallest viewport when building your grid, instead just use <samp>.col-<var>[1-12]</var></samp>.  From there, target larger screens using <samp><var>[xs|sm|md|lg]</var>-col-<var>[1-12]</var></samp>.  Column targeting works from the targeted breakpoint up, so the classes <samp>.col-6 .col-lg-4</samp> will span 6 columns on all devices up until large screens, which it will span only 4 columns.
             </p>
 
             <strong>Readable HTML</strong>
@@ -280,7 +280,7 @@
         </div>
         <div class="col-11 col-push-half">
             <p class="text-left">
-              The container wraps all of your columns.  Without using the <samp>.container</samp> class, your <samp>.col</samp> classes will not work.  The container is 100% Flexbox, and it's display is set to <samp>flex</samp> by default.  If you are familiar with Flexbox, the following information should be a refresher, if not - take a look at the helper classes that activate various Flexbox properties.
+              The container wraps all of your columns.  Without using the <samp>.container</samp> class, your <samp>.col</samp> classes will not work.  The container is 100% Flexbox, and it's display is set to <samp>flex</samp> by default.  If you are familiar with Flexbox, the following information should be a refresher, if not - take a look at the container modifier classes that activate various Flexbox properties.
             </p>
         
             <strong>Container width</strong>
@@ -328,11 +328,11 @@
 
 
                 <strong>Flex display, wrap and direction</strong>
-                <p>You can change the <em>display</em> property to inline-flex to by adding <samp>.flex-inline</samp> to the container.  Change the flex-direction with <samp>.dir-row</samp>, <samp>.dir-row-reverse</samp>, <samp>.dir-column</samp>, and <samp>.dir-column-reverse</samp>.
-                Change the <em>flex-wrap</em> by using <samp>.nowrap</samp> and <samp>.wrap-reverse</samp>.</p>
+                <p>We don't recommend it, but you can change the Flex <em>display</em> property to inline-flex to by adding <samp>.flex-inline</samp> to the container.  You can change the flex-direction using <samp>.dir-row</samp>, <samp>.dir-row-reverse</samp>, <samp>.dir-column</samp>, and <samp>.dir-column-reverse</samp>.
+                Finally, you can change the <em>flex-wrap property</em> by using <samp>.nowrap</samp> or <samp>.wrap-reverse</samp>.</p>
 
 
-                <p class="display-inline-block alert alert-sm"><strong>Note:</strong> Juiced is built with maximum compatbility when using <em>flex-direction: <strong>row</strong></em>. We have also written the docs using <em>flex-direction: row</em> and changing this may produce different outcomes from what our docs specify. Also, changing the direction, display, or wrap style may have compatability issues with I.E. as it does not properly handle box-sixing on Flexbox elements and needed a <em>max-width</em> hack to be IE10+ compatible.
+                <p class="display-inline-block alert alert-sm"><strong>Note:</strong> Juiced is built with maximum compatbility when using <em>flex-direction: <strong>row</strong></em>. We have also written the docs using <em>flex-direction: row</em> and changing this may produce different outcomes from what our docs specify. Also, changing the direction, display, or wrap style may have compatability issues with IE10 and IE11 as it does not properly handle box-sixing on Flexbox.
                 </p>
               </div>
             </div>
@@ -374,7 +374,7 @@
 
 
                 <strong>Column ordering</strong>
-                <p>Flexbox is the ultimate way to order content, and Juiced expands on that to allow up to 12 columns to be ordered per breakpoint.  Order columns for mobile first using <samp>.col-order-<var>[1-12]</var></samp> and order columns for larger screen sizes using: <samp>.col-<var>[xs|sm|md|lg]</var>-<var>[1-12]</var></samp>.
+                <p>Flexbox is the ultimate way to order content, and Juiced expands on that to allow up to 12 columns to be ordered per breakpoint.  Order columns for mobile first using <samp>.col-order-<var>[1-12]</var></samp> and order columns for larger screen sizes using: <samp>.col-<var>[xs|sm|md|lg]</var>-order-<var>[1-12]</var></samp>.
                 </p>
 
                 <strong>Column alignment</strong>
