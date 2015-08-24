@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Juiced Helper Classes</title>
+  <link rel="stylesheet" href="../dist/css/juiced.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+    body{
+      font-family: 'Lato', sans-serif;
+      font-size:16px;
+    }
+    .top-padding {
+      margin-top: 95px;
+    }
+    .heading-bar{
+      border-bottom: 1px solid #eee;
+      padding: 10px 0;
+    }
+    .link-push-up{
+      position: relative;
+      top: -90px;
+      display: block;
+    }
+    .side-links a{
+      padding: 3px 0;
+    }
+    #skip-content{
+      height: 0;
+      overflow: hidden;
+    }
+    #skip-content:focus{
+      height: auto;
+    }
+    #side-nav{
+      max-height: 100vh;
+      overflow-y: auto;
+      padding-bottom: 150px;
+    }
+    #navigation-bar{
+      background:#f2f2f2;
+    }
+    #navigation-bar[data-active=true]{
+      min-height: 200px;
+      /*text-align: center;*/
+      visibility: visible;
+      padding-top: 20px;
+    }
+    #navigation-bar[data-active=true] #fixed-nav{
+      position: relative;
+    }
+    #navigation-bar[data-active=true] #side-nav{
+      padding-bottom: 20px;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <div class="position-fixed background-color-white z-index-2 full-width heading-bar" >
+    <div class="container full-width items-center">
+      <div class="col-7 col-xs-8 text-center">
+        <div class="container gutters-sm items-center">
+          <div class="col-4 col-xs-auto">
+            <img src="logo.png" alt="Juiced" class="img-responsive" title="Juiced Logo">
+          </div>
+          <div class="col-8 col-xs-auto text-left">
+            <h2>classes</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-5 col-xs-4 text-center xs-text-right">
+
+        <a href="#content" id="skip-content" class="display-block position-relative" tabindex="1">Skip to main content</a>
+
+
+        <a href="#toggle" id="toggle_nav" class="btn md-display-none color-white radius background-color-light hover-background-color-blue transition-background-color transition text-decoration-none">List All</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container full-width">
+    <div class="col-md-2 col-md-order-2 col-10 col-push-1 col-md-push-0 top-padding hidden md-visible" id="navigation-bar"> 
+      <div class="container gutters items-start">
+        <div class="col-12">
+          <nav class="position-fixed full-width  font-bold" id="fixed-nav">
+            <div id="side-nav">
+              <a href="index.html" tabindex="3" class="color-primary"><h4>Juiced Docs</h4></a>
+
+              <a href="layout.html" tabindex="3"><h4 class="no-margin">Layout</h4></a>
+              <h4 class="no-margin color-light">Helper Classes</h4>
+              <ul class="no-style side-links no-padding-bottom">
+                <li><a href="#colors" tabindex="2" class="no-text-decoration color-primary opacity-75 transition-opacity transition-fast hover-opacity-100 position-relative display-block">colors</a></li>
+                <li><a href="#cursors" tabindex="2" class="no-text-decoration color-primary opacity-75 transition-opacity transition-fast hover-opacity-100 position-relative display-block">cursors</a></li>
+                <li><a href="#layout" tabindex="2" class="no-text-decoration color-primary opacity-75 transition-opacity transition-fast hover-opacity-100 position-relative display-block">layout</a></li>
+                <li><a href="#text" tabindex="2" class="no-text-decoration color-primary opacity-75 transition-opacity transition-fast hover-opacity-100 position-relative display-block">text</a></li>
+                <li><a href="#transform" tabindex="2" class="no-text-decoration color-primary opacity-75 transition-opacity transition-fast hover-opacity-100 position-relative display-block">transform</a></li>
+                <li><a href="#hover" tabindex="2" class="no-text-decoration color-primary opacity-75 transition-opacity transition-fast hover-opacity-100 position-relative display-block">hover</a></li>
+                <li><a href="#transitions" tabindex="2" class="no-text-decoration color-primary opacity-75 transition-opacity transition-fast hover-opacity-100 position-relative display-block">transitions</a></li>
+                <li><a href="#accessibility" tabindex="2" class="no-text-decoration color-primary opacity-75 transition-opacity transition-fast hover-opacity-100 position-relative display-block">accessibility</a></li>
+             
+              </ul>
+              <a href="components.html" tabindex="3"><h4 class="no-margin">Components</h4></a>
+
+              
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-10 col-md-order-1">
+      <div class="container gutters items-start">
+        <div class="col-12 top-padding">
+          <a name="content" class="link-push-up"></a>
+          <a name="colors" class="link-push-up"></a>
+          <h2 class="text-left">colors</h2>
+        </div>
+        <div class="col-11 col-push-half">
+            <p class="text-left">
+            Juiced has 9 colors baked in for use as backgrounds and font colors.  Change the <span class="color-blue">f</span>o<span class="color-green">n</span><span class="color-red">t</span> color using <samp>.color-<var>[option]</var></samp> and change the <span class="background-color-yellow color-auto">background</span> color using <samp>.background-color-<var>[option]</var></samp>.
+            </p>
+        </div>
+        <div class="col-sm-6 col-order-1">
+          <div class="container gutters-sm-all">
+            <div class="col-6 col-sm-12">
+              <div class="color-red"><samp>.color-red</samp></div>
+              <div class="color-blue"><samp>.color-blue</samp></div>
+              <div class="color-white background-color-dark"><samp>.color-white .background-color-dark</samp></div>
+              <div class="color-green"><samp>.color-green</samp></div>
+              <div class="background-color-green color-auto"><samp>.color-auto .background-color-green</samp></div>
+
+            </div>
+            <div class="col-6 col-sm-12">
+              <div class="color-yellow"><samp>.color-yellow</samp></div>
+              <div class="color-primary"><samp>.color-primary</samp></div>
+              <div class="color-alt"><samp>.color-alt</samp></div>
+              <div class="color-light"><samp>.color-light</samp></div>
+              <div class="color-dark"><samp>.color-dark</samp></div>
+            </div>
+          </div>
+
+          <p class="alert alert-sm">
+          <strong>Note:</strong> there is also a special <samp>.color-auto</samp> class that can be used in conjunction with a <samp>.background-color</samp>.  When a background color class is applied, <samp>.color-auto</samp> will be set to 40%+ contrast to match (<em>the contrast will be darker or lighter depending on the background color chosen</em>).
+          </p> 
+        </div>
+        <div class="col-sm-6 col-order-2">
+         <pre class="no-margin-top" data-code-type="HTML">
+          &lt;h2 class="color-red"&gt;Color red&lt;/h2&gt;
+          &lt;h2 class="color-blue"&gt;Color blue&lt;/h2&gt;
+          &lt;h2 class="color-white background-color-dark"&gt;Color white&lt;/h2&gt;
+          &lt;h2 class="color-green"&gt;Color green&lt;/h2&gt;
+          &lt;h2 class="background-color-green color-auto"&gt;Color auto&lt;/h2&gt;
+          &lt;h2 class="color-yellow"&gt;Color yellow&lt;/h2&gt;
+          &lt;h2 class="color-primary"&gt;Color primary&lt;/h2&gt;
+          &lt;h2 class="color-alt"&gt;Color alt&lt;/h2&gt;
+          &lt;h2 class="color-light"&gt;Color light&lt;/h2&gt;
+          &lt;h2 class="color-dark"&gt;Color dark&lt;/h2&gt;
+         </pre>
+        </div>
+      </div>
+      <div class="container gutters items-start justify-space-around">
+        <div class="col-12 top-padding">
+          <a name="cursors" class="link-push-up"></a>
+          <h2 class="text-left">cursors</h2>
+        </div>
+        <div class="col-11 col-push-half">
+            <p class="text-left">
+               Juiced does not automatically apply cursor effects to links, buttons or other elements.  Instead, there is a few baked in cursor classes: <samp class="cursor-pointer">.cursor-pointer</samp>, <samp class="cursor-default">.cursor-default</samp>, <samp class="cursor-auto">.cursor-auto</samp>, <samp class="cursor-none">.cursor-none</samp>, <samp class="cursor-not-allowed">.cursor-not-allowed</samp>.
+            </p>
+        </div>
+      </div>
+      <div class="container gutters items-start">
+        <div class="col-12 top-padding">
+          <a name="layout" class="link-push-up"></a>
+          <h2 class="text-left">layout</h2>
+        </div>
+        <div class="col-11 col-push-half">
+            <strong>Images</strong>
+            <p class="text-left">
+              Use <samp>.img-full-width</samp> and <samp>.img-responsive</samp> on your images to scale them properly inside the grid.
+            </p>
+
+            <strong>Margins</strong>
+            <p class="">
+              Use <samp>.no-margin</samp> to remove any pre-defined margins from elements.  You can also use <samp>.no-margin-<var>[top|bottom|left|right]</var></samp> to remove margins from a specific side. 
+            </p>
+
+            <strong>Padding</strong>
+            <p class="text-left">
+              Use <samp>.no-padding</samp> to remove any pre-defined paddings from elements.  You can also use <samp>.no-padding-<var>[top|bottom|left|right]</var></samp> to remove margins from a specific side. 
+            </p>
+
+            <strong>Position</strong>
+            <p class="text-left">
+              Change the  <em>position</em> property by using <samp>.position-<var>[relative|absolute|fixed|static]</samp>.
+            </p>
+
+            <strong>Z-index</strong>
+            <p class="text-left">
+              Change the  <em>z-index</em> property by using <samp>.z-index-<var>[auto|1|2|3|4|5]</samp>. 
+            </p>
+
+
+            <strong>Display &nbsp; <span class="color-light">responsive</span></strong>
+            <p class="text-left">
+              Use <samp>.display-<var>[block|inline|none|inline-block]</samp> to change the <em>display</em> property.  These classes are responsive so to change the display for larger viewports simply prefix the breakpoint, like: <samp>.<var>[xs|sm|md|lg]</var>-display-<var>[option]</var></samp>.
+            </p>
+
+            <strong>Visibility &nbsp; <span class="color-light">responsive</span></strong>
+            <p class="text-left">
+              Use <samp>.visible</samp> and <samp>.hidden</samp> to change the <em>visibility</em> property.  These classes are responsive so to change the visibility for larger viewports simply prefix the breakpoint, like: <samp>.<var>[xs|sm|md|lg]</var>-hidden</samp> or <samp>.<var>[xs|sm|md|lg]</var>-visible</samp>.
+              
+
+              <div class="alert alert-sm"><strong>Note:</strong> Our <samp>.hidden</samp> visibility class varies from Bootstrap in that we only change the visibility of the element.  The element remains in the document flow and will still take up space.  Change the display property to remove it from the flow.</div>
+
+            
+            </p>
+        </div>
+      </div>
+      <div class="container gutters items-start">
+        <div class="col-12 top-padding">
+          <a name="text" class="link-push-up"></a>
+          <h2 class="text-left">text</h2>
+        </div>
+        <div class="col-11 col-push-half">
+          <strong>Text decoration</strong>
+          <div class="container gutters-sm">
+            <div class="col-sm-7">
+              <p>
+              Use either <samp>.text-decoration-none</samp>, &nbsp; <samp>.no-text-decoration</samp>, &nbsp; or  &nbsp; <samp>.no-t-d</samp> &nbsp; to remove the default underline on link elements.
+              </p>
+            </div>
+            <div class="col-sm-5">
+              <div class="text-left alert alert-sm alert-yellow">
+                <strong>Tidbit:</strong> Text decoration is one of the only helper classes in Juiced that gets a unrecognizable shorthand option.
+              </div>
+            </div>
+          </div>
+    
+          <strong>Text transforms</strong>
+          <p class="text-left">
+            Use <samp>.text-uppercase</samp> for <span class="text-uppercase">uppercase text</span>.
+        
+            &nbsp; Use <samp>.text-lowercase</samp> for <span class="text-lowercase">lowercase text</span>.
+          
+            &nbsp;  Use <samp>.text-capitalize</samp> for <span class="text-capitalize">capitalized text</span>.
+          </p>
+
+          <strong>Font</strong>
+          <p class="text-left">
+            Change the font weight using <samp>.font-<var>[bold|bolder|light|lighter]</var></samp>.  Change the font style using<samp>.font-<var>[italic|oblique|normal]</var></samp>.
+          </p>
+      
+          <strong>Text alignment &nbsp; <span class="color-light">responsive</span></strong>
+          <p class="text-left">
+            Use <samp>.text-right</samp>, <samp>.text-left</samp>, <samp>.text-center</samp>, and <samp>.text-justify</samp> for text alignment.  These classes are responsive so to change the alignment for larger viewports simply prefix the breakpoint, like: <samp>.<var>[xs|sm|md|lg]</var>-text-<var>[right|left|center|justify]</var></samp>
+            <div class="container justify-space-around gutters-sm-all background-color-blue" >
+            <div class="col-xs-6 col-sm-4 text-right"><div class="background-color-white"><samp>.text-right</samp></div></div>
+            <div class="col-xs-6 col-sm-4 text-center"><div class="background-color-white"><samp>.text-center</samp></div></div>
+            <div class="col-xs-6 col-sm-4 text-left"><div class="background-color-white"><samp>.text-left</samp></div></div>
+            <div class="col-xs-6 col-sm-4 text-justify"><div class="background-color-white"><samp>.text-justify</samp> &nbsp; column-like text with even side wrapping.</div></div>
+          </div>
+          </p>
+        </div>
+      </div>
+
+      <div class="container gutters items-start">
+        <div class="col-12 top-padding">
+          <a name="transform" class="link-push-up"></a>
+          <h2 class="text-left">transform</h2>
+        </div>
+        <div class="col-11 col-push-half">
+
+          <p>Apply <em>scale</em> or <em>opacity</em> changes to an element.  Typically this is useful in conjunction with hover classes and transition classes to animate an effect.</p>
+
+          <strong>opacity</strong>
+
+          <p class="text-left">
+            Use <samp>.opacity-<var>[0|25|50|75|100]</var></samp> to modify the opacity.
+          </p>
+
+          <strong>scale</strong>
+
+          <p class="text-left">
+            Use <samp>.scale-<var>[0|50|100|105]</var></samp> to modify the scale.
+          </p>
+        </div>
+      </div>
+
+      <div class="container gutters items-start">
+        <div class="col-12 top-padding">
+          <a name="hover" class="link-push-up"></a>
+          <h2 class="text-left">hover</h2>
+        </div>
+        <div class="col-11 col-push-half">
+          <p class="hover-background-color-light">Hover effects are only applied when the element is in a <samp>:hover state</samp>. Juiced's hover classes are typically used in conjunction with transition classes for animated effects. </p>
+          <strong>Hover color</strong>
+          <p class="text-left">
+            Use <samp>.hover-color-<var>[option]</var></samp> and <samp>hover-background-color-<var>[option]</var></samp> to modify the color and background color upon hover state. 
+          </p>
+          <strong>Hover opacity</strong>
+          <p class="text-left">
+            Use <samp>.hover-opacity-<var>[0|25|50|75|100]</var></samp> to modify the opacity of the element upon hover state. 
+          </p>
+          <strong>Hover scale</strong>
+          <p class="text-left">
+            Use <samp>.hover-scale-<var>[0|50|100|105]</var></samp> to modify the scale of the element upon hover state. 
+          </p>
+          <strong>Special button classes</strong>
+          <p class="text-left">
+            There are two classes that will swap your <samp>.btn</samp> stylings when hovering. Use <samp>.hover-btn-outline</samp> to switch from a regular button to an outline style button and use <samp>.hover-btn-outline-reverse</samp> to switch from an outline style button to a regular button. 
+          </p>
+        </div>
+      </div>
+      <div class="container gutters items-start">
+        <div class="col-12 top-padding">
+          <a name="transitions" class="link-push-up"></a>
+          <h2 class="text-left">transitions</h2>
+        </div>
+        <div class="col-11 col-push-half">
+          <p>
+            Juiced gives you some very basic CSS transitions out of the box.
+          </p>
+          <div class="alert alert-sm display-block"><strong>Note:</strong> setting the transition <samp>property</samp> or <samp>timing</samp> is not required class when using a transition duration class as it will default to <samp>all</samp>.  But, it is recommended to set these property if you can to speed up browser painting and compositing.</div>
+          <strong>Transition property</strong>
+          <p class="text-left">
+            Use <samp>.transition-<var>[all|background|color|opacity|transform]</var></samp> to set the <em>transition-property</em> to be applied during a transition. 
+          </p>
+          <strong>Transition timing</strong>
+          <p class="text-left">
+            Use <samp>.transition-<var>[linear|ease|ease-in|ease-out|ease-in-out]</var></samp> to set the <em>transition-timing-function</em> property on an element. 
+          </p>
+          <strong>Transition duration</strong>
+          <p class="text-left">
+            Use <samp>.transition-<var>[normal|fast|slow|slow-2x|slow-4x]</var></samp> to set the <em>transition-timing-function</em> property to <em class="color-blue">.4s</em>, <em class="color-blue">.2s</em>, <em class="color-blue">.8s</em>, <em class="color-blue">1.2s</em>, and <em class="color-blue">2s</em> respectively.  &nbsp; <small><strong>Note:</strong> <samp>.transition-normal</samp> can be abbreviated to just <samp>.transition</samp>.</small>
+          </p>
+        </div>
+      </div>
+
+      <div class="container gutters items-start">
+        <div class="col-12 top-padding">
+          <a name="accessibility" class="link-push-up"></a>
+          <h2 class="text-left">accessibility</h2>
+        </div>
+        <div class="col-11 col-push-half">
+          
+          <strong>Screen Readers</strong>
+          <p class="text-left">
+            Use <samp>.sr-only</samp> to indiciate textual content that should only be rendered when using assistance technologies.  This class sets the element to be visible, but it takes up no space.
+          </p>
+
+           <strong>Using ARIA</strong>
+          <p class="text-left">
+            Using ARIA tags is strongly recommended. Any time you set the data-attribute <samp>[aria-hidden]</samp> to true, Juiced will automatically set the element to <samp>display:none</samp> to maintain a consistency across both regular browsers and browsers with assistive technologies enabled.
+          </p>
+          
+        </div>
+      </div>
+    
+      <div class="col-12 col-order-3  text-center">
+        <p class="color-light">Copyright 2015 Joey Lea.  All rights reserved.</p>
+     </div>
+    </div>
+
+
+
+  </div>
+  <script>
+  (function(){
+
+    var _navToggle = document.getElementById("toggle_nav"),
+      _navBar = document.getElementById("navigation-bar");
+   
+    _navToggle.addEventListener("click", function() {
+      if(_navBar.getAttribute("data-active") === "true") {
+        this.innerText = 'List All';
+        _navBar.setAttribute("data-active", "false");
+      }else{
+        this.innerText = 'Hide';
+        _navBar.setAttribute("data-active", "true");
+        window.scrollTo(0,0);
+      }
+    });
+
+    var _exits = [].slice.call(document.querySelectorAll('.alert-exit'));
+    _exits.forEach(function(ele) {
+      ele.addEventListener("click", function() {
+        var _parent = this.parentNode;
+        _parent.className = _parent.className + " display-none";
+      });
+    });
+
+    // var _btnClass = [].slice.call(document.querySelectorAll('.btn'));
+    // _btnClass.forEach(function(ele) {
+    //   ele.addEventListener("click", function(){ 
+    //     var _classList = this.className;
+    //     // alert(_classList);
+    //   })
+    // });
+
+  })();
+
+  </script>
+</body>
+</html>

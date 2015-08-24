@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Juiced Layout</title>
+  <link rel="stylesheet" href="../dist/css/juiced.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+    body{
+      font-family: 'Lato', sans-serif;
+      font-size:16px;
+    }
+    .top-padding {
+      margin-top: 95px;
+    }
+    .heading-bar{
+      border-bottom: 1px solid #eee;
+      padding: 10px 0;
+    }
+    .link-push-up{
+      position: relative;
+      top: -90px;
+      display: block;
+    }
+    .side-links a{
+      padding: 3px 0;
+    }
+    #skip-content{
+      height: 0;
+      overflow: hidden;
+    }
+    #skip-content:focus{
+      height: auto;
+    }
+    #side-nav{
+      max-height: 100vh;
+      overflow-y: auto;
+      padding-bottom: 150px;
+    }
+    #navigation-bar{
+      background:#f2f2f2;
+    }
+    #navigation-bar[data-active=true]{
+      min-height: 200px;
+      /*text-align: center;*/
+      visibility: visible;
+      padding-top: 20px;
+    }
+    #navigation-bar[data-active=true] #fixed-nav{
+      position: relative;
+    }
+    #navigation-bar[data-active=true] #side-nav{
+      padding-bottom: 20px;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <div class="position-fixed background-color-white z-index-2 full-width heading-bar" >
+    <div class="container full-width items-center">
+      <div class="col-7 col-xs-8 text-center">
+        <div class="container gutters-sm items-center">
+          <div class="col-4 col-xs-auto">
+            <img src="logo.png" alt="Juiced" class="img-responsive" title="Juiced Logo">
+          </div>
+          <div class="col-8 col-xs-auto text-left">
+            <h2>layout</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-5 col-xs-4 text-center xs-text-right">
+
+        <a href="#content" id="skip-content" class="display-block position-relative" tabindex="1">Skip to main content</a>
+
+
+        <a href="#toggle" id="toggle_nav" class="btn md-display-none color-white radius background-color-light hover-background-color-blue transition-background-color transition text-decoration-none">List All</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container full-width">
+    <div class="col-md-2 col-md-order-2 col-10 col-push-1 col-md-push-0 top-padding hidden md-visible" id="navigation-bar"> 
+      <div class="container gutters items-start">
+        <div class="col-12">
+          <nav class="position-fixed full-width  font-bold" id="fixed-nav">
+            <div id="side-nav">
+              <a href="index.html" tabindex="3" class="color-primary"><h4>Juiced Docs</h4></a>
+
+              <h4 class="no-margin color-light">Layout</h4>
+              <ul class="no-style side-links no-padding-bottom">
+                <li><a href="#overview" tabindex="2" class="no-text-decoration color-primary opacity-75 transition-opacity transition-fast hover-opacity-100 position-relative display-block">overview</a></li>
+                <li><a href="#grid" tabindex="2" class="no-text-decoration color-primary opacity-75 transition-opacity transition-fast hover-opacity-100 position-relative display-block">container</a></li>
+                <li><a href="#columns" tabindex="2" class="no-text-decoration color-primary opacity-75 transition-opacity transition-fast hover-opacity-100 position-relative display-block">columns</a></li>
+                <li><a href="#flexbox" tabindex="2" class="no-text-decoration color-primary opacity-75 transition-opacity transition-fast hover-opacity-100 position-relative display-block">flexbox</a></li>
+             
+              </ul>
+              <a href="classes.html" tabindex="3"><h4 class="no-margin">Helper Classes</h4></a>
+
+              <a href="components.html" tabindex="3"><h4 class="no-margin">Components</h4></a>
+
+              
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-10 col-md-order-1">
+      <div class="container gutters items-start">
+        <div class="col-12 top-padding">
+          <a name="content" class="link-push-up"></a>
+          <a name="overview" class="link-push-up"></a>
+          <h2 class="text-left">overview</h2>
+        </div>
+        <div class="col-11 col-push-half">
+            <p class="text-left">
+              Building mobile-first layouts is the most powerful feature of Juiced.   If you are familiar with a 12-column grid layout, Juiced will be a breeze to get started.  There are a few awesome advantages to using Juiced over other grid systems, namely <strong>Flexible boxes</strong>.  Using the Flexbox spec, Juiced lets you vertically align all columns, shift uneven or extra columns, add spacing around or between columns, auto-size and grow your columns to fit available space, and order columns for each breakpoint.  <strong>Juiced is pretty awesome!</strong>
+            </p>
+        
+            <strong>Quickstart</strong>
+            <p>
+              To start building with Juiced, create a <samp>.container</samp> parent element.  Inside you will add your columns (<samp>.col-<var>[auto|1-12]</var></samp>).  &nbsp; Unlike other CSS frameworks, you don't need to use <samp>.row</samp> and your columns don't have to add up to 12.    Gutters are created using padding, and are not added to columns by default. <em>Learn about gutters in the container section</em>.
+            </p>
+
+            <strong><samp>.col-<var>[1-12]</var></samp></strong>
+            <p>
+              Width-based columns are set to stretch across the 12 column grid depending on how wide you set each block. For instance: <samp>.col-1</samp> will only take up <sup>1</sup>/<sub>12</sub> of the width, whereas <samp>.col-6</samp> would take up <sup>6</sup>/<sub>12</sub> <small class="color-dark"><em>(or 50%)</em></small> of the width.
+            </p>
+            
+
+            <strong><samp>.col-auto</samp></strong>
+            <p>
+              Auto columns are set to have no max-width, and no initial width.  By default, they will take up as much space as their child content.  You can grow auto-sized columns to fill the available space using <samp>.grow-<var>[0-4</var>]</samp> where 0 is no growth and anything above that is the growth factor. 
+            </p>
+          </div>
+          <div class="col-12">  
+
+            <div class="container gutters-sm-all background-color-light">
+              <div class="col-1  col-order-1">
+                <div class="background-color-blue color-white">
+                  <samp>.col-1</samp>
+                </div>
+              </div>
+              <div class="col-6 col-order-2 col-sm-order-3">
+                <div class="background-color-red color-white">
+                  <samp>.col-6</samp>
+                </div>
+              </div>
+              <div class="col-auto  col-order-2 grow-1">
+                <div class="background-color-white color-dark">
+                  <samp>.col-auto .grow-1</samp>
+                </div>
+              </div>
+              <div class="col-auto  col-order-2">
+                <div class="background-color-white color-dark">
+                  <samp>.col-auto</samp>
+                </div>
+              </div>
+            </div>
+            <div class="container gutters-sm-all background-color-light" style="font-size: 11px;">
+              
+              <div class="col-lg-1 col-6">
+                <div class="background-color-white color-dark">
+                  <samp>.col-lg-1 .col-6</samp>
+                </div>
+              </div>
+               <div class="col-lg-1 col-6">
+                <div class="background-color-white color-dark">
+                  <samp>.col-lg-1 .col-6</samp>
+                </div>
+              </div>
+               <div class="col-lg-1 col-6">
+                <div class="background-color-white color-dark">
+                  <samp>.col-lg-1 .col-6</samp>
+                </div>
+              </div>
+               <div class="col-lg-1 col-6">
+                <div class="background-color-white color-dark">
+                  <samp>.col-lg-1 .col-6</samp>
+                </div>
+              </div>
+               <div class="col-lg-1 col-6">
+                <div class="background-color-white color-dark">
+                  <samp>.col-lg-1 .col-6</samp>
+                </div>
+              </div>
+               <div class="col-lg-1 col-6">
+                <div class="background-color-white color-dark">
+                  <samp>.col-lg-1 .col-6</samp>
+                </div>
+              </div>
+               <div class="col-lg-1 col-6">
+                <div class="background-color-white color-dark">
+                  <samp>.col-lg-1 .col-6</samp>
+                </div>
+              </div>
+               <div class="col-lg-1 col-6">
+                <div class="background-color-white color-dark">
+                  <samp>.col-lg-1 .col-6</samp>
+                </div>
+              </div>
+               <div class="col-lg-1 col-6">
+                <div class="background-color-white color-dark">
+                  <samp>.col-lg-1 .col-6</samp>
+                </div>
+              </div>
+               <div class="col-lg-1 col-6">
+                <div class="background-color-white color-dark">
+                  <samp>.col-lg-1 .col-6</samp>
+                </div>
+              </div>
+               <div class="col-lg-1 col-6">
+                <div class="background-color-white color-dark">
+                  <samp>.col-lg-1 .col-6</samp>
+                </div>
+              </div>
+               <div class="col-lg-1 col-6">
+                <div class="background-color-white color-dark">
+                  <samp>.col-lg-1 .col-6</samp>
+                </div>
+              </div>
+            </div>
+
+            <pre class="no-margin-top" data-code-type="HTML">
+              &lt;div class="container gutters-sm-all background-color-light"&gt;
+              &nbsp;  &lt;div class="col-1  col-order-1"&gt;
+              &nbsp;&nbsp;    &lt;div class="background-color-blue color-white"&gt;
+              &nbsp;&nbsp;&nbsp;      &lt;samp&gt;.col-1&lt;/samp&gt;
+              &nbsp;&nbsp;    &lt;/div&gt;
+              &nbsp;  &lt;/div&gt;
+              &nbsp;  &lt;div class="col-6 col-order-2 col-sm-order-3"&gt;
+              &nbsp;&nbsp;    &lt;div class="background-color-red color-white"&gt;
+              &nbsp;&nbsp;&nbsp;     &lt;samp&gt;.col-6&lt;/samp&gt;
+              &nbsp;&nbsp;    &lt;/div&gt;
+              &nbsp;  &lt;/div&gt;
+              &nbsp;  &lt;div class="col-auto  col-order-2 grow-1"&gt;
+              &nbsp;&nbsp;    &lt;div class="background-color-white color-dark"&gt;
+              &nbsp;&nbsp;&nbsp;      &lt;samp&gt;.col-auto .grow-1&lt;/samp&gt;
+              &nbsp;&nbsp;    &lt;/div&gt;
+              &nbsp;  &lt;/div&gt;
+              &nbsp;  &lt;div class="col-auto  col-order-2"&gt;
+              &nbsp;&nbsp;    &lt;div class="background-color-white color-dark"&gt;
+              &nbsp;&nbsp;&nbsp;      &lt;samp&gt;.col-auto&lt;/samp&gt;
+              &nbsp;&nbsp;    &lt;/div&gt;
+              &nbsp;  &lt;/div&gt;
+              &lt;/div&gt;
+            </pre>
+          </div>
+          <div class="col-11 col-push-half">
+
+            <p class="no-margin-bottom">
+            <strong>Truly mobile-first</strong>
+            </p>
+            <p>
+              Juiced is built with a mobile-first mentality, so you never have to target the smallest viewport when buildling your grid, instead just use <samp>.col-<var>[1-12]</var></samp>.  From there, you build up for larger screens using <samp><var>[xs|sm|md|lg]</var>-col-<var>[1-12]</var></samp>.  Column targeting works from the targeted breakpoint up, so the classes <samp>.col-6 .col-lg-4</samp> will span 6 columns on all devices up until large screens, which it will span only 4 columns.
+            </p>
+
+            <strong>Readable HTML</strong>
+            <p>
+              Juiced makes it easy to understand exactly what is going on inside a layout without needing to dig into the CSS.  This is because of the understable classnames like <samp class="color-blue">.color-blue</samp> and <samp class="background-color-dark color-white">.background-color-dark</samp>.</p>
+            <p>This can be highly advantageous for designers and developers as they know exactly what's going on just by looking at the HTML.  However, a potential drawback would be that your markup may have many classes needed to style a particular element (especially buttons).  Using many classes will not have any performance impact in modern browers.
+            </p>
+        </div>
+        <div class="col-sm-6 col-order-1">
+          <div class="container gutters-sm-all background-color-light">
+            
+          </div>
+
+        </div>
+        <div class="col-sm-6 col-order-2">
+         
+        </div>
+      </div>
+
+    
+      <div class="col-12 col-order-3  text-center">
+        <p class="color-light">Copyright 2015 Joey Lea.  All rights reserved.</p>
+     </div>
+    </div>
+
+
+
+  </div>
+  <script>
+  (function(){
+
+    var _navToggle = document.getElementById("toggle_nav"),
+      _navBar = document.getElementById("navigation-bar");
+   
+    _navToggle.addEventListener("click", function() {
+      if(_navBar.getAttribute("data-active") === "true") {
+        this.innerText = 'List All';
+        _navBar.setAttribute("data-active", "false");
+      }else{
+        this.innerText = 'Hide';
+        _navBar.setAttribute("data-active", "true");
+        window.scrollTo(0,0);
+      }
+    });
+
+    var _exits = [].slice.call(document.querySelectorAll('.alert-exit'));
+    _exits.forEach(function(ele) {
+      ele.addEventListener("click", function() {
+        var _parent = this.parentNode;
+        _parent.className = _parent.className + " display-none";
+      });
+    });
+
+    // var _btnClass = [].slice.call(document.querySelectorAll('.btn'));
+    // _btnClass.forEach(function(ele) {
+    //   ele.addEventListener("click", function(){ 
+    //     var _classList = this.className;
+    //     // alert(_classList);
+    //   })
+    // });
+
+  })();
+
+  </script>
+</body>
+</html>

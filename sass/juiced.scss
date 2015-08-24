@@ -137,10 +137,10 @@ p{
 
 ul.no-style, ol.no-style, dl.no-style{
   list-style: none;
-  margin: 0;
-  margin-bottom: 1.4rem;
+  // margin: 0;
+  // margin-bottom: 1.4rem;
   li{
-    margin: 0;
+    // margin: 0;
   }
 }
 
@@ -371,7 +371,7 @@ input[type=radio], input[type=checkbox]{
     border: 1px solid transparent;
   }
 
-  &.thin{
+  &.outline{
     &:after{
       border: 1px solid lighten($color-light, 5%);
       background: transparent;
@@ -580,7 +580,7 @@ label{
 .text-lowercase {
   text-transform: lowercase;
 }
-.text-capitlize {
+.text-capitalize {
   text-transform: capitalize;
 }
 
@@ -646,7 +646,7 @@ label{
   color: lighten($color-dark, 60%);
 }
 .background-color-light.color-auto{
-  color: darken($color-light, 40%);
+  color: darken($color-light, 50%);
 }
 .background-color-green.color-auto{
   color: lighten($color-green, 48%);
@@ -815,7 +815,7 @@ label{
 }
 .hover-btn-outline{
   &:hover{
-    background: transparent !important;
+    background: transparent;
     border: 1px solid;
   }
 }
@@ -1000,8 +1000,8 @@ label{
   &.align-baseline {
     align-self: baseline;
   }
-  &.align-strech {
-    align-self: strech;
+  &.align-stretch {
+    align-self: stretch;
   }
 
 
@@ -1344,6 +1344,13 @@ label{
       left: (1 / 12 * 100%) / 2;
     }
 
+    &>.col-xs-auto{
+      width: auto;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+   
+
   }
 
   .xs-card-masonry-4{
@@ -1474,6 +1481,12 @@ label{
     &>.col-sm-push-half{
       left: (1 / 12 * 100%) / 2;
     }
+
+    &>.col-sm-auto{
+      width: auto;
+      flex: 0 1 auto;
+      max-width: none;
+    }
   
   }
 
@@ -1596,7 +1609,13 @@ label{
     &>.col-md-push-half{
       left: (1 / 12 * 100%) / 2;
     }
-   
+    
+    &>.col-md-auto{
+      width: auto;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
     
   }
 
@@ -1720,6 +1739,12 @@ label{
 
     &>.col-lg-push-half{
       left: (1 / 12 * 100%) / 2;
+    }
+
+    &>.col-lg-auto{
+      width: auto;
+      flex: 0 1 auto;
+      max-width: none;
     }
 
   }
