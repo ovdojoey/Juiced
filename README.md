@@ -17,7 +17,7 @@ To create your own custom version of Juiced (using your own colors or breakpoint
 ## Usage
 
 #### Simple Usage
-You can use Juiced by including the minified `/dist/css/juiced.css` file in the head section of your webpage.  By default, this will use the Juiced default colors.  If you wish to make changes to the default colors, [download a custom build of Juiced](https://www.juicedcss.com/download/) or see the *Advanced Usage* below.
+You can use Juiced by including the minified `/dist/css/juiced.css` file in the head section of your webpage.  By default, this will use the Juiced default colors.  If you wish to make changes to the default colors see the *Advanced Usage* below.
 
 #### Advanced Usage
 
