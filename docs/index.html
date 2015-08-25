@@ -64,7 +64,9 @@
       <div class="col-7 col-xs-8 text-center">
         <div class="container gutters-sm items-center">
           <div class="col-4 col-xs-auto">
-            <img src="logo.png" alt="Juiced" class="img-responsive" title="Juiced Logo">
+            <a href="http://juicedcss.com">
+              <img src="logo.png" alt="Juiced" class="img-responsive" title="Juiced Logo">
+            </a>
           </div>
           <div class="col-8 col-xs-auto text-left">
             <h2>docs</h2>
@@ -116,8 +118,22 @@
             <strong>Installing Juiced</strong>
             <p>Juiced can be downloaded directly from the <a href="https://github.com/ovdojoey/Juiced" target="_blank">Github repository</a> or with Bower using: <samp>bower install juiced</samp>.  For more details and advanced customizations options view the <a href="https://github.com/ovdojoey/Juiced/blob/master/README.md" target="_blank">README</a>.</p>
             
+            <strong>Using Juiced</strong>
+            <p>
+            You can use Juiced by including the minified <samp>/dist/css/juiced.css</samp> file in the head section of your webpage. By default, this will use the Juiced default colors. If you wish to make changes to the default colors see the Advanced Usage below.
+            </p>
+
+            <strong>Advanced Usage</strong>
+            <p>
+            If you are already using SASS in your workflow, add Juiced to the top of your SASS file with <samp>@import /bower_components/sass/juiced</samp>. Note: the location of your <samp>juiced.scss</samp> file may vary.
+            </p>
+            <p>
+            You should define any Juiced variables above your @import statement as this will save your custom variables even after updating the Juiced source (for instance when updating using bower update). See the <samp>/sass/_variables.scss</samp> file for a list of available variables.
+            </p>
+
+
             <strong>Code Samples</strong>
-            <p>We provide some code samples, but they do not necessarily match the visual example shown, as content may be edited for brevity.  So copy-pasting is great - but what you see may not be an exact match to our examples.</p>
+            <p>We provide some code samples throughout the Docs, but they do not necessarily match the visual example shown as content may be edited for brevity.  So copy-pasting is great - but what you see may not be an exact match to our examples.</p>
 
             <strong>How to read the docs</strong>
             <p>Anything in <samp>monospace</samp> denotes a particular class or noteworthy piece of information.  Most of the docs are written using &lt;samp&gt;&lt;/samp&gt; to indicate Juiced code. 
@@ -125,6 +141,10 @@
             <p>
               Brackets [] and pipes | refer to multiple options within a selection, so if you see: <samp>.col-<var>[auto|1-12]</var></samp> that means that <samp>.col-auto</samp>, or <samp>.col-1</samp>, or <samp>.col-2</samp>, or <samp>.col-3</samp> all the way through <samp>.col-12</samp> are valid options. <em><strong>Note:</strong> 1-12</em> is inclusive, so both 1 and 12 are valid options.</em>
             </p>
+
+            <div class="text-center">
+              <a href="layout.html" class="btn btn-block btn-large btn-outline color-blue">Next Up, Layout</a>
+            </div>
             
           </div>
  
