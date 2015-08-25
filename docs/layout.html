@@ -133,7 +133,7 @@
 
             <strong><samp>.col-auto</samp></strong>
             <p>
-              Auto columns are set to have no max-width, and no initial width.  By default, they will take up as much space as their child content.  You can grow auto-sized columns to fill the available space using <samp>.grow-<var>[0-4</var>]</samp> where 0 is no growth and anything above that is the growth factor. 
+              Auto columns are set to have no max-width, and no initial width.  By default, they will take up as much space as their child content.  You can also make a column auto sized as the viewport changes by using <samp>.col-<var>[xs|sm|md|lg]</var>-auto</samp>. Grow the auto columns to fill the available space using <samp>.grow-<var>[0-4</var>]</samp> where 0 is no growth and anything above that is the growth factor. 
             </p>
           </div>
           <div class="col-12">  
@@ -355,6 +355,10 @@
         <div class="col-11 col-push-half">
             <p class="text-left">
               Columns house all of your content. They can be a fixed width by using <samp>.col-<var>[1-12]</var></samp> or they can be automatically sized by using <samp>.col-auto</samp>.  Columns must be children of a container, but you are free to nest as many containers inside of columns as you need.
+            </p>
+
+            <strong>.col-push-<var>[half|0-12]</var></strong>
+            <p>Use <samp>.col-push-<var>[half|0-12]</var></samp> and <samp>.col-<var>[xs|sm|md|lg]</var>-push-<var>[half|0-12]</var></samp> to shift a columns position to the left by a set width.  This can be useful when centering content or to move content along the 12-column grid.  Juiced also has a <em>half</em> option which can be useful with <samp>.col-11</samp>.  Reset smaller pushes by using <em>0</em>, for example: <samp>.col-push-2 col-8 col-lg-push-0 col-lg-12</samp>
             </p>
         
             
