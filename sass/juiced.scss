@@ -71,6 +71,7 @@ h1,h2,h3,h4,h5,h6{
 
 /* 2.D */
 a{
+  touch-action: manipulation;
   &:link{
     color: $color-link;
     text-decoration: none;
@@ -214,6 +215,7 @@ ul.no-style, ol.no-style, dl.no-style{
   display: inline-block;
   border: 1px solid transparent;
   font-size: 1rem;
+  touch-action: manipulation;
 
   &.radius {
     border-radius: 5px;
