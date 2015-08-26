@@ -270,7 +270,7 @@
 
             <strong>Readable HTML</strong>
             <p>
-              Juiced makes it easy to understand exactly what is going on inside a layout without needing to dig into the CSS.  This is because of the understable classnames like <samp class="color-blue">.color-blue</samp> and <samp class="background-color-dark color-white">.background-color-dark</samp>.</p>
+              Juiced makes it easy to understand exactly what is going on inside a layout without needing to dig into the CSS.  This is because of the understandable classnames like <samp class="color-blue">.color-blue</samp> and <samp class="background-color-dark color-white">.background-color-dark</samp>.</p>
             <p>This can be highly advantageous for designers and developers as they know exactly what's going on just by looking at the HTML.  However, a potential drawback would be that your markup may have many classes needed to style a particular element (especially buttons).  Using many classes will not have any performance impact in modern browers.
             </p>
         </div>
@@ -341,11 +341,11 @@
 
 
                 <strong>Flex display, wrap and direction</strong>
-                <p>We don't recommend it, but you can change the Flex <em>display</em> property to inline-flex to by adding <samp>.flex-inline</samp> to the container.  You can change the flex-direction using <samp>.dir-row</samp>, <samp>.dir-row-reverse</samp>, <samp>.dir-column</samp>, and <samp>.dir-column-reverse</samp>.
+                <p>We don't recommend changing these settings. You can change the Flex <em>display</em> property to inline-flex to by adding <samp>.flex-inline</samp> to the container.  You can change the flex-direction using <samp>.dir-row</samp>, <samp>.dir-row-reverse</samp>, <samp>.dir-column</samp>, and <samp>.dir-column-reverse</samp>.
                 Finally, you can change the <em>flex-wrap property</em> by using <samp>.nowrap</samp> or <samp>.wrap-reverse</samp>.</p>
 
 
-                <p class="display-inline-block alert alert-sm"><strong>Note:</strong> Juiced is built with maximum compatbility when using <em>flex-direction: <strong>row</strong></em>. We have also written the docs using <em>flex-direction: row</em> and changing this may produce different outcomes from what our docs specify. Also, changing the direction, display, or wrap style may have compatability issues with IE10 and IE11 as it does not properly handle box-sixing on Flexbox.
+                <p class="display-inline-block alert alert-sm"><strong>Note:</strong> Juiced is built using <em>flex-direction: <strong>row</strong></em>. We have also written the docs using <em>flex-direction: row</em> and changing this may produce different outcomes from what our docs specify. Also, changing the direction, display, or wrap style may have compatability issues with IE10 and IE11 as it does not properly handle box-sixing on Flexbox.
                 </p>
               </div>
             </div>
@@ -399,10 +399,18 @@
                 </p>
 
                 <strong>Column growth</strong>
-                <p>When using auto sized columns, it can be useful to grow that column to fill any available space left.  Simply add <samp>.grow-1</samp> to add do so.  If you need to scale multiple columns independtly, you can add <samp>.col-grow-<var>[1-4]</var>]</samp>, which is useful if there are more than one auto-sized columns that need to scale at a consistent factor. 
+                <p>When using auto sized columns, it can be useful to grow that column to fill any available space left.  Simply add <samp>.grow-1</samp> to add do so.  If you need to scale multiple columns independently, you can add <samp>.col-grow-<var>[1-4]</var>]</samp>, which is useful if there are more than one auto-sized columns that need to scale at a consistent factor. 
                 </p>
 
+                <div class="text-center">
+                  <a href="classes.html" class="btn btn-block btn-large btn-outline color-blue no-t-d">Next up, Helper Classes</a>
+                </div>
+
               </div>
+
+              
+              
+
             </div>
 
 

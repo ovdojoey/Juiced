@@ -212,7 +212,7 @@
 
             <strong>Z-index</strong>
             <p class="text-left">
-              Change the  <em>z-index</em> property by using <samp>.z-index-<var>[auto|1|2|3|4|5]</samp>. 
+              Change the  <em>z-index</em> property by using <samp>.z-index-<var>[auto|negative|0|1|2|3|4|5]</samp>. 
             </p>
 
 
@@ -244,6 +244,7 @@
               <p>
               Use either <samp>.text-decoration-none</samp>, &nbsp; <samp>.no-text-decoration</samp>, &nbsp; or  &nbsp; <samp>.no-t-d</samp> &nbsp; to remove the default underline on link elements.
               </p>
+              <p>Add an <span class="t-d-u">underline</span> text decoration using <samp>.text-decoration-underline</samp> or <samp>.t-d-u</samp>.  <span class="t-d-s">Strike</span> through text using <samp>.text-decoration-strike</samp> or <samp>.t-d-strike</samp>.
             </div>
             <div class="col-sm-5">
               <div class="text-left alert alert-sm alert-yellow">
@@ -336,7 +337,7 @@
           <p>
             Juiced gives you some very basic CSS transitions out of the box.
           </p>
-          <div class="alert alert-sm display-block"><strong>Note:</strong> setting the transition <em>property</em> or <em>timing</em> is not required class when using a transition duration class as it will default to <em>all</em>.  But, it is recommended to set these property if you can to speed up browser painting and compositing.</div>
+          <div class="alert alert-sm display-block"><strong>Note:</strong> setting the <em>property</em> or <em>timing</em> is not required when you specify a transition duration class as it will default to <em>all</em>.  But, it is recommended to set the <em>transition property</em>, if you can, to speed up browser painting and compositing.</div>
           <strong>Transition property</strong>
           <p class="text-left">
             Use <samp>.transition-<var>[all|background|color|opacity|transform]</var></samp> to set the <em>transition-property</em> to be applied during a transition. 
@@ -368,8 +369,11 @@
           <p class="text-left">
             Using ARIA tags is strongly recommended. Any time you set the data-attribute <samp>[aria-hidden]</samp> to true, Juiced will automatically set the element to <samp>display:none</samp> to maintain a consistency across both regular browsers and browsers with assistive technologies enabled.
           </p>
-          
+          <div class="text-center">
+            <a href="components.html" class="btn btn-block btn-large btn-outline color-blue no-t-d">Next up, Components</a>
+          </div>
         </div>
+      
       </div>
     
       <div class="col-12 col-order-3  text-center">

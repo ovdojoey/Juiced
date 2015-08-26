@@ -1,0 +1,108 @@
+/* 2.A */
+* {
+  box-sizing: border-box;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+}
+
+html[dir="rtl"]{
+  direction: rtl;
+}
+html[dir="ltr"]{
+  direction: ltr;
+}
+
+/* 2.B */
+body{
+  font-size: 18px;
+  line-height: 1.4rem;
+  color: $color-dark;
+}
+
+/* 2.C */
+h1,h2,h3,h4,h5,h6{
+  font-weight: bold;
+  line-height: 1.6;
+  color: inherit;
+  small{
+    color: lighten($color-dark, 40%);
+    font-size: 60%;
+  }
+}
+
+/* 2.D */
+a{
+  touch-action: manipulation;
+  &:link{
+    color: $color-link;
+    text-decoration: none;
+  }
+  &:visited{
+    color: $color-link;
+  }
+  &:hover, &:focus{
+    color: lighten($color-link, 10%);
+    // text-decoration: underline;
+  }
+  &:active{
+    outline: none;
+  }
+}
+a.text-decoration-none, a.no-text-decoration, a.no-t-d{
+  text-decoration: none;
+}
+
+/* 2.E */
+pre{
+  background: lighten($color-light, 30%);
+  white-space: pre-line;
+  padding: 12px;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  max-width: 100%;
+  margin-bottom: 2.8rem;
+  position: relative;
+
+  &:after{
+    content: attr(data-code-type);
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: darken($color-light, 8%);
+    font-family: sans-serif;
+    font-weight: 900;
+  }
+}
+
+/* 2.F */
+blockquote {
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: lighten($color-light, 10%);
+  content: open-quote;
+  font-size: 3em;
+  line-height: 0.1em;
+  margin-right: 0.12em;
+  vertical-align: -0.3em;
+}
+blockquote p {
+  display: inline;
+}
+
+/* 2.G */
+p{
+  margin-bottom: 2.8rem;
+}
+
+ul.no-style, ol.no-style, dl.no-style{
+  list-style: none;
+  li{
+    // margin: 0;
+  }
+}

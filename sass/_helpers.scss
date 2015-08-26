@@ -1,0 +1,532 @@
+
+
+/*
+ Helpers functions
+*/
+
+.full-width {
+  width: 100%;
+}
+
+.background-cover {
+  background-size: cover !important;
+}
+
+.img-full-width{
+  width: 100%;
+  max-width: 100%;
+}
+.img-responsive{
+  height: auto;
+  max-width: 100%;
+  // display: block;
+}
+.text-decoration-underline,.t-d-u{
+  text-decoration: underline;
+}
+.text-decoration-strike, .t-d-s{
+  text-decoration: line-through;
+}
+
+
+.no-margin{
+  margin: 0;
+}
+.no-margin-top{
+  margin-top: 0;
+}
+.no-margin-bottom{
+  margin-bottom: 0;
+}
+.no-margin-left{
+  margin-left: 0;
+}
+.no-margin-right{
+  margin-right: 0;
+}
+.no-border{
+  border: 0;
+}
+.no-padding{
+  padding: 0;
+}
+.no-padding-top{
+  padding-top: 0;
+}
+.no-padding-bottom {
+  padding-bottom: 0;
+}
+.no-padding-right {
+  padding-right: 0;
+}
+.no-padding-left {
+  padding-left: 0;
+}
+
+.hidden{
+  visibility: hidden;
+}
+.visible {
+  visibility: visible;
+}
+
+.display-none {
+  display: none;
+}
+.display-block {
+  display: block;
+}
+.display-inline-block {
+  display: inline-block;
+}
+.display-inline {
+  display: inline;
+}
+
+.position-relative {
+  position: relative;
+}
+.position-absolute {
+  position: absolute;
+}
+.position-fixed {
+  position: fixed;
+}
+.position-static {
+  position: static;
+}
+
+.z-index-auto {
+  z-index: auto;
+}
+.z-index-negative {
+  z-index: -1;
+}
+.z-index-1{
+  z-index: 1;
+}
+.z-index-2{
+  z-index: 2;
+}
+.z-index-3{
+  z-index: 3;
+}
+.z-index-4{
+  z-index: 4;
+}
+.z-index-5{
+  z-index: 5;
+}
+
+
+.text-justify{
+  text-align: justify;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.text-decoration-none, .no-text-decoration, .no-t-d{
+  text-decoration: none;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-lowercase {
+  text-transform: lowercase;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+
+.font-italic{
+  font-style: italic;
+}
+.font-oblique {
+  font-style: oblique;
+}
+.font-normal {
+  font-style: normal;
+}
+.font-bold {
+  font-weight: bold;
+}
+.font-bolder {
+  font-weight: bolder;
+}
+.font-lighter {
+  font-weight: lighter;
+}
+.font-light {
+  font-weight: normal;
+}
+
+
+.color-primary, a.color-primary {
+  color: $color-primary;
+}
+.color-alt, a.color-alt {
+  color: $color-alt;
+}
+.color-dark, a.color-dark {
+  color: $color-dark;
+}
+.color-light, a.color-light {
+  color: $color-light;
+}
+.color-green, a.color-green {
+  color: $color-green;
+}
+.color-red, a.color-red {
+  color: $color-red;
+}
+.color-blue, a.color-blue {
+  color: $color-blue;
+}
+.color-yellow, a.color-yellow {
+  color: $color-yellow;
+}
+.color-white, a.color-white {
+  color: $color-white;
+}
+
+.background-color-primary.color-auto{
+  color: lighten($color-primary, 45%);
+}
+.background-color-alt.color-auto{
+  color: lighten($color-alt, 48%);
+}
+.background-color-dark.color-auto{
+  color: lighten($color-dark, 60%);
+}
+.background-color-light.color-auto{
+  color: darken($color-light, 50%);
+}
+.background-color-green.color-auto{
+  color: lighten($color-green, 48%);
+}
+.background-color-red.color-auto{
+  color: lighten($color-red, 48%);
+}
+.background-color-yellow.color-auto{
+  color: darken($color-yellow, 48%);
+}
+.background-color-blue.color-auto{
+  color: lighten($color-blue, 45%);
+}
+.background-color-white.color-auto{
+  color: darken($color-white, 48%);
+}
+
+.background-color-primary {
+  background: $color-primary;
+}
+.background-color-alt {
+  background: $color-alt;
+}
+.background-color-dark {
+  background: $color-dark;
+}
+.background-color-light {
+  background: $color-light;
+}
+.background-color-green {
+  background: $color-green;
+}
+.background-color-red {
+  background: $color-red;
+}
+.background-color-blue {
+  background: $color-blue;
+}
+.background-color-yellow {
+  background: $color-yellow;
+}
+.background-color-white {
+  background: $color-white;
+}
+
+.opacity-0{
+  opacity: 0;
+}
+.opacity-25{
+  opacity: .25;
+}
+.opacity-50{
+  opacity: .5;
+}
+.opacity-75{
+  opacity: .75;
+}
+.opacity-100 {
+  opacity: 1;
+}
+
+.scale-0 {
+  transform: scale(0);
+}
+.scale-50 {
+  transform: scale(0.5);
+}
+.scale-100 {
+  transform: scale(1);
+}
+.scale-125{
+  transform: scale(1.25);
+}
+
+.hover-color-primary, a.hover-color-primary{
+  &:hover{
+    color: $color-primary;
+  }
+}
+.hover-color-alt, a.hover-color-alt{
+  &:hover{
+    color: $color-alt;
+  }
+}
+.hover-color-dark, a.hover-color-dark{
+  &:hover{
+    color: $color-dark;
+  }
+}
+.hover-color-light, a.hover-color-light{
+  &:hover{
+    color: $color-light;
+  }
+}
+.hover-color-green, a.hover-color-green{
+  &:hover{
+    color: $color-green;
+  }
+}
+.hover-color-red, a.hover-color-red{
+  &:hover{
+    color: $color-red;
+  }
+}
+.hover-color-blue, a.hover-color-blue{
+  &:hover{
+    color: $color-blue;
+  }
+}
+.hover-color-yellow, a.hover-color-yellow{
+  &:hover{
+    color: $color-yellow;
+  }
+}
+.hover-color-white, a.hover-color-white{
+  &:hover{
+    color: $color-white;
+  }
+}
+
+
+.hover-background-color-primary{
+  &:hover{
+    background: $color-primary;
+  }
+}
+.hover-background-color-alt{
+  &:hover{
+    background: $color-alt;
+  }
+}
+.hover-background-color-dark{
+  &:hover{
+    background: $color-dark;
+  }
+}
+.hover-background-color-light{
+  &:hover{
+    background: $color-light;
+  }
+}
+.hover-background-color-green{
+  &:hover{
+    background: $color-green;
+  }
+}
+.hover-background-color-red{
+  &:hover{
+    background: $color-red;
+  }
+}
+.hover-background-color-blue{
+  &:hover{
+    background: $color-blue;
+  }
+}
+.hover-background-color-yellow{
+  &:hover{
+    background: $color-yellow;
+  }
+}
+.hover-background-color-white{
+  &:hover{
+    background: $color-white;
+  }
+}
+.hover-btn-outline{
+  &:hover{
+    background: transparent;
+    border: 1px solid;
+  }
+}
+.btn.hover-btn-outline-reverse{
+  &:hover{
+    background: auto;
+    border: 1px solid transparent;
+  }
+}
+
+.hover-opacity-0 {
+  &:hover {
+    opacity: 0;
+  }
+}
+.hover-opacity-25 {
+  &:hover{
+    opacity: .25;
+  }
+}
+.hover-opacity-50 {
+  &:hover{
+    opacity: .5;
+  }
+}
+.hover-opacity-75 {
+  &:hover{
+    opacity: .75;
+  }
+}
+.hover-opacity-100 {
+  &:hover{
+    opacity: 1;
+  }
+}
+
+.hover-scale-0 {
+  &:hover{
+    transform: scale(0);
+  }
+}
+.hover-scale-50 {
+  &:hover{
+    transform: scale(0.5);
+  }
+}
+.hover-scale-100{
+  &:hover{
+    transform: scale(1);
+  }
+}
+.hover-scale-105{
+  &:hover{
+    transform: scale(1.05);
+  }
+}
+
+
+.transition-background{
+  transition-property: background;
+}
+.transition-color{
+  transition-property: color;
+}
+.transition-opacity {
+  transition-property: opacity;
+}
+.transition-transform{
+  transition-property: transform;
+}
+.transition-all{
+  transition-property: all;
+}
+
+// mixed transitions
+.transition-background-color{
+  transition-property: background, color;
+}
+.transition-background-color-opacity{
+  transition-property: background, color, opacity;
+}
+.transition-background-color-opacity-transform{
+  transition-property: background, color, opacity, transform;
+}
+.transition-opacity-transform{
+  transition-property: opacity, transform;
+}
+
+
+.transition-linear{
+  transition-timing-function: linear;
+}
+.transition-ease{
+  transition-timing-function: ease;
+}
+.transition-ease-in {
+  transition-timing-function: ease-in;
+}
+.transition-ease-out {
+  transition-timing-function: ease-out;
+}
+.transition-ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+
+
+.transition, .transition-normal {
+  transition-duration: .4s;
+}
+.transition-fast {
+  transition-duration: .2s;
+}
+.transition-slow {
+  transition-duration: .8s;
+}
+.transition-slow-2x {
+  transition-duration: 1.2s;
+}
+.transition-slow-4x {
+  transition-duration: 2s;
+}
+
+// Cursors
+.cursor-pointer{
+  cursor: pointer;
+}
+.cursor-default {
+  cursor: default;
+}
+.cursor-auto {
+  cursor: auto;
+}
+.cursor-none {
+  cursor: none;
+}
+.cursor-not-allowed{
+  cursor: not-allowed;
+}
+
+
+/* ARIA + Screen reader assists */
+.sr-only {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+[aria-hidden="true"] {
+  // element is hidden from SR | forcing across all devices for consistency
+  display: none;
+}
