@@ -251,6 +251,66 @@
 .background-color-white {
   background: $color-white;
 }
+.background-color-darker{
+  &.background-color-dark{
+    background: darken($color-dark, 8%);
+  }
+  &.background-color-white{
+    background: darken($color-white, 8%);
+  }
+  &.background-color-yellow{
+    background: darken($color-yellow, 8%);
+  }
+  &.background-color-red{
+    background: darken($color-red, 8%);
+  }
+  &.background-color-blue{
+    background: darken($color-blue, 8%);
+  }
+  &.background-color-green{
+    background: darken($color-green, 8%);
+  }
+  &.background-color-light{
+    background: darken($color-light, 8%);
+  }
+  &.background-color-alt{
+    background: darken($color-alt, 8%);
+  }
+  &.background-color-primary{
+    background: darken($color-primary, 8%);
+  }
+}
+
+.background-color-lighter{
+  &.background-color-dark{
+    background: lighten($color-dark, 8%);
+  }
+  &.background-color-white{
+    background: lighten($color-white, 8%);
+  }
+  &.background-color-yellow{
+    background: lighten($color-yellow, 8%);
+  }
+  &.background-color-red{
+    background: lighten($color-red, 8%);
+  }
+  &.background-color-blue{
+    background: lighten($color-blue, 8%);
+  }
+  &.background-color-green{
+    background: lighten($color-green, 8%);
+  }
+  &.background-color-light{
+    background: lighten($color-light, 8%);
+  }
+  &.background-color-alt{
+    background: lighten($color-alt, 8%);
+  }
+  &.background-color-primary{
+    background: lighten($color-primary, 8%);
+  }
+}
+
 
 .opacity-0{
   opacity: 0;
@@ -373,6 +433,103 @@
     background: $color-white;
   }
 }
+.hover-background-color-darker{
+  &.background-color-dark{
+    &:hover{
+      background: darken($color-dark, 8%);
+    }
+  }
+  &.background-color-white{
+    &:hover{
+      background: darken($color-white, 8%);
+    }
+  }
+  &.background-color-yellow{
+    &:hover{
+      background: darken($color-yellow, 8%);
+    }
+  }
+  &.background-color-red{
+    &:hover{
+      background: darken($color-red, 8%);
+    }
+  }
+  &.background-color-blue{
+    &:hover{
+      background: darken($color-blue, 8%);
+    }
+  }
+  &.background-color-green{
+    &:hover{
+      background: darken($color-green, 8%);
+    }
+  }
+  &.background-color-light{
+    &:hover{
+      background: darken($color-light, 8%);
+    }
+  }
+  &.background-color-alt{
+    &:hover{
+      background: darken($color-alt, 8%);
+    }
+  }
+  &.background-color-primary{
+    &:hover{
+      background: darken($color-primary, 8%);
+    }
+  }
+}
+
+.hover-background-color-lighter{
+  &.background-color-dark{
+    &:hover{
+      background: lighten($color-dark, 8%);
+    }
+  }
+  &.background-color-white{
+    &:hover{
+      background: lighten($color-white, 8%);
+    }
+  }
+  &.background-color-yellow{
+    &:hover{
+      background: lighten($color-yellow, 8%);
+    }
+  }
+  &.background-color-red{
+    &:hover{
+      background: lighten($color-red, 8%);
+    }
+  }
+  &.background-color-blue{
+    &:hover{
+      background: lighten($color-blue, 8%);
+    }
+  }
+  &.background-color-green{
+    &:hover{
+      background: lighten($color-green, 8%);
+    }
+  }
+  &.background-color-light{
+    &:hover{
+      background: lighten($color-light, 8%);
+    }
+  }
+  &.background-color-alt{
+    &:hover{
+      background: lighten($color-alt, 8%);
+    }
+  }
+  &.background-color-primary{
+    &:hover{
+      background: lighten($color-primary, 8%);
+    }
+  }
+}
+
+
 .hover-btn-outline{
   &:hover{
     background: transparent;
