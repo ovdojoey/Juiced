@@ -21,7 +21,7 @@ You can use Juiced by including the minified `/dist/css/juiced.css` file in the 
 
 #### Advanced Usage
 
-If you are already using SASS in your workflow, add Juiced to the top of your SASS file with `@import /bower_components/sass/juiced`. *Note: the location of your bower components folder may vary.*  
+If you are already using Sass in your workflow, add Juiced to the top of your Sass file with `@import /bower_components/sass/juiced`. *Note: the location of your bower components folder may vary.*  
 
 **Want to customize Juiced?** 
 
